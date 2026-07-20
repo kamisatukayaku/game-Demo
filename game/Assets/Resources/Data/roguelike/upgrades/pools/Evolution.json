@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "description": "Detached weapon evolution index. Route visibility is controlled by evolution_build_gates.json starter_evolution_routes.",
+  "source_weapon": "contact_weapon",
+  "required_source_level": 3,
+  "files": [
+    "weapons/evolutions/laser_evolution",
+    "weapons/evolutions/missile_evolution",
+    "weapons/evolutions/explosion_evolution",
+    "weapons/evolutions/pulse_evolution",
+    "weapons/evolutions/boomerang_evolution",
+    "weapons/evolutions/trail_evolution"
+  ]
+}

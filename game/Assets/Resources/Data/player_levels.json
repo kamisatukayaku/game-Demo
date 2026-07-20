@@ -1,0 +1,20 @@
+{
+  "_note": "玩家等级 1-15 级。前重设计：前期每级属性增长快（1-5级），中期放缓（6-10级），后期以战术深度为主（11-15级）。上限15级。",
+  "player_levels": [
+    { "level": 1,  "xp_required": 0,     "attack_mult": 1.00, "hp_mult": 1.00, "defense_mult": 0.00, "crit_chance_bonus": 0.00, "move_speed_bonus": 0.00, "_desc": "初始" },
+    { "level": 2,  "xp_required": 40,    "attack_mult": 1.08, "hp_mult": 1.10, "defense_mult": 0.05, "crit_chance_bonus": 0.00, "move_speed_bonus": 0.00, "_desc": "前期快速成长" },
+    { "level": 3,  "xp_required": 100,   "attack_mult": 1.16, "hp_mult": 1.20, "defense_mult": 0.10, "crit_chance_bonus": 0.02, "move_speed_bonus": 0.00, "_desc": "前期快速成长" },
+    { "level": 4,  "xp_required": 180,   "attack_mult": 1.24, "hp_mult": 1.30, "defense_mult": 0.15, "crit_chance_bonus": 0.02, "move_speed_bonus": 0.05, "_desc": "前期快速成长" },
+    { "level": 5,  "xp_required": 280,   "attack_mult": 1.32, "hp_mult": 1.40, "defense_mult": 0.20, "crit_chance_bonus": 0.04, "move_speed_bonus": 0.05, "_desc": "前期快速成长" },
+    { "level": 6,  "xp_required": 400,   "attack_mult": 1.38, "hp_mult": 1.48, "defense_mult": 0.24, "crit_chance_bonus": 0.04, "move_speed_bonus": 0.10, "_desc": "中期放缓" },
+    { "level": 7,  "xp_required": 540,   "attack_mult": 1.44, "hp_mult": 1.56, "defense_mult": 0.28, "crit_chance_bonus": 0.06, "move_speed_bonus": 0.10, "_desc": "中期放缓" },
+    { "level": 8,  "xp_required": 700,   "attack_mult": 1.50, "hp_mult": 1.64, "defense_mult": 0.32, "crit_chance_bonus": 0.06, "move_speed_bonus": 0.15, "_desc": "中期放缓" },
+    { "level": 9,  "xp_required": 880,   "attack_mult": 1.55, "hp_mult": 1.70, "defense_mult": 0.35, "crit_chance_bonus": 0.08, "move_speed_bonus": 0.15, "_desc": "中期放缓" },
+    { "level": 10, "xp_required": 1080,  "attack_mult": 1.60, "hp_mult": 1.76, "defense_mult": 0.38, "crit_chance_bonus": 0.08, "move_speed_bonus": 0.20, "_desc": "中期放缓" },
+    { "level": 11, "xp_required": 1300,  "attack_mult": 1.64, "hp_mult": 1.81, "defense_mult": 0.40, "crit_chance_bonus": 0.10, "move_speed_bonus": 0.20, "_desc": "后期战术深度" },
+    { "level": 12, "xp_required": 1550,  "attack_mult": 1.68, "hp_mult": 1.86, "defense_mult": 0.42, "crit_chance_bonus": 0.10, "move_speed_bonus": 0.22, "_desc": "后期战术深度" },
+    { "level": 13, "xp_required": 1820,  "attack_mult": 1.72, "hp_mult": 1.90, "defense_mult": 0.44, "crit_chance_bonus": 0.12, "move_speed_bonus": 0.22, "_desc": "后期战术深度" },
+    { "level": 14, "xp_required": 2120,  "attack_mult": 1.76, "hp_mult": 1.94, "defense_mult": 0.46, "crit_chance_bonus": 0.12, "move_speed_bonus": 0.25, "_desc": "后期战术深度" },
+    { "level": 15, "xp_required": 2450,  "attack_mult": 1.80, "hp_mult": 1.98, "defense_mult": 0.48, "crit_chance_bonus": 0.15, "move_speed_bonus": 0.25, "_desc": "满级" }
+  ]
+}

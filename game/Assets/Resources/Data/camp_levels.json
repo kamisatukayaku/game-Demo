@@ -1,0 +1,20 @@
+{
+  "_note": "营地等级 1-15 级。营地实际属性 = 营地类别加成(类别内各加成表) × 营地等级加成(此表)。camp_category_mult 由营地类型独立定义。",
+  "camp_levels": [
+    { "level": 1,  "enemy_count_mult": 1.00, "enemy_hp_mult": 1.00, "enemy_damage_mult": 1.00, "enemy_speed_mult": 1.00, "xp_reward": 50,   "gold_reward": 10,  "spawn_interval": 4.0,  "max_alive_enemies": 5 },
+    { "level": 2,  "enemy_count_mult": 1.10, "enemy_hp_mult": 1.06, "enemy_damage_mult": 1.06, "enemy_speed_mult": 1.00, "xp_reward": 65,   "gold_reward": 13,  "spawn_interval": 3.8,  "max_alive_enemies": 6 },
+    { "level": 3,  "enemy_count_mult": 1.20, "enemy_hp_mult": 1.12, "enemy_damage_mult": 1.12, "enemy_speed_mult": 1.01, "xp_reward": 82,   "gold_reward": 16,  "spawn_interval": 3.6,  "max_alive_enemies": 7 },
+    { "level": 4,  "enemy_count_mult": 1.30, "enemy_hp_mult": 1.18, "enemy_damage_mult": 1.18, "enemy_speed_mult": 1.02, "xp_reward": 102,  "gold_reward": 20,  "spawn_interval": 3.4,  "max_alive_enemies": 7 },
+    { "level": 5,  "enemy_count_mult": 1.40, "enemy_hp_mult": 1.25, "enemy_damage_mult": 1.25, "enemy_speed_mult": 1.03, "xp_reward": 125,  "gold_reward": 25,  "spawn_interval": 3.2,  "max_alive_enemies": 8 },
+    { "level": 6,  "enemy_count_mult": 1.50, "enemy_hp_mult": 1.32, "enemy_damage_mult": 1.32, "enemy_speed_mult": 1.04, "xp_reward": 152,  "gold_reward": 30,  "spawn_interval": 3.0,  "max_alive_enemies": 8 },
+    { "level": 7,  "enemy_count_mult": 1.60, "enemy_hp_mult": 1.39, "enemy_damage_mult": 1.39, "enemy_speed_mult": 1.05, "xp_reward": 183,  "gold_reward": 36,  "spawn_interval": 2.8,  "max_alive_enemies": 9 },
+    { "level": 8,  "enemy_count_mult": 1.70, "enemy_hp_mult": 1.47, "enemy_damage_mult": 1.47, "enemy_speed_mult": 1.06, "xp_reward": 218,  "gold_reward": 43,  "spawn_interval": 2.6,  "max_alive_enemies": 9 },
+    { "level": 9,  "enemy_count_mult": 1.80, "enemy_hp_mult": 1.55, "enemy_damage_mult": 1.55, "enemy_speed_mult": 1.07, "xp_reward": 258,  "gold_reward": 51,  "spawn_interval": 2.4,  "max_alive_enemies": 10 },
+    { "level": 10, "enemy_count_mult": 1.95, "enemy_hp_mult": 1.63, "enemy_damage_mult": 1.63, "enemy_speed_mult": 1.08, "xp_reward": 305,  "gold_reward": 60,  "spawn_interval": 2.2,  "max_alive_enemies": 10 },
+    { "level": 11, "enemy_count_mult": 2.10, "enemy_hp_mult": 1.72, "enemy_damage_mult": 1.72, "enemy_speed_mult": 1.09, "xp_reward": 360,  "gold_reward": 71,  "spawn_interval": 2.0,  "max_alive_enemies": 11 },
+    { "level": 12, "enemy_count_mult": 2.25, "enemy_hp_mult": 1.81, "enemy_damage_mult": 1.81, "enemy_speed_mult": 1.10, "xp_reward": 425,  "gold_reward": 84,  "spawn_interval": 1.9,  "max_alive_enemies": 12 },
+    { "level": 13, "enemy_count_mult": 2.40, "enemy_hp_mult": 1.90, "enemy_damage_mult": 1.90, "enemy_speed_mult": 1.11, "xp_reward": 500,  "gold_reward": 99,  "spawn_interval": 1.8,  "max_alive_enemies": 12 },
+    { "level": 14, "enemy_count_mult": 2.55, "enemy_hp_mult": 2.00, "enemy_damage_mult": 2.00, "enemy_speed_mult": 1.12, "xp_reward": 590,  "gold_reward": 117, "spawn_interval": 1.7,  "max_alive_enemies": 13 },
+    { "level": 15, "enemy_count_mult": 2.70, "enemy_hp_mult": 2.10, "enemy_damage_mult": 2.10, "enemy_speed_mult": 1.14, "xp_reward": 695,  "gold_reward": 138, "spawn_interval": 1.6,  "max_alive_enemies": 14 }
+  ]
+}

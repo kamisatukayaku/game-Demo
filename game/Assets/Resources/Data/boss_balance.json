@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "defaults": {
+    "contact_hit_interval_sec": 0.85,
+    "player_laser_tick_interval_sec": 0.30,
+    "global_recovery_light_sec": 0.35,
+    "global_recovery_pressure_sec": 0.55,
+    "max_consecutive_pressure": 2,
+    "intro_grace_wild_sec": 2.6,
+    "intro_grace_mini_sec": 1.4,
+    "intro_grace_final_sec": 2.8
+  },
+  "aoe_resistance": {
+    "instant_explosion": 0.72,
+    "detached_explosion": 0.72,
+    "detached_pulse": 0.78,
+    "pulse": 0.78,
+    "detached_trail": 0.82,
+    "trail": 0.82,
+    "arena_pulse": 0.58,
+    "aoe": 0.70,
+    "detached_nuclear": 0.65,
+    "chain_falloff": 0.55,
+    "default_mult": 1.0
+  },
+  "quadrant_block": {
+    "warning_sec": 1.2,
+    "duration_sec": 28.0
+  },
+  "bosses": {
+    "wild_boss_hex_king": {
+      "wave_overrides": {
+        "5": {
+          "hp_mult_bonus": 0.90,
+          "damage_mult_bonus": 0.68,
+          "intro_grace_sec": 2.8
+        }
+      }
+    },
+    "mini_boss_hex_sentinel": {
+      "wave_overrides": {
+        "8": {
+          "hp_mult_bonus": 1.42,
+          "damage_mult_bonus": 0.90,
+          "intro_grace_sec": 1.5
+        }
+      }
+    },
+    "wild_boss_star_hive": {
+      "wave_overrides": {
+        "10": {
+          "hp_mult_bonus": 1.24,
+          "damage_mult_bonus": 0.72
+        }
+      }
+    },
+    "mini_boss_star_chorus": {
+      "wave_overrides": {
+        "13": {
+          "hp_mult_bonus": 1.52,
+          "damage_mult_bonus": 0.86,
+          "intro_grace_sec": 1.5
+        }
+      }
+    },
+    "wild_boss_pent_colossus": {
+      "wave_overrides": {
+        "15": {
+          "hp_mult_bonus": 1.62,
+          "damage_mult_bonus": 0.96,
+          "intro_grace_sec": 2.4
+        }
+      }
+    }
+  }
+}

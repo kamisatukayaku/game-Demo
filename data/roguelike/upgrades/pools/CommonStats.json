@@ -1,0 +1,11 @@
+{
+  "schema_version": 2,
+  "pool": "common_stats",
+  "tags": ["common"],
+  "upgrades": [
+    {"id":"num_common_damage","display_name":"攻击增幅","description":"所有攻击的基础伤害提高。","stat":"all_damage_mult","values":[0.12,0.10,0.08,0.07,0.05],"max_stacks":5,"offer_weight":0.9,"offer_group":"numeric","tags":["damage"]},
+    {"id":"num_common_attack_speed","display_name":"攻击节奏","description":"基础攻击间隔缩短，最低间隔受硬上限保护。","stat":"weapon_attack_speed_mult","values":[0.15,0.12,0.10,0.08,0.06],"max_stacks":5,"offer_weight":0.9,"offer_group":"numeric","tags":["rapid"]},
+    {"id":"num_common_area","display_name":"范围扩展","description":"技能影响范围扩大，超过软上限后收益递减。","stat":"skill_range_mult","values":[0.15,0.12,0.10,0.08,0.06],"max_stacks":5,"offer_weight":0.75,"offer_group":"numeric","tags":["area"]},
+    {"id":"num_common_crit","display_name":"精准校准","description":"暴击率提高，最高为75%。","stat":"crit_chance","values":[0.08,0.07,0.06,0.05,0.04],"max_stacks":5,"offer_weight":0.65,"offer_group":"numeric","tags":["critical"]}
+  ]
+}

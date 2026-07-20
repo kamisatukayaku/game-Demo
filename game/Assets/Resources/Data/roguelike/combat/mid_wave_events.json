@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "settings": {
+    "min_wave": 6,
+    "trigger_delay_min": 7,
+    "trigger_delay_max": 13
+  },
+  "events": [
+    {
+      "id": "meteor_strike",
+      "display_name": "陨石预警",
+      "description": "预警圈收缩后爆发，对范围内敌我造成伤害。",
+      "warning_seconds": 2.5,
+      "radius": 3.6,
+      "damage": 18,
+      "color": "#FF5522"
+    },
+    {
+      "id": "energy_storm",
+      "display_name": "能量风暴",
+      "description": "随机象限出现持续风暴，圈内周期性受到伤害。",
+      "duration": 12,
+      "radius": 6.5,
+      "tick_interval": 0.85,
+      "damage": 8,
+      "color": "#8844FF"
+    },
+    {
+      "id": "warp_portal",
+      "display_name": "短时传送门",
+      "description": "双传送门短暂开启，踏入一端可从另一端现身。",
+      "duration": 8,
+      "radius": 2.2,
+      "color": "#33CCFF"
+    }
+  ]
+}

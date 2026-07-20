@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "_note": "击杀仅掉经验；召唤物由胜利条件系统单独发放。",
+  "pools": [
+    {
+      "id": "common_mob",
+      "context": "kill",
+      "rolls": 1,
+      "entries": [
+        { "weight": 100, "kind": "xp", "amount_min": 10, "amount_max": 18 }
+      ]
+    },
+    {
+      "id": "mutant_mob",
+      "context": "kill",
+      "rolls": 1,
+      "entries": [
+        { "weight": 100, "kind": "xp", "amount_min": 14, "amount_max": 24 }
+      ]
+    },
+    {
+      "id": "t2_mob",
+      "context": "kill",
+      "rolls": 1,
+      "entries": [
+        { "weight": 100, "kind": "xp", "amount_min": 12, "amount_max": 22 }
+      ]
+    },
+    {
+      "id": "elite_mob",
+      "context": "kill",
+      "rolls": 1,
+      "entries": [
+        { "weight": 100, "kind": "xp", "amount_min": 28, "amount_max": 45 }
+      ]
+    },
+    {
+      "id": "lane_mob",
+      "context": "kill",
+      "rolls": 1,
+      "entries": [
+        { "weight": 100, "kind": "xp", "amount_min": 8, "amount_max": 14 }
+      ]
+    },
+    {
+      "id": "wild_boss",
+      "context": "boss",
+      "rolls": 2,
+      "entries": [
+        { "weight": 100, "kind": "xp", "amount_min": 110, "amount_max": 160 },
+        { "weight": 45, "kind": "xp", "amount_min": 45, "amount_max": 75 }
+      ]
+    },
+    {
+      "id": "wild_boss_major",
+      "context": "boss",
+      "description": "第15波等大型野外 Boss",
+      "rolls": 3,
+      "entries": [
+        { "weight": 100, "kind": "xp", "amount_min": 160, "amount_max": 240 },
+        { "weight": 60, "kind": "xp", "amount_min": 70, "amount_max": 110 },
+        { "weight": 25, "kind": "xp", "amount_min": 35, "amount_max": 55 }
+      ]
+    },
+    {
+      "id": "loot_final_boss_summon",
+      "context": "boss",
+      "rolls": 1,
+      "entries": [
+        { "weight": 100, "kind": "equipment", "equipment_id": "item_final_boss_summon" }
+      ]
+    },
+    {
+      "id": "post_wave15_mob",
+      "context": "kill",
+      "description": "简单难度第15波后普通怪",
+      "rolls": 1,
+      "entries": [
+        { "weight": 100, "kind": "xp", "amount_min": 12, "amount_max": 20 },
+        { "weight": 100, "kind": "equipment", "equipment_id": "item_final_boss_summon", "once_per_run": true }
+      ]
+    }
+  ]
+}

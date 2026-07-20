@@ -1,0 +1,23 @@
+{
+  "name": "Game.Tests.PlayMode",
+  "rootNamespace": "",
+  "references": [
+    "Game.Roguelike",
+    "Game.Shared",
+    "Unity.Recorder.Editor"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

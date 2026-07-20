@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "evolution": {
+    "id": "trail",
+    "name": "轨迹进化",
+    "behavior_verb": "切割",
+    "fantasy_text": "移动轨迹被烙进地面，路径网络持续切割敌人。",
+    "source_weapon": "contact_weapon",
+    "advanced_form": "trail",
+    "movement_model": "random_wander",
+    "evolution_condition": {
+      "description": "需要指定的 Contact Weapon 达到 Lv3。",
+      "source_weapon_level": 3
+    },
+    "tiers": [
+      {
+        "tier": 1,
+        "id": "short_trail",
+        "name": "????",
+        "description": "????????????????",
+        "gameplay_change": "移动路径开始具备伤害。"
+      },
+      {
+        "tier": 2,
+        "id": "long_trail",
+        "name": "????",
+        "description": "?????",
+        "gameplay_change": "形成更完整的区域切割线。"
+      },
+      {
+        "tier": 3,
+        "id": "persistent_path",
+        "name": "????",
+        "description": "???????",
+        "gameplay_change": "轨迹转化为持续区域控制。"
+      },
+      {
+        "tier": 4,
+        "id": "forked_path",
+        "name": "????",
+        "description": "??????????????",
+        "gameplay_change": "单一路径扩展为分支结构。"
+      },
+      {
+        "tier": 5,
+        "id": "trail_network",
+        "name": "????",
+        "description": "??????????",
+        "gameplay_change": "形成完整轨迹网络。"
+      }
+    ],
+    "final_form": {
+      "id": "trail_network",
+      "name": "轨迹网络",
+      "description": "持久、分叉与自动连接的轨迹覆盖战场，形成移动伤害网络。"
+    }
+  }
+}

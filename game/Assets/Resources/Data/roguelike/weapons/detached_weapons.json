@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "attack_modes": [
+    {
+      "id": "Contact",
+      "display_name": "环绕接触",
+      "description": "围绕玩家旋转，接触敌人时持续造成伤害。",
+      "movement_model": "player_orbit"
+    },
+    {
+      "id": "LaserShot",
+      "display_name": "棱镜激光",
+      "description": "自主游走并周期性发射贯穿光束。",
+      "movement_model": "random_wander"
+    },
+    {
+      "id": "Missile",
+      "display_name": "追踪飞弹",
+      "description": "自主寻找目标并发射追踪飞弹。",
+      "movement_model": "random_wander"
+    },
+    {
+      "id": "Explosion",
+      "display_name": "范围爆破",
+      "description": "接触敌人时触发范围爆炸。",
+      "movement_model": "random_wander"
+    },
+    {
+      "id": "Pulse",
+      "display_name": "扩散脉冲",
+      "description": "周期性释放向外扩散的伤害波纹。",
+      "movement_model": "random_wander"
+    },
+    {
+      "id": "Boomerang",
+      "display_name": "往返回旋",
+      "description": "从玩家身边飞出，沿路径往返切割敌人。",
+      "movement_model": "player_center_launch"
+    },
+    {
+      "id": "Trail",
+      "display_name": "伤害轨迹",
+      "description": "移动时留下可持续伤害敌人的轨迹。",
+      "movement_model": "random_wander"
+    }
+  ],
+  "weapons": [
+    {
+      "id": "contact_weapon",
+      "display_name": "环刃核心",
+      "description": "围绕玩家旋转，接触敌人造成 15 点基础伤害。",
+      "visual_id": "contact_core",
+      "attack_modes": [
+        "Contact"
+      ],
+      "base_damage": 15.0,
+      "orbit_radius": 2.75,
+      "orbit_speed": 132.0,
+      "contact_radius": 1.05,
+      "hit_cooldown": 0.3
+    },
+    {
+      "id": "laser_weapon",
+      "display_name": "棱镜核心",
+      "description": "自主游走，每 2.2 秒发射一次远程贯穿光束。",
+      "visual_id": "laser_core",
+      "attack_modes": [
+        "LaserShot"
+      ],
+      "base_damage": 9.0,
+      "wander_radius": 5.0,
+      "wander_speed": 3.8,
+      "attack_range": 14.0,
+      "attack_cooldown": 2.2
+    },
+    {
+      "id": "missile_weapon",
+      "display_name": "飞弹核心",
+      "description": "自主游走，每 2.4 秒向目标发射追踪飞弹。",
+      "visual_id": "missile_core",
+      "attack_modes": [
+        "Missile"
+      ],
+      "base_damage": 11.0,
+      "wander_radius": 5.5,
+      "wander_speed": 4.1,
+      "attack_range": 16.0,
+      "projectile_hit_radius": 0.55,
+      "attack_cooldown": 2.4
+    },
+    {
+      "id": "explosion_weapon",
+      "display_name": "爆破核心",
+      "description": "接触触发范围爆破，连续命中后产生终结爆炸。",
+      "visual_id": "explosion_core",
+      "attack_modes": [
+        "Explosion"
+      ],
+      "base_damage": 13.0,
+      "wander_radius": 5.0,
+      "wander_speed": 4.3,
+      "contact_radius": 0.9,
+      "hit_cooldown": 0.6,
+      "effect_radius": 1.35,
+      "secondary_radius": 2.2,
+      "secondary_delay": 0.18,
+      "finisher_threshold": 5,
+      "finisher_radius": 5.2
+    },
+    {
+      "id": "pulse_weapon",
+      "display_name": "脉冲核心",
+      "description": "每 2.85 秒释放扩散波纹，连续释放后触发全场脉冲。",
+      "visual_id": "pulse_core",
+      "attack_modes": [
+        "Pulse"
+      ],
+      "base_damage": 7.2,
+      "wander_radius": 5.2,
+      "wander_speed": 3.9,
+      "attack_cooldown": 2.85,
+      "pulse_speed": 7.2,
+      "pulse_thickness": 0.55,
+      "pulse_max_radius": 5.8,
+      "pulse_zone_duration": 1.25,
+      "effect_radius": 0.95,
+      "finisher_threshold": 6,
+      "finisher_radius": 30.0
+    },
+    {
+      "id": "boomerang_weapon",
+      "display_name": "回旋核心",
+      "description": "从玩家身边主动飞出，往返两次并切割路径上的敌人。",
+      "visual_id": "boomerang_core",
+      "attack_modes": [
+        "Boomerang"
+      ],
+      "base_damage": 14.0,
+      "attack_range": 15.0,
+      "attack_cooldown": 2.35,
+      "contact_radius": 0.82,
+      "boomerang_speed": 12.0,
+      "boomerang_short_distance": 5.0,
+      "boomerang_long_distance": 9.0,
+      "boomerang_recasts": 2,
+      "boomerang_storm_count": 5
+    },
+    {
+      "id": "trail_weapon",
+      "display_name": "轨迹核心",
+      "description": "自主游走并留下持续伤害轨迹，逐步连接成控制区域。",
+      "visual_id": "trail_core",
+      "attack_modes": [
+        "Trail"
+      ],
+      "base_damage": 10.0,
+      "wander_radius": 6.0,
+      "wander_speed": 4.6,
+      "trail_sample_distance": 0.5,
+      "trail_short_lifetime": 0.7,
+      "trail_long_lifetime": 1.3,
+      "trail_persistent_lifetime": 2.8,
+      "trail_width": 0.55,
+      "trail_fork_length": 2.4,
+      "trail_network_distance": 4.5
+    }
+  ]
+}

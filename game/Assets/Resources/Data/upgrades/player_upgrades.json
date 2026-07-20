@@ -1,0 +1,3239 @@
+﻿{
+    "class_id":  "player",
+    "route":  "player",
+    "upgrades":  [
+                     {
+                         "id":  "pl_vitality",
+                         "route":  "player",
+                         "repeatable":  true,
+                         "max_stacks":  10,
+                         "display_name":  "体质",
+                         "description":  "最大生命 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "max_hp_mult",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "category":  "attribute",
+                         "offer_weight":  0.35
+                     },
+                     {
+                         "id":  "pl_endurance",
+                         "route":  "player",
+                         "repeatable":  true,
+                         "max_stacks":  8,
+                         "display_name":  "耐力",
+                         "description":  "最大生命 +12 点",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "max_hp_flat",
+                                               "op":  "add",
+                                               "value":  12
+                                           }
+                                       ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "category":  "attribute",
+                         "offer_weight":  0.35
+                     },
+                     {
+                         "id":  "pl_regen",
+                         "route":  "player",
+                         "repeatable":  true,
+                         "max_stacks":  8,
+                         "display_name":  "恢复",
+                         "description":  "生命回复 +0.35/秒",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "hp_regen",
+                                               "op":  "add",
+                                               "value":  0.35
+                                           }
+                                       ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "category":  "attribute",
+                         "offer_weight":  0.35
+                     },
+                     {
+                         "id":  "pl_swift",
+                         "route":  "player",
+                         "repeatable":  true,
+                         "max_stacks":  8,
+                         "display_name":  "迅捷",
+                         "description":  "移动速度 +5%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.05
+                                           }
+                                       ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "category":  "attribute",
+                         "offer_weight":  0.35
+                     },
+                     {
+                         "id":  "pl_plating",
+                         "route":  "player",
+                         "repeatable":  true,
+                         "max_stacks":  6,
+                         "display_name":  "护甲",
+                         "description":  "减伤 +3%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.03
+                                           }
+                                       ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "category":  "attribute",
+                         "offer_weight":  0.35
+                     },
+                     {
+                         "id":  "pl_focus",
+                         "route":  "player",
+                         "repeatable":  true,
+                         "max_stacks":  8,
+                         "display_name":  "专注",
+                         "description":  "暴击率 +4%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.04
+                                           }
+                                       ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "category":  "attribute",
+                         "offer_weight":  0.35
+                     },
+                     {
+                         "id":  "pl_brutal",
+                         "route":  "player",
+                         "repeatable":  true,
+                         "max_stacks":  8,
+                         "display_name":  "残忍",
+                         "description":  "暴击伤害 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "category":  "attribute",
+                         "offer_weight":  0.35
+                     },
+                     {
+                         "id":  "pl_vampiric",
+                         "route":  "player",
+                         "repeatable":  true,
+                         "max_stacks":  6,
+                         "display_name":  "吸血",
+                         "description":  "吸血 +3%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lifesteal",
+                                               "op":  "add",
+                                               "value":  0.03
+                                           }
+                                       ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "vampiric"
+                                  ],
+                         "category":  "attribute",
+                         "offer_weight":  0.35
+                     },
+                     {
+                         "tier":  1,
+                         "id":  "pl_sv_01",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "生存本能",
+                         "description":  "减伤 +4%，生命 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.04
+                                           },
+                                           {
+                                               "stat":  "max_hp_mult",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  2,
+                         "id":  "pl_sv_02",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "坚韧",
+                         "description":  "最大生命 +8%，击退抗性 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "max_hp_mult",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           },
+                                           {
+                                               "stat":  "knockback_resist",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_01"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  3,
+                         "id":  "pl_sv_03",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "再生",
+                         "description":  "生命回复 +0.4/秒",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "hp_regen",
+                                               "op":  "add",
+                                               "value":  0.4
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_02"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  4,
+                         "id":  "pl_sv_04",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "铁壁",
+                         "description":  "减伤 +5%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.05
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_03"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  5,
+                         "id":  "pl_sv_05",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "稳固阵线",
+                         "description":  "全元素抗性 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "all_resist",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_04"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  6,
+                         "id":  "pl_sv_06",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "溢出护盾",
+                         "description":  "治疗溢出转为护盾",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "overheal_shield",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_05"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  7,
+                         "id":  "pl_sv_07",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "守护者",
+                         "description":  "减伤 +4%，生命 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.04
+                                           },
+                                           {
+                                               "stat":  "max_hp_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_06"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  8,
+                         "id":  "pl_sv_08",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "续命",
+                         "description":  "受击回复 6% 伤害值",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "heal_on_hit_pct",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_07"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  9,
+                         "id":  "pl_sv_09",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "不屈",
+                         "description":  "低生命减伤转化 +1 层",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_08"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  10,
+                         "id":  "pl_sv_10",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "永恒壁垒",
+                         "description":  "减伤 +6%，回复 +0.5/秒",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           },
+                                           {
+                                               "stat":  "hp_regen",
+                                               "op":  "add",
+                                               "value":  0.5
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_09"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  11,
+                         "id":  "pl_sv_11",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "壁垒联动",
+                         "description":  "低生命减伤 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_10"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  12,
+                         "id":  "pl_sv_12",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "钢铁之躯",
+                         "description":  "生命 +12%，抗性 +5%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "max_hp_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           },
+                                           {
+                                               "stat":  "all_resist",
+                                               "op":  "add",
+                                               "value":  0.05
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_11"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  13,
+                         "id":  "pl_sv_13",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "绝境自愈",
+                         "description":  "受击回复 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "heal_on_hit_pct",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_12"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  14,
+                         "id":  "pl_sv_14",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "生存核心",
+                         "description":  "减伤 +5%，低生命减伤 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.05
+                                           },
+                                           {
+                                               "stat":  "missing_hp_damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_13"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  15,
+                         "id":  "pl_sv_15",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "不朽者",
+                         "description":  "传奇前置：护盾 + 低生命减伤 + 强回复",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "overheal_shield",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           },
+                                           {
+                                               "stat":  "missing_hp_damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           },
+                                           {
+                                               "stat":  "hp_regen",
+                                               "op":  "add",
+                                               "value":  0.45
+                                           }
+                                       ],
+                         "tags":  [
+                                      "survival"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sv_14"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  1,
+                         "id":  "pl_bz_01",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "狂战之血",
+                         "description":  "全伤害 +6%，吸血 +4%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "all_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           },
+                                           {
+                                               "stat":  "lifesteal",
+                                               "op":  "add",
+                                               "value":  0.04
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  2,
+                         "id":  "pl_bz_02",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "战意",
+                         "description":  "低生命增伤 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_01"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  3,
+                         "id":  "pl_bz_03",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "嗜血",
+                         "description":  "吸血 +5%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lifesteal",
+                                               "op":  "add",
+                                               "value":  0.05
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_02"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  4,
+                         "id":  "pl_bz_04",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "狂怒",
+                         "description":  "全伤害 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "all_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_03"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  5,
+                         "id":  "pl_bz_05",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "背水",
+                         "description":  "低生命增伤 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_04"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  6,
+                         "id":  "pl_bz_06",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "血怒",
+                         "description":  "低生命攻速 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_attack_speed",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_05"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  7,
+                         "id":  "pl_bz_07",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "狂战续行",
+                         "description":  "击杀回复 1.8% 最大生命",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "heal_on_kill_pct",
+                                               "op":  "add",
+                                               "value":  0.018
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_06"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  8,
+                         "id":  "pl_bz_08",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "鲜血渴望",
+                         "description":  "吸血 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lifesteal",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_07"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  9,
+                         "id":  "pl_bz_09",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "濒死爆发",
+                         "description":  "低生命增伤 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_08"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  10,
+                         "id":  "pl_bz_10",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "狂战士",
+                         "description":  "全伤害 +10%，低生命攻速 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "all_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           },
+                                           {
+                                               "stat":  "missing_hp_attack_speed",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_09"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  11,
+                         "id":  "pl_bz_11",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "血战",
+                         "description":  "低生命吸血 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_lifesteal",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_10"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  12,
+                         "id":  "pl_bz_12",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "狂怒加深",
+                         "description":  "低生命增伤 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_11"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  13,
+                         "id":  "pl_bz_13",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "战吼",
+                         "description":  "击杀回复 +1.2%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "heal_on_kill_pct",
+                                               "op":  "add",
+                                               "value":  0.012
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_12"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  14,
+                         "id":  "pl_bz_14",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "狂战核心",
+                         "description":  "吸血 +8%，低生命增伤 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lifesteal",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           },
+                                           {
+                                               "stat":  "missing_hp_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_13"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  15,
+                         "id":  "pl_bz_15",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "灭战者",
+                         "description":  "传奇前置：残血高攻速 + 高吸血 + 高增伤",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           },
+                                           {
+                                               "stat":  "missing_hp_lifesteal",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           },
+                                           {
+                                               "stat":  "missing_hp_attack_speed",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "tags":  [
+                                      "berserk"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_bz_14"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  1,
+                         "id":  "pl_cr_01",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "锐利",
+                         "description":  "暴击率 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  2,
+                         "id":  "pl_cr_02",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "致命",
+                         "description":  "暴击伤害 +15%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_01"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  3,
+                         "id":  "pl_cr_03",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "猎眼",
+                         "description":  "暴击率 +5%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.05
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_02"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  4,
+                         "id":  "pl_cr_04",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "处决",
+                         "description":  "暴击伤害 +18%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.18
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_03"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  5,
+                         "id":  "pl_cr_05",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "精准",
+                         "description":  "暴击率 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_04"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  6,
+                         "id":  "pl_cr_06",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "致命一击",
+                         "description":  "暴击伤害 +20%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.2
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_05"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  7,
+                         "id":  "pl_cr_07",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "弱点洞察",
+                         "description":  "对精英伤害 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "elite_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_06"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  8,
+                         "id":  "pl_cr_08",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "斩首",
+                         "description":  "对首领伤害 +15%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "boss_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_07"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  9,
+                         "id":  "pl_cr_09",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "暴击联动",
+                         "description":  "暴击后攻速 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_attack_speed_bonus",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_08"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  10,
+                         "id":  "pl_cr_10",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "刺客核心",
+                         "description":  "暴击率 +8%，暴伤 +15%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           },
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_09"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  11,
+                         "id":  "pl_cr_11",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "连斩暴击",
+                         "description":  "连杀暴击层 +1",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_streak_crit_stacks",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_10"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  12,
+                         "id":  "pl_cr_12",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "完美暴击",
+                         "description":  "暴击伤害 +22%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.22
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_11"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  13,
+                         "id":  "pl_cr_13",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "猎杀直觉",
+                         "description":  "暴击率 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_12"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  14,
+                         "id":  "pl_cr_14",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "暴击大师",
+                         "description":  "暴击联动攻速 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_attack_speed_bonus",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_13"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  15,
+                         "id":  "pl_cr_15",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "死神之眼",
+                         "description":  "传奇前置：高暴击 + 连杀暴击 + 暴击攻速",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           },
+                                           {
+                                               "stat":  "kill_streak_crit_stacks",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           },
+                                           {
+                                               "stat":  "crit_attack_speed_bonus",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "tags":  [
+                                      "critical"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_cr_14"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  1,
+                         "id":  "pl_mb_01",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "轻步",
+                         "description":  "移动速度 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  2,
+                         "id":  "pl_mb_02",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "闪避",
+                         "description":  "击退抗性 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "knockback_resist",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_01"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  3,
+                         "id":  "pl_mb_03",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "疾行",
+                         "description":  "移动速度 +5%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.05
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_02"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  4,
+                         "id":  "pl_mb_04",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "动量",
+                         "description":  "移速转伤害 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_damage_ratio",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_03"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  5,
+                         "id":  "pl_mb_05",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "风驰",
+                         "description":  "移动速度 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_04"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  6,
+                         "id":  "pl_mb_06",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "幻影步",
+                         "description":  "移速转暴击率 +5%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_crit_ratio",
+                                               "op":  "add",
+                                               "value":  0.05
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_05"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  7,
+                         "id":  "pl_mb_07",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "灵动",
+                         "description":  "技能冷却 −6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_cooldown_reduce",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_06"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  8,
+                         "id":  "pl_mb_08",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "追风",
+                         "description":  "移动速度 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_07"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  9,
+                         "id":  "pl_mb_09",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "风刃",
+                         "description":  "移速转伤害 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_damage_ratio",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_08"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  10,
+                         "id":  "pl_mb_10",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "疾风核心",
+                         "description":  "移速 +8%，移速转暴击 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           },
+                                           {
+                                               "stat":  "move_speed_crit_ratio",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_09"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  11,
+                         "id":  "pl_mb_11",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "无影",
+                         "description":  "移速转暴击 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_crit_ratio",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_10"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  12,
+                         "id":  "pl_mb_12",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "穿梭",
+                         "description":  "技能冷却 −8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_cooldown_reduce",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_11"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  13,
+                         "id":  "pl_mb_13",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "风驰电掣",
+                         "description":  "移动速度 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_12"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  14,
+                         "id":  "pl_mb_14",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "机动大师",
+                         "description":  "移速转伤害 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_damage_ratio",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_13"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  15,
+                         "id":  "pl_mb_15",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "幻影",
+                         "description":  "传奇前置：高移速 + 移速转暴击/伤害",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           },
+                                           {
+                                               "stat":  "move_speed_crit_ratio",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           },
+                                           {
+                                               "stat":  "move_speed_damage_ratio",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "mobility"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_mb_14"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  1,
+                         "id":  "pl_sl_01",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "猎杀",
+                         "description":  "击杀回复 1.5% 最大生命",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "heal_on_kill_pct",
+                                               "op":  "add",
+                                               "value":  0.015
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  2,
+                         "id":  "pl_sl_02",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "收割",
+                         "description":  "经验获取 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "exp_gain_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_01"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  3,
+                         "id":  "pl_sl_03",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "连杀",
+                         "description":  "连杀增伤层 +1",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_streak_damage_stacks",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_02"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  4,
+                         "id":  "pl_sl_04",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "嗜杀",
+                         "description":  "击杀回复 +1%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "heal_on_kill_pct",
+                                               "op":  "add",
+                                               "value":  0.01
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_03"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  5,
+                         "id":  "pl_sl_05",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "战利品",
+                         "description":  "经验获取 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "exp_gain_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_04"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  6,
+                         "id":  "pl_sl_06",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "杀戮节奏",
+                         "description":  "连杀攻速层 +1",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_streak_attack_speed",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_05"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  7,
+                         "id":  "pl_sl_07",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "屠戮",
+                         "description":  "击杀回复 +1.2%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "heal_on_kill_pct",
+                                               "op":  "add",
+                                               "value":  0.012
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_06"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  8,
+                         "id":  "pl_sl_08",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "连斩",
+                         "description":  "连杀增伤 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_streak_damage_bonus",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_07"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  9,
+                         "id":  "pl_sl_09",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "猎魂",
+                         "description":  "连杀暴击层 +1",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_streak_crit_stacks",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_08"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  10,
+                         "id":  "pl_sl_10",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "刽子手",
+                         "description":  "连杀增伤层 +1，击杀回复 +1%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_streak_damage_stacks",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           },
+                                           {
+                                               "stat":  "heal_on_kill_pct",
+                                               "op":  "add",
+                                               "value":  0.01
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_09"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  11,
+                         "id":  "pl_sl_11",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "杀戮狂欢",
+                         "description":  "连杀攻速 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_streak_attack_speed",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_10"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  12,
+                         "id":  "pl_sl_12",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "经验收割",
+                         "description":  "经验获取 +15%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "exp_gain_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_11"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  13,
+                         "id":  "pl_sl_13",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "血宴",
+                         "description":  "击杀回复 +1.5%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "heal_on_kill_pct",
+                                               "op":  "add",
+                                               "value":  0.015
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_12"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  14,
+                         "id":  "pl_sl_14",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "连杀核心",
+                         "description":  "连杀增伤 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_streak_damage_bonus",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_13"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  15,
+                         "id":  "pl_sl_15",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "灭杀者",
+                         "description":  "传奇前置：连杀增伤 + 连杀攻速 + 击杀回复",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_streak_damage_stacks",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           },
+                                           {
+                                               "stat":  "kill_streak_attack_speed",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           },
+                                           {
+                                               "stat":  "heal_on_kill_pct",
+                                               "op":  "add",
+                                               "value":  0.018
+                                           }
+                                       ],
+                         "tags":  [
+                                      "slayer"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sl_14"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  1,
+                         "id":  "pl_lk_01",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "幸运",
+                         "description":  "经验获取 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "exp_gain_mult",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  2,
+                         "id":  "pl_lk_02",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "横财",
+                         "description":  "击杀额外经验 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lucky_kill_xp_bonus",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_01"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  3,
+                         "id":  "pl_lk_03",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "机遇",
+                         "description":  "暴击率 +4%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.04
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_02"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  4,
+                         "id":  "pl_lk_04",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "好运",
+                         "description":  "经验获取 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "exp_gain_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_03"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  5,
+                         "id":  "pl_lk_05",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "意外之财",
+                         "description":  "击杀掉落加成 +15%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lucky_drop_bonus",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_04"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  6,
+                         "id":  "pl_lk_06",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "鸿运",
+                         "description":  "双重触发概率 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lucky_double_proc",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_05"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  7,
+                         "id":  "pl_lk_07",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "福星",
+                         "description":  "经验获取 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "exp_gain_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_06"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  8,
+                         "id":  "pl_lk_08",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "暴击幸运",
+                         "description":  "暴击率 +6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_07"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  9,
+                         "id":  "pl_lk_09",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "黄金运",
+                         "description":  "击杀经验 +15%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lucky_kill_xp_bonus",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_08"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  10,
+                         "id":  "pl_lk_10",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "幸运核心",
+                         "description":  "经验 +15%，双重触发 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "exp_gain_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           },
+                                           {
+                                               "stat":  "lucky_double_proc",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_09"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  11,
+                         "id":  "pl_lk_11",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "幸运暴击",
+                         "description":  "暴击率 +8%，暴伤 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           },
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_10"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  12,
+                         "id":  "pl_lk_12",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "天降横财",
+                         "description":  "击杀掉落 +20%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lucky_drop_bonus",
+                                               "op":  "add",
+                                               "value":  0.2
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_11"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  13,
+                         "id":  "pl_lk_13",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "命运",
+                         "description":  "双重触发 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lucky_double_proc",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_12"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  14,
+                         "id":  "pl_lk_14",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "幸运大师",
+                         "description":  "经验 +12%，击杀经验 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "exp_gain_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           },
+                                           {
+                                               "stat":  "lucky_kill_xp_bonus",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_13"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  15,
+                         "id":  "pl_lk_15",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "天命之子",
+                         "description":  "传奇前置：高经验 + 高幸运双重触发",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "exp_gain_mult",
+                                               "op":  "add",
+                                               "value":  0.18
+                                           },
+                                           {
+                                               "stat":  "lucky_double_proc",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           },
+                                           {
+                                               "stat":  "lucky_kill_xp_bonus",
+                                               "op":  "add",
+                                               "value":  0.18
+                                           }
+                                       ],
+                         "tags":  [
+                                      "lucky"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_lk_14"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  1,
+                         "id":  "pl_sk_01",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "秘法",
+                         "description":  "技能伤害 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  2,
+                         "id":  "pl_sk_02",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "迅捷施法",
+                         "description":  "技能冷却 −8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_cooldown_reduce",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_01"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  3,
+                         "id":  "pl_sk_03",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "延展",
+                         "description":  "技能范围 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_range_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_02"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  4,
+                         "id":  "pl_sk_04",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "共鸣",
+                         "description":  "技能伤害 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_03"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  5,
+                         "id":  "pl_sk_05",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "冷却精通",
+                         "description":  "技能冷却 −6%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_cooldown_reduce",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_04"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  6,
+                         "id":  "pl_sk_06",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "技能回响",
+                         "description":  "技能回响 +1",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_echo",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_05"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  7,
+                         "id":  "pl_sk_07",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "奥术暴击",
+                         "description":  "技能暴击率 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_crit_chance",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_06"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  8,
+                         "id":  "pl_sk_08",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "广域",
+                         "description":  "技能范围 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_range_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_07"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  9,
+                         "id":  "pl_sk_09",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "过载",
+                         "description":  "技能伤害 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_08"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  10,
+                         "id":  "pl_sk_10",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "法师核心",
+                         "description":  "技能冷却 −10%，技能伤害 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_cooldown_reduce",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           },
+                                           {
+                                               "stat":  "skill_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_09"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  11,
+                         "id":  "pl_sk_11",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "双响",
+                         "description":  "技能回响 +1",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_echo",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_10"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  12,
+                         "id":  "pl_sk_12",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "技能暴击",
+                         "description":  "技能暴击伤害 +25%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_crit_damage",
+                                               "op":  "add",
+                                               "value":  0.25
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_11"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  13,
+                         "id":  "pl_sk_13",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "极速咏唱",
+                         "description":  "技能冷却 −8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_cooldown_reduce",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_12"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  14,
+                         "id":  "pl_sk_14",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "奥术大师",
+                         "description":  "技能范围 +15%，技能伤害 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_range_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           },
+                                           {
+                                               "stat":  "skill_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_13"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  15,
+                         "id":  "pl_sk_15",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "大法师",
+                         "description":  "传奇前置：回响 + 高技能伤 + 低冷却",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "skill_echo",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           },
+                                           {
+                                               "stat":  "skill_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           },
+                                           {
+                                               "stat":  "skill_cooldown_reduce",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "tags":  [
+                                      "skill"
+                                  ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "requires_ids":  [
+                                              "pl_sk_14"
+                                          ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  20,
+                         "id":  "pl_combo_indomitable",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "不屈者",
+                         "description":  "隐藏传奇：生命越低减伤越高（生存 + 狂战）",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.2
+                                           },
+                                           {
+                                               "stat":  "missing_hp_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           },
+                                           {
+                                               "stat":  "damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.06
+                                           }
+                                       ],
+                         "requires_tags":  [
+                                               "survival",
+                                               "berserk"
+                                           ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "attribute"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  20,
+                         "id":  "pl_combo_phantom",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "幻影刺客",
+                         "description":  "隐藏传奇：移速转化为暴击率（暴击 + 机动）",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "move_speed_crit_ratio",
+                                               "op":  "add",
+                                               "value":  0.18
+                                           },
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           },
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "requires_tags":  [
+                                               "critical",
+                                               "mobility"
+                                           ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "attribute"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  20,
+                         "id":  "pl_combo_reaper",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "收割者",
+                         "description":  "隐藏传奇：连续击杀提升暴击（暴击 + 连杀）",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_streak_crit_stacks",
+                                               "op":  "add",
+                                               "value":  2.0
+                                           },
+                                           {
+                                               "stat":  "kill_streak_crit_bonus",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           },
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.25
+                                           }
+                                       ],
+                         "requires_tags":  [
+                                               "critical",
+                                               "slayer"
+                                           ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "attribute"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  20,
+                         "id":  "pl_combo_gale",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "疾风收割",
+                         "description":  "隐藏传奇：击杀获得移速（机动 + 连杀）",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "kill_move_speed_bonus",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           },
+                                           {
+                                               "stat":  "kill_streak_attack_speed",
+                                               "op":  "add",
+                                               "value":  1.0
+                                           },
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "requires_tags":  [
+                                               "mobility",
+                                               "slayer"
+                                           ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "attribute"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  20,
+                         "id":  "pl_combo_bloodfiend",
+                         "route":  "player",
+                         "repeatable":  false,
+                         "display_name":  "血魔",
+                         "description":  "隐藏传奇：生命越低吸血越高（狂战 + 吸血）",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "missing_hp_lifesteal",
+                                               "op":  "add",
+                                               "value":  0.22
+                                           },
+                                           {
+                                               "stat":  "missing_hp_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           },
+                                           {
+                                               "stat":  "lifesteal",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "requires_tags":  [
+                                               "berserk",
+                                               "vampiric"
+                                           ],
+                         "classes":  [
+                                         "all"
+                                     ],
+                         "tags":  [
+                                      "attribute"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     }
+                 ]
+}

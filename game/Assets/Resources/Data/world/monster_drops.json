@@ -1,0 +1,108 @@
+{
+  "_note": "怪物掉落配表。T1普通/T2精英/T3首领/野外Boss四级掉落。精英和T3怪有小概率掉落破损饰品，野外Boss掉落完好/精致饰品。",
+  "drop_tables": [
+    {
+      "drop_id": "common_mob",
+      "_desc": "T1普通怪物 — 少量金币+经验，极低概率掉落破损饰品",
+      "drops": [
+        { "type": "exp", "min": 3, "max": 8 },
+        { "type": "gold", "min": 2, "max": 6 },
+        { "type": "accessory", "min": 1, "max": 1, "probability": 0.03, "quality": "damaged", "items": [
+          { "item_id": "minor_power_ring", "weight": 2.0 },
+          { "item_id": "minor_vitality_charm", "weight": 2.0 },
+          { "item_id": "minor_guard_brooch", "weight": 1.5 },
+          { "item_id": "minor_swift_feather", "weight": 1.5 },
+          { "item_id": "minor_lucky_coin", "weight": 1.0 },
+          { "item_id": "minor_healing_totem", "weight": 1.0 }
+        ]}
+      ]
+    },
+    {
+      "drop_id": "t2_mob",
+      "_desc": "T2精英怪物 — 更多金币+经验，提高破损饰品掉落概率",
+      "drops": [
+        { "type": "exp", "min": 8, "max": 15 },
+        { "type": "gold", "min": 5, "max": 12 },
+        { "type": "accessory", "min": 1, "max": 1, "probability": 0.10, "quality": "damaged", "items": [
+          { "item_id": "minor_power_ring", "weight": 2.0 },
+          { "item_id": "minor_vitality_charm", "weight": 2.0 },
+          { "item_id": "minor_guard_brooch", "weight": 2.0 },
+          { "item_id": "minor_swift_feather", "weight": 2.0 },
+          { "item_id": "minor_lucky_coin", "weight": 1.5 },
+          { "item_id": "minor_healing_totem", "weight": 1.5 }
+        ]}
+      ]
+    },
+    {
+      "drop_id": "elite_mob",
+      "_desc": "精英怪物 — 大量金币+经验，提高破损饰品掉落，极小概率掉落完好饰品",
+      "drops": [
+        { "type": "exp", "min": 20, "max": 40 },
+        { "type": "gold", "min": 15, "max": 30 },
+        { "type": "accessory", "min": 1, "max": 1, "probability": 0.15, "quality": "damaged", "items": [
+          { "item_id": "minor_power_ring", "weight": 2.0 },
+          { "item_id": "minor_vitality_charm", "weight": 2.0 },
+          { "item_id": "minor_guard_brooch", "weight": 2.0 },
+          { "item_id": "minor_swift_feather", "weight": 2.0 },
+          { "item_id": "minor_lucky_coin", "weight": 1.5 },
+          { "item_id": "minor_healing_totem", "weight": 1.5 }
+        ]},
+        { "type": "accessory", "min": 1, "max": 1, "probability": 0.05, "quality": "intact", "items": [
+          { "item_id": "ring_of_power", "weight": 2.0 },
+          { "item_id": "amulet_of_vitality", "weight": 2.0 },
+          { "item_id": "boots_of_haste", "weight": 1.5 },
+          { "item_id": "thorned_bracers", "weight": 1.0 }
+        ]}
+      ]
+    },
+    {
+      "drop_id": "mutant_mob",
+      "_desc": "变异怪物 — 经验丰富，较高破损饰品掉落",
+      "drops": [
+        { "type": "exp", "min": 15, "max": 30 },
+        { "type": "gold", "min": 8, "max": 18 },
+        { "type": "accessory", "min": 1, "max": 1, "probability": 0.12, "quality": "damaged", "items": [
+          { "item_id": "minor_power_ring", "weight": 2.0 },
+          { "item_id": "minor_lucky_coin", "weight": 2.0 },
+          { "item_id": "minor_swift_feather", "weight": 2.0 },
+          { "item_id": "minor_healing_totem", "weight": 1.5 }
+        ]}
+      ]
+    },
+    {
+      "drop_id": "boss_loot",
+      "_desc": "野外Boss — 必定掉落完好/精致饰品，大量金币+经验",
+      "drops": [
+        { "type": "exp", "min": 80, "max": 150 },
+        { "type": "gold", "min": 50, "max": 100 },
+        { "type": "accessory", "min": 1, "max": 1, "probability": 0.60, "quality": "intact", "items": [
+          { "item_id": "ring_of_power", "weight": 2.0 },
+          { "item_id": "amulet_of_vitality", "weight": 2.0 },
+          { "item_id": "cloak_of_shadows", "weight": 1.5 },
+          { "item_id": "vampiric_brooch", "weight": 1.5 },
+          { "item_id": "dragonscale_armor", "weight": 1.5 },
+          { "item_id": "thorned_bracers", "weight": 1.0 }
+        ]},
+        { "type": "accessory", "min": 1, "max": 1, "probability": 0.30, "quality": "refined", "items": [
+          { "item_id": "refined_splitter_lens", "weight": 2.0 },
+          { "item_id": "refined_explosive_core", "weight": 1.5 },
+          { "item_id": "refined_lightning_rod", "weight": 1.5 },
+          { "item_id": "refined_berserker_gauntlets", "weight": 1.5 },
+          { "item_id": "refined_homing_eye", "weight": 1.5 }
+        ]}
+      ]
+    },
+    {
+      "drop_id": "lane_mob",
+      "_desc": "兵线怪物 — 少量经验+金币",
+      "drops": [
+        { "type": "exp", "min": 2, "max": 5 },
+        { "type": "gold", "min": 1, "max": 3 },
+        { "type": "accessory", "min": 1, "max": 1, "probability": 0.02, "quality": "damaged", "items": [
+          { "item_id": "minor_guard_brooch", "weight": 2.0 },
+          { "item_id": "minor_healing_totem", "weight": 1.5 }
+        ]}
+      ]
+    }
+  ]
+}

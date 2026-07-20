@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "evolution": {
+    "id": "missile",
+    "name": "飞弹进化",
+    "behavior_verb": "齐射",
+    "fantasy_text": "游走的弹头化作蜂群，锁定后倾泻而下。",
+    "source_weapon": "contact_weapon",
+    "advanced_form": "missile",
+    "movement_model": "random_wander",
+    "evolution_condition": {
+      "description": "需要指定的 Contact Weapon 达到 Lv3。",
+      "source_weapon_level": 3
+    },
+    "tiers": [
+      {
+        "tier": 1,
+        "id": "single_launch",
+        "name": "????",
+        "description": "???????????????",
+        "gameplay_change": "进化为自主飞弹平台。"
+      },
+      {
+        "tier": 2,
+        "id": "salvo_launch",
+        "name": "????",
+        "description": "?????????????",
+        "gameplay_change": "攻击形成短促齐射。"
+      },
+      {
+        "tier": 3,
+        "id": "hunter_guidance",
+        "name": "????",
+        "description": "?????????",
+        "gameplay_change": "获得稳定追踪能力。"
+      },
+      {
+        "tier": 4,
+        "id": "split_warhead",
+        "name": "????",
+        "description": "??????????????",
+        "gameplay_change": "单点攻击扩展为多目标覆盖。"
+      },
+      {
+        "tier": 5,
+        "id": "missile_swarm",
+        "name": "????",
+        "description": "?????????????",
+        "gameplay_change": "形成完整飞弹群。"
+      }
+    ],
+    "final_form": {
+      "id": "missile_swarm",
+      "name": "飞弹蜂群",
+      "description": "追踪、连射与分裂组合成持续覆盖战场的飞弹群。"
+    }
+  }
+}

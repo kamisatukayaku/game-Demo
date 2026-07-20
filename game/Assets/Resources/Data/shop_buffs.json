@@ -1,0 +1,69 @@
+{
+  "_note": "商店可出售的Buff定义。持续时间统一延长至120-150s（除短暂无敌外）。",
+  "buffs": [
+    {
+      "buff_id": "shop_buff_attack_boost",
+      "display_name": "攻击强化",
+      "description": "攻击力 +25%，持续 120 秒。",
+      "price": 50,
+      "duration": 120.0,
+      "min_world_level": 1
+    },
+    {
+      "buff_id": "shop_buff_speed_boost",
+      "display_name": "移速强化",
+      "description": "移动速度 +30%，持续 150 秒。",
+      "price": 45,
+      "duration": 150.0,
+      "min_world_level": 1
+    },
+    {
+      "buff_id": "shop_buff_defense_boost",
+      "display_name": "防御强化",
+      "description": "受到的伤害 -25%，持续 120 秒。",
+      "price": 45,
+      "duration": 120.0,
+      "min_world_level": 2
+    },
+    {
+      "buff_id": "shop_buff_regen_boost",
+      "display_name": "生命再生",
+      "description": "每秒回复 3% 最大生命，持续 120 秒。",
+      "price": 70,
+      "duration": 120.0,
+      "min_world_level": 3
+    },
+    {
+      "buff_id": "shop_buff_crit_boost",
+      "display_name": "暴击强化",
+      "description": "暴击率 +15%，暴击伤害 +40%，持续 120 秒。",
+      "price": 90,
+      "duration": 120.0,
+      "min_world_level": 4
+    },
+    {
+      "buff_id": "shop_buff_invincible",
+      "display_name": "短暂无敌",
+      "description": "免疫所有伤害，持续 10 秒。",
+      "price": 180,
+      "duration": 10.0,
+      "min_world_level": 6
+    },
+    {
+      "buff_id": "shop_buff_thorns",
+      "display_name": "荆棘光环",
+      "description": "反弹200%受到的近战伤害，持续 120 秒。",
+      "price": 60,
+      "duration": 120.0,
+      "min_world_level": 5
+    },
+    {
+      "buff_id": "shop_buff_projectile_power",
+      "display_name": "弹幕强化",
+      "description": "弹道数+2，弹速+30%，持续 120 秒。",
+      "price": 100,
+      "duration": 120.0,
+      "min_world_level": 6
+    }
+  ]
+}

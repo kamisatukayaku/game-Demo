@@ -1,0 +1,270 @@
+{
+    "schema_version":  5,
+    "_note":  "小怪：任意正多边形/棱角形，必须实心、无曲线。Player：正圆实心。见 docs/art-enemies-and-bosses.md",
+    "rendering":  {
+                      "projection":  "orthographic_2d",
+                      "top_down_perspective":  false,
+                      "outline_width_px":  1
+                  },
+    "constraints":  {
+                        "minion":  {
+                                       "fill_rule_allowed":  [
+                                                                 "solid"
+                                                             ],
+                                       "curves_allowed":  false,
+                                       "composite_allowed":  false,
+                                       "shape_categories":  [
+                                                                "regular_polygon",
+                                                                "star",
+                                                                "hexagram",
+                                                                "diamond"
+                                                            ]
+                                   },
+                        "player":  {
+                                       "shape_id":  "circle",
+                                       "fill_rule":  "solid",
+                                       "curves_allowed":  true
+                                   },
+                        "boss":  {
+                                     "fill_rule_allowed":  [
+                                                               "solid",
+                                                               "outline",
+                                                               "outline_thick"
+                                                           ],
+                                     "curves_allowed":  false,
+                                     "composite_allowed":  true,
+                                     "min_parts":  2,
+                                     "max_parts":  12
+                                 }
+                    },
+    "defaults":  {
+                     "fill_rule":  "solid",
+                     "palette":  "mob_red",
+                     "motion":  "none"
+                 },
+    "player":  {
+                   "shape_id":  "circle",
+                   "fill_rule":  "solid",
+                   "palette":  "player_blue"
+               },
+    "minions":  [
+                    {
+                        "enemy_id":  "mob_hex_01",
+                        "shape_id":  "hex",
+                        "palette":  "mob_red",
+                        "motion":  "pulse"
+                    },
+                    {
+                        "enemy_id":  "mob_hex_03",
+                        "shape_id":  "oct",
+                        "palette":  "mob_red_dark",
+                        "motion":  "pulse"
+                    },
+                    {
+                        "enemy_id":  "mob_star4_01",
+                        "shape_id":  "star4",
+                        "palette":  "mob_red",
+                        "motion":  "spin"
+                    },
+                    {
+                        "enemy_id":  "mob_square_01",
+                        "shape_id":  "square",
+                        "palette":  "mob_red",
+                        "scale_xy":  [
+                                         1.12,
+                                         1.0
+                                     ]
+                    },
+                    {
+                        "enemy_id":  "mob_pent_01",
+                        "shape_id":  "pent",
+                        "palette":  "mob_red_dark",
+                        "motion":  "pulse"
+                    },
+                    {
+                        "enemy_id":  "mob_tri_01",
+                        "shape_id":  "tri",
+                        "palette":  "mob_red",
+                        "motion":  "slow_spin"
+                    },
+                    {
+                        "enemy_id":  "mob_square_02",
+                        "shape_id":  "diamond",
+                        "palette":  "mob_red",
+                        "motion":  "spin"
+                    },
+                    {
+                        "enemy_id":  "mob_wisp_fast_01",
+                        "shape_id":  "diamond",
+                        "palette":  "mob_red",
+                        "scale_xy":  [
+                                         0.68,
+                                         1.18
+                                     ],
+                        "motion":  "spin"
+                    },
+                    {
+                        "enemy_id":  "mob_star5_01",
+                        "shape_id":  "star5",
+                        "palette":  "mob_red",
+                        "motion":  "pulse"
+                    },
+                    {
+                        "enemy_id":  "mob_star4_02",
+                        "shape_id":  "star6",
+                        "palette":  "mob_red",
+                        "scale_xy":  [
+                                         0.9,
+                                         0.9
+                                     ],
+                        "motion":  "spin"
+                    },
+                    {
+                        "enemy_id":  "mob_tri_05",
+                        "shape_id":  "hexagram",
+                        "palette":  "mob_red_dark",
+                        "motion":  "slow_spin"
+                    },
+                    {
+                        "enemy_id":  "mob_star8_01",
+                        "shape_id":  "star8",
+                        "palette":  "mob_red_dark",
+                        "motion":  "spin"
+                    },
+                    {
+                        "enemy_id":  "mob_splitter_eco_01",
+                        "shape_id":  "diamond",
+                        "palette":  "mob_red_dark",
+                        "motion":  "pulse"
+                    },
+                    {
+                        "enemy_id":  "mob_splitter_shard_eco_01",
+                        "shape_id":  "tri",
+                        "palette":  "mob_red",
+                        "motion":  "slow_spin"
+                    },
+                    {
+                        "enemy_id":  "mob_support_eco_01",
+                        "shape_id":  "hex",
+                        "palette":  "mob_red_dark",
+                        "motion":  "slow_spin"
+                    },
+                    {
+                        "enemy_id":  "mob_bomber_eco_01",
+                        "shape_id":  "tri",
+                        "palette":  "mob_red",
+                        "scale_xy":  [0.82, 1.18],
+                        "motion":  "pulse"
+                    },
+                    {
+                        "enemy_id":  "mob_disruptor_eco_01",
+                        "shape_id":  "oct",
+                        "palette":  "mob_red_dark",
+                        "motion":  "slow_spin"
+                    }
+                ],
+    "projectiles":  {
+                        "minion_default_shape":  "tri",
+                        "player_default_shape":  "circle",
+                        "default_palette":  "bullet_light",
+                        "trail_alpha":  0.35
+                    },
+    "palettes":  {
+                     "mob_red":  {
+                                     "fill":  "#E85D4C",
+                                     "outline":  "#FFFFFF"
+                                 },
+                     "mob_red_dark":  {
+                                          "fill":  "#C94A3D",
+                                          "outline":  "#FFFFFF"
+                                      },
+                     "bullet_light":  {
+                                          "fill":  "#FFF5F0",
+                                          "outline":  "#FFCCCC"
+                                      },
+                     "bullet_angular":  {
+                                            "fill":  "#FFFFFF",
+                                            "outline":  "#E85D4C"
+                                        },
+                     "player_blue":  {
+                                         "fill":  "#7EC8E8",
+                                         "outline":  "#FFFFFF"
+                                     }
+                 },
+    "shapes":  {
+                   "circle":  {
+                                  "type":  "circle",
+                                  "fill_rule":  "solid",
+                                  "_reserved":  "player_only",
+                                  "curves":  true
+                              },
+                   "tri":  {
+                               "type":  "regular_polygon",
+                               "sides":  3,
+                               "fill_rule":  "solid"
+                           },
+                   "square":  {
+                                  "type":  "regular_polygon",
+                                  "sides":  4,
+                                  "fill_rule":  "solid"
+                              },
+                   "pent":  {
+                                "type":  "regular_polygon",
+                                "sides":  5,
+                                "fill_rule":  "solid"
+                            },
+                   "hex":  {
+                               "type":  "regular_polygon",
+                               "sides":  6,
+                               "fill_rule":  "solid"
+                           },
+                   "oct":  {
+                               "type":  "regular_polygon",
+                               "sides":  8,
+                               "fill_rule":  "solid"
+                           },
+                   "diamond":  {
+                                   "type":  "regular_polygon",
+                                   "sides":  4,
+                                   "rotation_deg":  45,
+                                   "fill_rule":  "solid"
+                               },
+                   "star4":  {
+                                 "type":  "star",
+                                 "points":  4,
+                                 "fill_rule":  "solid",
+                                 "inner_radius_ratio":  0.42
+                             },
+                   "star5":  {
+                                 "type":  "star",
+                                 "points":  5,
+                                 "fill_rule":  "solid",
+                                 "inner_radius_ratio":  0.45
+                             },
+                   "star6":  {
+                                 "type":  "star",
+                                 "points":  6,
+                                 "fill_rule":  "solid",
+                                 "inner_radius_ratio":  0.48
+                             },
+                   "star8":  {
+                                 "type":  "star",
+                                 "points":  8,
+                                 "fill_rule":  "solid",
+                                 "inner_radius_ratio":  0.52
+                             },
+                   "hexagram":  {
+                                    "type":  "hexagram",
+                                    "fill_rule":  "solid"
+                                }
+               },
+    "shape_generators":  {
+                             "_note":  "运行时可用 sides 动态生成 ngon；小怪仍须 fill_rule=solid、无曲线",
+                             "ngon":  {
+                                          "type":  "regular_polygon",
+                                          "sides_min":  3,
+                                          "sides_max":  12,
+                                          "fill_rule":  "solid"
+                                      }
+                         }
+}

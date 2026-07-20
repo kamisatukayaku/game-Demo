@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "corruptions": [
+    {
+      "id": "corruption_glass_cannon",
+      "display_name": "玻璃大炮",
+      "description": "全伤害 +35%，最大生命 -20%。",
+      "positive_stat": "all_damage_mult",
+      "positive_value": 0.35,
+      "negative_stat": "max_hp_mult",
+      "negative_value": -0.2
+    },
+    {
+      "id": "corruption_blood_pact",
+      "display_name": "血契",
+      "description": "吸血 +8%，移速 -15%。",
+      "positive_stat": "lifesteal",
+      "positive_value": 0.08,
+      "negative_stat": "move_speed_mult",
+      "negative_value": -0.15
+    },
+    {
+      "id": "corruption_greed",
+      "display_name": "贪婪",
+      "description": "经验获取 +40%，减伤 -10%。",
+      "positive_stat": "exp_gain_mult",
+      "positive_value": 0.4,
+      "negative_stat": "damage_reduction",
+      "negative_value": -0.1
+    },
+    {
+      "id": "corruption_frenzy",
+      "display_name": "狂乱",
+      "description": "攻速 +30%，最大生命 -15%。",
+      "positive_stat": "weapon_attack_speed_mult",
+      "positive_value": 0.3,
+      "negative_stat": "max_hp_mult",
+      "negative_value": -0.15
+    },
+    {
+      "id": "corruption_brittle_power",
+      "display_name": "脆壳之力",
+      "description": "暴击伤害 +50%，全抗性 -15%。",
+      "positive_stat": "crit_damage_mult",
+      "positive_value": 0.5,
+      "negative_stat": "all_resist",
+      "negative_value": -0.15
+    },
+    {
+      "id": "corruption_reckless",
+      "display_name": "亡命狂奔",
+      "description": "移速 +25%，减伤 -12%。",
+      "positive_stat": "move_speed_mult",
+      "positive_value": 0.25,
+      "negative_stat": "damage_reduction",
+      "negative_value": -0.12
+    },
+    {
+      "id": "corruption_volatile",
+      "display_name": "易爆",
+      "description": "爆炸伤害 +40%，生命回复 -2/秒。",
+      "positive_stat": "explosion_damage_mult",
+      "positive_value": 0.4,
+      "negative_stat": "hp_regen",
+      "negative_value": -2
+    },
+    {
+      "id": "corruption_hunter",
+      "display_name": "猎杀者",
+      "description": "精英伤害 +35%，Boss 伤害 -15%。",
+      "positive_stat": "elite_damage_mult",
+      "positive_value": 0.35,
+      "negative_stat": "boss_damage_mult",
+      "negative_value": -0.15
+    }
+  ]
+}

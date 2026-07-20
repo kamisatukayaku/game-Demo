@@ -1,0 +1,52 @@
+{
+  "steps": [
+    {
+      "id": "move",
+      "message": "WASD 移动",
+      "priority": 3,
+      "anchor": "bottom"
+    },
+    {
+      "id": "dash",
+      "message": "按左 Shift 冲刺，可短暂规避伤害",
+      "priority": 3,
+      "anchor": "bottom"
+    },
+    {
+      "id": "auto_attack",
+      "message": "武器会自动寻找并攻击附近敌人",
+      "priority": 3,
+      "anchor": "bottom"
+    },
+    {
+      "id": "xp_pickup",
+      "message": "靠近能量核心以吸收经验",
+      "priority": 3,
+      "anchor": "bottom"
+    },
+    {
+      "id": "level_up",
+      "message": "选择强化，逐步构建本局能力",
+      "priority": 4,
+      "anchor": "level_up_footer"
+    },
+    {
+      "id": "detached_weapon",
+      "message": "外置核心会独立行动，并可进化为不同攻击形态",
+      "priority": 3,
+      "anchor": "bottom"
+    },
+    {
+      "id": "enemy_support",
+      "message": "支援者：会持续治疗附近敌人，优先击杀！",
+      "priority": 2,
+      "anchor": "bottom"
+    },
+    {
+      "id": "enemy_disruptor",
+      "message": "干扰者：会减速并削弱你，尽快处理！",
+      "priority": 2,
+      "anchor": "bottom"
+    }
+  ]
+}

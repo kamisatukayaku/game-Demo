@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "requires_tag": "dash",
+  "requires_tag_stacks": 1,
+  "upgrades": [
+    {
+      "tier": 1,
+      "id": "dash_melee_01",
+      "display_name": "冲刺斩击",
+      "description": "冲刺路径更宽，更容易撞到敌人。",
+      "category": "mechanic",
+      "mechanic_id": "dash_melee",
+      "requires_ids": ["foundation_dash_strike"],
+      "introduces_mechanic": false,
+      "offer_weight": 1.05,
+      "tags": ["mechanic", "contact", "dash", "melee"],
+      "modifiers": [
+        { "stat": "dash_strike_width_add", "op": "add", "value": 0.3 }
+      ]
+    },
+    {
+      "tier": 2,
+      "id": "dash_melee_02",
+      "display_name": "冲击推离",
+      "description": "冲刺命中会把普通敌人向前击退。",
+      "category": "mechanic",
+      "mechanic_id": "dash_melee",
+      "requires_ids": ["dash_melee_01"],
+      "offer_weight": 1.0,
+      "tags": ["mechanic", "contact", "dash", "melee", "control"],
+      "modifiers": [
+        { "stat": "dash_strike_knockback", "op": "add", "value": 5.8 }
+      ]
+    },
+    {
+      "tier": 3,
+      "id": "dash_melee_03",
+      "display_name": "动能尾流",
+      "description": "冲刺会留下短暂伤害轨迹。",
+      "category": "mechanic",
+      "mechanic_id": "dash_melee",
+      "requires_ids": ["dash_melee_02"],
+      "min_wave": 4,
+      "offer_weight": 1.0,
+      "tags": ["mechanic", "contact", "dash", "melee", "trail"],
+      "modifiers": [
+        { "stat": "dash_damage_trail", "op": "add", "value": 1 },
+        { "stat": "dash_damage_trail_ratio_add", "op": "add", "value": 0.1 },
+        { "stat": "dash_damage_trail_width_add", "op": "add", "value": 0.16 }
+      ]
+    },
+    {
+      "tier": 4,
+      "id": "dash_melee_04",
+      "display_name": "命中回充",
+      "description": "冲刺每命中一个新目标，返还少量冷却。",
+      "category": "mechanic",
+      "mechanic_id": "dash_melee",
+      "requires_ids": ["dash_melee_03"],
+      "min_wave": 7,
+      "offer_weight": 0.95,
+      "tags": ["mechanic", "contact", "dash", "melee", "cooldown"],
+      "modifiers": [
+        { "stat": "dash_strike_cooldown_refund", "op": "add", "value": 0.09 }
+      ]
+    },
+    {
+      "tier": 5,
+      "id": "dash_melee_05",
+      "display_name": "回锋突进",
+      "description": "一次冲刺命中多个敌人后，获得一次额外追击冲刺。冲刺终点产生小范围震荡。",
+      "category": "mechanic",
+      "mechanic_id": "dash_melee",
+      "requires_ids": ["dash_melee_04"],
+      "min_wave": 10,
+      "offer_weight": 0.75,
+      "tags": ["mechanic", "contact", "dash", "melee", "capstone"],
+      "modifiers": [
+        { "stat": "dash_pursuit_unlock", "op": "add", "value": 1 },
+        { "stat": "dash_pursuit_hit_threshold_add", "op": "add", "value": -1 },
+        { "stat": "dash_strike_aftershock_radius", "op": "add", "value": 1.8 }
+      ]
+    }
+  ]
+}

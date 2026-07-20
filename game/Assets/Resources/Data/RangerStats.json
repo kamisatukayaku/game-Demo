@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "pool": "ranger_stats",
+  "requires_tag": "projectile",
+  "tags": ["projectile"],
+  "upgrades": [
+    {"id":"num_ranger_projectile_speed","display_name":"弹速","description":"投射物飞得更快。","stat":"projectile_speed_mult","values":[0.14,0.12,0.10,0.08,0.06],"max_stacks":5,"offer_weight":0.8,"tags":["coverage"]},
+    {"id":"num_ranger_projectile_size","display_name":"弹体大小","description":"投射物命中范围扩大。","stat":"projectile_size_mult","values":[0.12,0.10,0.08,0.07,0.05],"max_stacks":5,"offer_weight":0.65,"tags":["coverage"]},
+    {"id":"num_ranger_fire_rate","display_name":"射击速度","description":"自动射击更快，最低间隔为0.2秒。","stat":"weapon_attack_speed_mult","values":[0.14,0.12,0.10,0.08,0.06],"max_stacks":5,"offer_weight":0.8,"tags":["rapid"]},
+    {"id":"num_ranger_crit_efficiency","display_name":"暴击伤害","description":"暴击造成更多伤害。","stat":"crit_damage_mult","values":[0.18,0.14,0.11,0.09,0.07],"max_stacks":5,"offer_weight":0.52,"tags":["critical"]},
+    {"id":"num_ranger_focus_round","display_name":"聚焦弹芯","description":"主弹伤害提高。","stat":"primary_projectile_damage_mult","values":[0.13,0.10,0.08],"max_stacks":3,"offer_weight":0.58,"tags":["projectile","single_target"]},
+    {"id":"num_ranger_marksman_line","display_name":"远距校准","description":"远距离命中伤害提高。","stat":"long_range_damage_mult","values":[0.12,0.09,0.07],"max_stacks":3,"offer_weight":0.55,"tags":["projectile","single_target","range"]}
+  ]
+}

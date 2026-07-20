@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "layouts": [
+    {
+      "id": "expanse",
+      "display_name": "广域",
+      "description": "环形竞技场，默认移速下约 10 秒可达边缘。",
+      "base_radius": 80,
+      "shape_hint": "circle",
+      "fill_color": "#2A4868",
+      "border_color": "#7AD4FF"
+    },
+    {
+      "id": "narrow_ring",
+      "display_name": "窄环",
+      "description": "更紧凑的环形竞技场，边缘压迫感更强。",
+      "base_radius": 22,
+      "shape_hint": "narrow_ring",
+      "fill_color": "#335A7A",
+      "border_color": "#C8F5FF"
+    },
+    {
+      "id": "island_chain",
+      "display_name": "岛链",
+      "description": "主环外散布三座能量岛，刷怪点沿岛链分布。",
+      "base_radius": 28,
+      "shape_hint": "island_chain",
+      "fill_color": "#2A4868",
+      "border_color": "#7AD4FF",
+      "islands": [
+        { "angle_deg": 30, "radius": 8, "orbit": 19 },
+        { "angle_deg": 150, "radius": 7, "orbit": 18 },
+        { "angle_deg": 270, "radius": 8, "orbit": 20 }
+      ]
+    },
+    {
+      "id": "cross",
+      "display_name": "十字",
+      "description": "十字走廊布局，四角为高风险刷怪区。",
+      "base_radius": 26,
+      "shape_hint": "cross",
+      "fill_color": "#3A2858",
+      "border_color": "#D8A8FF",
+      "corridor_width": 11
+    }
+  ]
+}

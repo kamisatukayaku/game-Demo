@@ -1,0 +1,102 @@
+{
+  "schema_version": 3,
+  "description": "Detached-weapon evolution affinity data. Unified runs do not hard-lock routes; legacy route entries are kept for old saves and simulations.",
+  "starter_evolution_routes": [
+    {
+      "starter_id": "unified",
+      "display_name": "自由离体路线",
+      "allowed_evolutions": ["laser", "missile", "explosion", "pulse", "boomerang", "trail"]
+    },
+    {
+      "starter_id": "mage",
+      "display_name": "法术兼容路线",
+      "allowed_evolutions": ["laser", "pulse"]
+    },
+    {
+      "starter_id": "shooter",
+      "display_name": "射击兼容路线",
+      "allowed_evolutions": ["missile", "explosion"]
+    },
+    {
+      "starter_id": "contact",
+      "display_name": "冲刺兼容路线",
+      "allowed_evolutions": ["boomerang", "trail"]
+    }
+  ],
+  "builds": [
+    {
+      "build_id": "unified",
+      "paths": [
+        {
+          "id": "gravity_tidal",
+          "display_name": "法术控制",
+          "tags": ["gravity_mastery", "gravity", "tidal_mastery", "tidal", "spell"],
+          "id_prefixes": ["mage_gravity_", "mage_tidal_", "num_mage_"]
+        },
+        {
+          "id": "projectile",
+          "display_name": "弹道压制",
+          "tags": ["rapid", "spread", "critical", "pierce", "projectile"],
+          "id_prefixes": ["eq_ranged_", "num_ranger_"]
+        },
+        {
+          "id": "dash_contact",
+          "display_name": "冲刺星环",
+          "tags": ["dash", "melee", "contact", "boomerang", "trail", "orbit"],
+          "id_prefixes": ["dash_melee_", "evo_boomerang_", "evo_trail_", "num_part_"]
+        },
+        {
+          "id": "detached_network",
+          "display_name": "离体网络",
+          "tags": ["detached", "detached_weapon", "laser", "missile", "explosion", "pulse"],
+          "id_prefixes": ["evo_laser_", "evo_missile_", "evo_explosion_", "evo_pulse_"]
+        }
+      ]
+    },
+    {
+      "build_id": "mage",
+      "paths": [
+        {
+          "id": "gravity",
+          "display_name": "引力织网",
+          "tags": ["gravity_mastery", "gravity"],
+          "id_prefixes": ["mage_gravity_", "num_mage_gravity"]
+        },
+        {
+          "id": "tidal",
+          "display_name": "潮汐控场",
+          "tags": ["tidal_mastery", "tidal"],
+          "id_prefixes": ["mage_tidal_", "num_mage_tidal"]
+        }
+      ]
+    },
+    {
+      "build_id": "shooter",
+      "paths": [
+        {
+          "id": "rapid",
+          "display_name": "弹幕过载",
+          "tags": ["rapid", "spread"],
+          "id_prefixes": ["eq_ranged_bh_", "num_ranger_fire_rate", "num_ranger_projectile_speed"]
+        },
+        {
+          "id": "sniper",
+          "display_name": "精准狙击",
+          "tags": ["critical", "pierce"],
+          "id_prefixes": ["eq_ranged_sn_", "num_ranger_crit_efficiency"]
+        }
+      ]
+    },
+    {
+      "build_id": "contact",
+      "paths": [
+        {
+          "id": "contact_core",
+          "display_name": "疾风破阵",
+          "tags": ["dash", "melee", "contact", "boomerang", "trail", "return", "movement", "orbit"],
+          "id_prefixes": ["dash_melee_", "evo_boomerang_", "evo_trail_", "num_part_orbit", "num_part_damage"]
+        }
+      ]
+    }
+  ]
+}

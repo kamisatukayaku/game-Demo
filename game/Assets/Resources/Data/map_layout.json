@@ -1,0 +1,9 @@
+{
+  "schema_version": 2,
+  "_note": "原型：仅温湿噪声选群系，无结构地标 / Boss 区 / 污染档",
+  "pollution_field": null,
+  "pollution_tiers": [],
+  "boss_zone": null,
+  "corner_boss_zones": [],
+  "structure_landmarks": []
+}

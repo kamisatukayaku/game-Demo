@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "evolution": {
+    "id": "laser",
+    "name": "激光进化",
+    "behavior_verb": "折射",
+    "fantasy_text": "光束在棱镜间折返，切割路径上的每一道阴影。",
+    "source_weapon": "contact_weapon",
+    "advanced_form": "laser_shot",
+    "movement_model": "random_wander",
+    "evolution_condition": {
+      "description": "需要指定的 Contact Weapon 达到 Lv3。",
+      "source_weapon_level": 3
+    },
+    "tiers": [
+      {
+        "tier": 1,
+        "id": "focused_beam",
+        "name": "????",
+        "description": "?????????????????",
+        "gameplay_change": "转化为自主游走的远程光束核心。"
+      },
+      {
+        "tier": 2,
+        "id": "twin_refraction",
+        "name": "????",
+        "description": "???????????",
+        "gameplay_change": "单线攻击变为双方向覆盖。"
+      },
+      {
+        "tier": 3,
+        "id": "prism_edge",
+        "name": "????",
+        "description": "?????????????",
+        "gameplay_change": "转化为宽幅区域切割。"
+      },
+      {
+        "tier": 4,
+        "id": "orbital_sweep",
+        "name": "????",
+        "description": "????????????",
+        "gameplay_change": "获得动态扫描覆盖。"
+      },
+      {
+        "tier": 5,
+        "id": "prism_array",
+        "name": "????",
+        "description": "??????????????????",
+        "gameplay_change": "形成完整棱镜网络。"
+      }
+    ],
+    "final_form": {
+      "id": "prism_array",
+      "name": "棱镜阵列",
+      "description": "双向宽幅扫描通过棱镜节点持续折射，组成不断重构的能量网络。"
+    }
+  }
+}

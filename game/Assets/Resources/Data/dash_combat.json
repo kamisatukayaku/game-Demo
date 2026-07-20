@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "dash_combat": {
+    "base": {
+      "distance": 5.0,
+      "duration": 0.15,
+      "cooldown": 2.0,
+      "minimum_cooldown": 0.35,
+      "invincible_time": 0.15,
+      "strike_damage": 18.0,
+      "strike_width": 0.72,
+      "knockback": 0.0,
+      "cooldown_refund_cap_ratio": 0.5,
+      "aftershock_damage_ratio": 0.65,
+      "aftershock_radius": 0.0,
+      "aftershock_knockback": 5.0,
+      "input_grace_seconds": 0.15,
+      "pursuit_hit_threshold": 3,
+      "pursuit_window_seconds": 2.5,
+      "pursuit_distance_mult": 0.85,
+      "boss_knockback_scale": 0.12,
+      "elite_knockback_scale": 0.55
+    }
+  }
+}

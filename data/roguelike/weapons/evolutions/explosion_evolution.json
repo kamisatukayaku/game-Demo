@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "evolution": {
+    "id": "explosion",
+    "name": "爆炸进化",
+    "behavior_verb": "连锁",
+    "fantasy_text": "每一次碰撞都点燃下一环爆点，死亡亦是燃料。",
+    "source_weapon": "contact_weapon",
+    "advanced_form": "explosion",
+    "movement_model": "random_wander",
+    "evolution_condition": {
+      "description": "需要指定的 Contact Weapon 达到 Lv3。",
+      "source_weapon_level": 3
+    },
+    "tiers": [
+      {
+        "tier": 1,
+        "id": "impact_burst",
+        "name": "????",
+        "description": "????????????",
+        "gameplay_change": "接触伤害转化为范围爆破。"
+      },
+      {
+        "tier": 2,
+        "id": "expanding_charge",
+        "name": "????",
+        "description": "???????????",
+        "gameplay_change": "扩大有效覆盖。"
+      },
+      {
+        "tier": 3,
+        "id": "chain_detonation",
+        "name": "????",
+        "description": "?????????????",
+        "gameplay_change": "形成连环传播。"
+      },
+      {
+        "tier": 4,
+        "id": "death_charge",
+        "name": "????",
+        "description": "?????????????",
+        "gameplay_change": "击杀成为爆破链燃料。"
+      },
+      {
+        "tier": 5,
+        "id": "nuclear_chain",
+        "name": "???",
+        "description": "???????????????",
+        "gameplay_change": "形成完整核爆链。"
+      }
+    ],
+    "final_form": {
+      "id": "nuclear_chain",
+      "name": "核爆链",
+      "description": "碰撞、连锁与击杀爆破持续传播并汇聚为大型能量爆发。"
+    }
+  }
+}

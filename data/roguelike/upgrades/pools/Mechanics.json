@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "requires_tag": "projectile",
+  "upgrades": [
+    {
+      "tier": 1,
+      "id": "mechanic_pierce_01",
+      "display_name": "超穿透",
+      "description": "穿透链完成后，再 +1 穿透。",
+      "category": "mechanic",
+      "mechanic_id": "pierce",
+      "requires_ids": ["eq_ranged_pc_05"],
+      "offer_weight": 0.45,
+      "tags": ["mechanic", "projectile", "pierce"],
+      "modifiers": [{ "stat": "projectile_pierce", "op": "add", "value": 1 }]
+    },
+    {
+      "tier": 2,
+      "id": "mechanic_pierce_02",
+      "display_name": "极限贯穿",
+      "description": "再 +1 穿透，适合清理长线敌群。",
+      "category": "mechanic",
+      "mechanic_id": "pierce",
+      "requires_ids": ["mechanic_pierce_01"],
+      "offer_weight": 0.55,
+      "tags": ["mechanic", "projectile", "pierce"],
+      "modifiers": [{ "stat": "projectile_pierce", "op": "add", "value": 1 }]
+    },
+    {
+      "tier": 1,
+      "id": "mechanic_homing_01",
+      "display_name": "弱追踪",
+      "description": "投射物会缓慢修正轨迹接近目标。",
+      "category": "mechanic",
+      "mechanic_id": "homing",
+      "introduces_mechanic": true,
+      "offer_weight": 0.35,
+      "tags": ["mechanic", "projectile", "homing"],
+      "modifiers": [{ "stat": "projectile_weak_homing", "op": "add", "value": 1 }]
+    },
+    {
+      "tier": 2,
+      "id": "mechanic_homing_02",
+      "display_name": "追踪校准",
+      "description": "投射物转向能力增强。",
+      "category": "mechanic",
+      "mechanic_id": "homing",
+      "requires_ids": ["mechanic_homing_01"],
+      "offer_weight": 0.8,
+      "tags": ["mechanic", "projectile", "homing"],
+      "modifiers": [{ "stat": "projectile_homing_turn_add", "op": "add", "value": 35 }]
+    },
+    {
+      "tier": 1,
+      "id": "mechanic_split_01",
+      "display_name": "命中分裂",
+      "description": "投射物命中后生成两个次级投射物。",
+      "category": "mechanic",
+      "mechanic_id": "split",
+      "introduces_mechanic": true,
+      "offer_weight": 0.3,
+      "tags": ["mechanic", "projectile", "split"],
+      "modifiers": [{ "stat": "projectile_split_on_hit", "op": "add", "value": 2 }]
+    },
+    {
+      "tier": 2,
+      "id": "mechanic_split_02",
+      "display_name": "扩散分裂",
+      "description": "次级投射物以更宽角度寻找不同目标。",
+      "category": "mechanic",
+      "mechanic_id": "split",
+      "requires_ids": ["mechanic_split_01"],
+      "offer_weight": 0.75,
+      "tags": ["mechanic", "projectile", "split"],
+      "modifiers": [{ "stat": "projectile_split_on_hit", "op": "add", "value": 2 }]
+    },
+    {
+      "tier": 1,
+      "id": "mechanic_slot_01",
+      "display_name": "机制槽扩展",
+      "description": "机制槽上限 +1。",
+      "category": "numeric",
+      "offer_weight": 0.2,
+      "tags": ["system"],
+      "modifiers": [{ "stat": "mechanic_slots", "op": "add", "value": 1 }]
+    },
+    {
+      "tier": 2,
+      "id": "mechanic_slot_02",
+      "display_name": "机制槽扩展 II",
+      "description": "机制槽上限再 +1。",
+      "category": "numeric",
+      "requires_ids": ["mechanic_slot_01"],
+      "offer_weight": 0.15,
+      "tags": ["system"],
+      "modifiers": [{ "stat": "mechanic_slots", "op": "add", "value": 1 }]
+    },
+    {
+      "tier": 3,
+      "id": "mechanic_slot_03",
+      "display_name": "机制槽扩展 III",
+      "description": "机制槽达到最终上限。",
+      "category": "numeric",
+      "requires_ids": ["mechanic_slot_02"],
+      "offer_weight": 0.1,
+      "tags": ["system"],
+      "modifiers": [{ "stat": "mechanic_slots", "op": "add", "value": 1 }]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "pool": "part_stats",
+  "requires_tag": "detached",
+  "tags": ["detached_weapon"],
+  "upgrades": [
+    {"id":"num_part_contact_core","display_name":"星环核心强化","description":"提升外置武器等级；达到 III 后可选择进化路线。","stat":"detached_contact_level","values":[1,1,1],"max_stacks":3,"offer_weight":1.0,"tags":["detached_weapon"]},
+    {"id":"num_part_damage","display_name":"无人武器火力","description":"所有外置武器伤害提高。","stat":"detached_part_damage_mult","values":[0.10,0.08,0.07,0.05,0.04],"max_stacks":5,"offer_weight":0.72,"tags":["part_damage"]},
+    {"id":"num_part_orbit_speed","display_name":"无人武器机动","description":"外置武器移动、追击和游走速度提高。","stat":"detached_contact_orbit_speed_mult","values":[0.12,0.10,0.08,0.07,0.05],"max_stacks":5,"offer_weight":0.65,"tags":["detached_weapon"]},
+    {"id":"num_part_orbit_radius","display_name":"星环活动域","description":"星环半径和外置武器活动范围扩大。","stat":"detached_contact_radius_mult","values":[0.18,0.14,0.11,0.09,0.07],"max_stacks":5,"offer_weight":0.68,"tags":["detached_weapon","area"]},
+    {"id":"num_part_count","display_name":"星环核心 +1","description":"新增 1 个外置武器，最多 6 个。","stat":"detached_part_count","values":[1,1,1,1,1],"max_stacks":5,"offer_weight":0.45,"tags":["part_count","part_spawn"]}
+  ]
+}

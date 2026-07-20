@@ -1,0 +1,45 @@
+{
+    "schema_version":  8,
+    "_note":  "Arena curve tuned via ProgressionCurveSimulator (W1 L2-3, W5 L8-11, W10 L15-19, W15 L20).",
+    "level_curve":  {
+                        "xp_base":  180,
+                        "xp_growth":  1.145,
+                        "max_level":  25
+                    },
+    "survival_tuning": {
+                        "heal_on_kill_budget_per_second": 4.0,
+                        "heal_on_kill_budget_window_seconds": 1.0
+                    },
+    "offer_config":  {
+                         "choices_per_level":  3,
+                         "auxiliary_offer_chance":  0.65,
+                         "gameplay_weight":  1.0,
+                         "attribute_weight":  1.0,
+                         "build_tag_bonus_per_stack":  0.38,
+                         "chain_continuation_bonus":  1.65,
+                         "group_targets": {
+                           "gameplay": 0.40,
+                           "player": 0.25,
+                           "detached": 0.20,
+                           "numeric": 0.15
+                         }
+                     },
+    "routes":  [
+                   {
+                       "id":  "equipment",
+                       "display_name":  "装备"
+                   },
+                   {
+                       "id":  "skill",
+                       "display_name":  "技能"
+                   },
+                   {
+                       "id":  "player",
+                       "display_name":  "角色"
+                   }
+               ],
+    "upgrade_files":  [
+                          "upgrades/ranged_upgrades",
+                          "upgrades/mage_upgrades"
+                      ]
+}

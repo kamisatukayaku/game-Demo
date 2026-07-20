@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "_note": "Roguelike active skills for Mage. Arcane Missile is bound to primary attack.",
+  "classes": [
+    {
+      "id": "unified",
+      "slots": [
+        {
+          "slot": 1,
+          "id": "skill_mage_gravity_well",
+          "display_name": "引力井",
+          "kind": "gravity_well",
+          "attack_profile_id": "skill_mage_gravity_well",
+          "cooldown": 7.0,
+          "base_radius": 3.2,
+          "duration": 3.0
+        },
+        {
+          "slot": 2,
+          "id": "skill_mage_tidal_pulse",
+          "display_name": "潮汐脉冲",
+          "kind": "tidal_pulse",
+          "attack_profile_id": "skill_mage_tidal_pulse",
+          "cooldown": 9.0,
+          "base_radius": 3.0,
+          "duration": 3.5,
+          "_legacy_ids": ["skill_mage_frost_ward"]
+        }
+      ]
+    },
+    {
+      "id": "mage",
+      "slots": [
+        {
+          "slot": 1,
+          "id": "skill_mage_gravity_well",
+          "display_name": "引力井",
+          "kind": "gravity_well",
+          "attack_profile_id": "skill_mage_gravity_well",
+          "cooldown": 7.0,
+          "base_radius": 3.2,
+          "duration": 3.0
+        },
+        {
+          "slot": 2,
+          "id": "skill_mage_tidal_pulse",
+          "display_name": "潮汐脉冲",
+          "kind": "tidal_pulse",
+          "attack_profile_id": "skill_mage_tidal_pulse",
+          "cooldown": 9.0,
+          "base_radius": 3.0,
+          "duration": 3.5,
+          "_legacy_ids": ["skill_mage_frost_ward"]
+        }
+      ]
+    }
+  ]
+}

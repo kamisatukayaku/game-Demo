@@ -1,0 +1,1128 @@
+﻿{
+    "class_id":  "melee",
+    "route":  "equipment",
+    "upgrades":  [
+                     {
+                         "tier":  1,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_1",
+                         "display_name":  "利刃研磨",
+                         "description":  "近战伤害 +15%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  1,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_1b",
+                         "display_name":  "加速神经",
+                         "description":  "近战攻速 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_attack_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  2,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_2",
+                         "display_name":  "延伸刀锋",
+                         "description":  "攻击范围 +0.4",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_range_add",
+                                               "op":  "add",
+                                               "value":  0.4
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_1"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  2,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_2b",
+                         "display_name":  "重劈",
+                         "description":  "近战伤害 +18%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.18
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_1"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  3,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_3",
+                         "display_name":  "嗜血",
+                         "description":  "吸血 +5%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lifesteal",
+                                               "op":  "add",
+                                               "value":  0.05
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_2"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  3,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_3b",
+                         "display_name":  "弱点洞悉",
+                         "description":  "暴击率 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_2"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  4,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_4",
+                         "display_name":  "震荡波",
+                         "description":  "近战命中产生范围爆炸（半径 1.5）",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "melee_explosion_radius",
+                                               "op":  "add",
+                                               "value":  1.5
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_3",
+                                              "eq_melee_3b"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  4,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_4b",
+                         "display_name":  "连斩",
+                         "description":  "近战攻速 +15%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_attack_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_3",
+                                              "eq_melee_3b"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  5,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_5",
+                         "display_name":  "裂骨",
+                         "description":  "近战伤害 +22%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.22
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_4",
+                                              "eq_melee_3"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  5,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_5b",
+                         "display_name":  "击退猛击",
+                         "description":  "近战命中击退敌人 +30% 概率",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "melee_knockback_chance",
+                                               "op":  "add",
+                                               "value":  0.3
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_4",
+                                              "eq_melee_3"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  6,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_6",
+                         "display_name":  "横扫",
+                         "description":  "攻击范围 +0.55",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_range_add",
+                                               "op":  "add",
+                                               "value":  0.55
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_5",
+                                              "eq_melee_4"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  6,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_6b",
+                         "display_name":  "致残打击",
+                         "description":  "近战命中减速敌人 25%，持续 1.5 秒",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "melee_slow_chance",
+                                               "op":  "add",
+                                               "value":  0.25
+                                           },
+                                           {
+                                               "stat":  "melee_slow_amount",
+                                               "op":  "add",
+                                               "value":  0.35
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_5",
+                                              "eq_melee_4"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  7,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_7",
+                         "display_name":  "处决",
+                         "description":  "暴击率 +10%，暴击伤害 +30%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           },
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.3
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_6",
+                                              "eq_melee_5"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  7,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_7b",
+                         "display_name":  "溅血",
+                         "description":  "近战伤害 +25%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.25
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_6",
+                                              "eq_melee_5"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  8,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_8",
+                         "display_name":  "刀扇",
+                         "description":  "额外弹体 +1（向前扇形发射）",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_extra_projectile",
+                                               "op":  "add",
+                                               "value":  1
+                                           }
+                                       ],
+                         "prerequisite":  {
+                                              "stat":  "weapon_extra_projectile",
+                                              "op":  "lt",
+                                              "value":  3
+                                          },
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_7",
+                                              "eq_melee_6"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  8,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_8b",
+                         "display_name":  "撕裂",
+                         "description":  "近战命中施加流血，每秒 5 伤害持续 3 秒",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "melee_bleed_dps",
+                                               "op":  "add",
+                                               "value":  5
+                                           },
+                                           {
+                                               "stat":  "melee_bleed_duration",
+                                               "op":  "add",
+                                               "value":  3
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_7",
+                                              "eq_melee_6"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  9,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_9",
+                         "display_name":  "狂刃",
+                         "description":  "近战伤害 +28%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.28
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_8",
+                                              "eq_melee_7"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  9,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_9b",
+                         "display_name":  "暴风斩",
+                         "description":  "爆炸半径 +0.8，攻速 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "melee_explosion_radius",
+                                               "op":  "add",
+                                               "value":  0.8
+                                           },
+                                           {
+                                               "stat":  "weapon_attack_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "prerequisite":  {
+                                              "stat":  "melee_explosion_radius",
+                                              "op":  "gte",
+                                              "value":  1
+                                          },
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_8",
+                                              "eq_melee_7"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  10,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_10",
+                         "display_name":  "碎星",
+                         "description":  "近战伤害 +32%，暴击伤害 +50%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.32
+                                           },
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.5
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_9",
+                                              "eq_melee_8"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  10,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_10b",
+                         "display_name":  "血宴",
+                         "description":  "吸血 +8%，最大生命 +12%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lifesteal",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           },
+                                           {
+                                               "stat":  "max_hp_mult",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_9",
+                                              "eq_melee_8"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  11,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_11",
+                         "display_name":  "影刃",
+                         "description":  "攻击范围 +0.7，移动速度 +10%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_range_add",
+                                               "op":  "add",
+                                               "value":  0.7
+                                           },
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_10",
+                                              "eq_melee_9"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  11,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_11b",
+                         "display_name":  "连斩如风",
+                         "description":  "近战攻速 +20%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_attack_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.2
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_10",
+                                              "eq_melee_9"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  12,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_12",
+                         "display_name":  "灾厄",
+                         "description":  "近战伤害 +35%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.35
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_11",
+                                              "eq_melee_10"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  12,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_12b",
+                         "display_name":  "刀光",
+                         "description":  "额外弹体 +1",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_extra_projectile",
+                                               "op":  "add",
+                                               "value":  1
+                                           }
+                                       ],
+                         "prerequisite":  {
+                                              "stat":  "weapon_extra_projectile",
+                                              "op":  "lt",
+                                              "value":  3
+                                          },
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_11",
+                                              "eq_melee_10"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  13,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_13",
+                         "display_name":  "猎头者",
+                         "description":  "暴击率 +12%，对精英伤害 +20%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.12
+                                           },
+                                           {
+                                               "stat":  "elite_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.2
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_12",
+                                              "eq_melee_11"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  13,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_13b",
+                         "display_name":  "粉碎",
+                         "description":  "爆炸半径 +1.2",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "melee_explosion_radius",
+                                               "op":  "add",
+                                               "value":  1.2
+                                           }
+                                       ],
+                         "prerequisite":  {
+                                              "stat":  "melee_explosion_radius",
+                                              "op":  "gte",
+                                              "value":  1
+                                          },
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_12",
+                                              "eq_melee_11"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  14,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_14",
+                         "display_name":  "嗜血狂魔",
+                         "description":  "吸血 +10%，生命偷取溢出转为护盾",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "lifesteal",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           },
+                                           {
+                                               "stat":  "overheal_shield",
+                                               "op":  "add",
+                                               "value":  1
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_13",
+                                              "eq_melee_12"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  14,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_14b",
+                         "display_name":  "风怒",
+                         "description":  "近战攻速 +18%，移动速度 +8%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_attack_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.18
+                                           },
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.08
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_13",
+                                              "eq_melee_12"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  15,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_15",
+                         "display_name":  "灭世",
+                         "description":  "近战伤害 +40%，攻击范围 +0.8",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.4
+                                           },
+                                           {
+                                               "stat":  "weapon_range_add",
+                                               "op":  "add",
+                                               "value":  0.8
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_14",
+                                              "eq_melee_13"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  15,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_15b",
+                         "display_name":  "弹幕刀锋",
+                         "description":  "额外弹体 +1（达到最大弹体数 3）",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_extra_projectile",
+                                               "op":  "add",
+                                               "value":  1
+                                           }
+                                       ],
+                         "prerequisite":  {
+                                              "stat":  "weapon_extra_projectile",
+                                              "op":  "eq",
+                                              "value":  2
+                                          },
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_14",
+                                              "eq_melee_13"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  16,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_16b",
+                         "display_name":  "压碎",
+                         "description":  "对减速敌人伤害 +30%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "slow_target_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.3
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_15",
+                                              "eq_melee_14"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  17,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_17",
+                         "display_name":  "天罚",
+                         "description":  "近战伤害 +45%，暴击率 +15%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.45
+                                           },
+                                           {
+                                               "stat":  "crit_chance",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_16b",
+                                              "eq_melee_15"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  17,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_17b",
+                         "display_name":  "灼热刀锋",
+                         "description":  "近战命中施加灼烧，每秒 8 伤害持续 3 秒",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "melee_burn_dps",
+                                               "op":  "add",
+                                               "value":  8
+                                           },
+                                           {
+                                               "stat":  "melee_burn_duration",
+                                               "op":  "add",
+                                               "value":  3
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_16b",
+                                              "eq_melee_15"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  18,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_18",
+                         "display_name":  "终焉",
+                         "description":  "暴击伤害 +80%，对首领伤害 +25%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "crit_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.8
+                                           },
+                                           {
+                                               "stat":  "boss_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.25
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_17",
+                                              "eq_melee_16b"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  18,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_18b",
+                         "display_name":  "嗜血光环",
+                         "description":  "击杀回复最大生命 3%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "heal_on_kill_pct",
+                                               "op":  "add",
+                                               "value":  0.03
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_17",
+                                              "eq_melee_16b"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  19,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_19",
+                         "display_name":  "神速",
+                         "description":  "攻速 +25%，移动速度 +15%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_attack_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.25
+                                           },
+                                           {
+                                               "stat":  "move_speed_mult",
+                                               "op":  "add",
+                                               "value":  0.15
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_18",
+                                              "eq_melee_17"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  19,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_19b",
+                         "display_name":  "毁灭冲击",
+                         "description":  "爆炸半径 +1.5，爆炸伤害 +40%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "melee_explosion_radius",
+                                               "op":  "add",
+                                               "value":  1.5
+                                           },
+                                           {
+                                               "stat":  "explosion_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.4
+                                           }
+                                       ],
+                         "prerequisite":  {
+                                              "stat":  "melee_explosion_radius",
+                                              "op":  "gte",
+                                              "value":  2
+                                          },
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_18",
+                                              "eq_melee_17"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  20,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_20",
+                         "display_name":  "神罚·终",
+                         "description":  "近战伤害 +50%，全伤害 +20%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "weapon_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.5
+                                           },
+                                           {
+                                               "stat":  "all_damage_mult",
+                                               "op":  "add",
+                                               "value":  0.2
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_19",
+                                              "eq_melee_18"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     },
+                     {
+                         "tier":  20,
+                         "weapon_theme":  "melee",
+                         "id":  "eq_melee_20b",
+                         "display_name":  "不死",
+                         "description":  "减伤 +10%，最大生命 +20%",
+                         "modifiers":  [
+                                           {
+                                               "stat":  "damage_reduction",
+                                               "op":  "add",
+                                               "value":  0.1
+                                           },
+                                           {
+                                               "stat":  "max_hp_mult",
+                                               "op":  "add",
+                                               "value":  0.2
+                                           }
+                                       ],
+                         "classes":  [
+                                         "melee"
+                                     ],
+                         "requires_ids":  [
+                                              "eq_melee_19",
+                                              "eq_melee_18"
+                                          ],
+                         "tags":  [
+                                      "melee"
+                                  ],
+                         "category":  "gameplay",
+                         "offer_weight":  1
+                     }
+                 ]
+}

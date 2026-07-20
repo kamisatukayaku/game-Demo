@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "upgrades": [
+    {
+      "tier": 1,
+      "id": "orbit_blade_01",
+      "display_name": "黑环启动",
+      "description": "激活黑色环绕武器系统，获得1颗围绕玩家旋转的黑色星环。",
+      "category": "mechanic",
+      "mechanic_id": "orbit_blade",
+      "introduces_mechanic": true,
+      "offer_weight": 1.05,
+      "tags": ["mechanic", "orbit", "blade"],
+      "modifiers": [
+        { "stat": "warrior_weapon_count", "op": "add", "value": 1 }
+      ]
+    },
+    {
+      "tier": 2,
+      "id": "orbit_blade_02",
+      "display_name": "环距扩展",
+      "description": "星环数量 +1，旋转半径略微提高。",
+      "category": "mechanic",
+      "mechanic_id": "orbit_blade",
+      "requires_ids": ["orbit_blade_01"],
+      "offer_weight": 1.0,
+      "tags": ["mechanic", "orbit", "blade"],
+      "modifiers": [
+        { "stat": "warrior_weapon_count", "op": "add", "value": 1 },
+        { "stat": "warrior_radius", "op": "add", "value": 0.35 }
+      ]
+    },
+    {
+      "tier": 3,
+      "id": "orbit_blade_03",
+      "display_name": "灵刃出鞘",
+      "description": "星环可以飞出追击敌人。若已拥有冲刺撞击，冲刺结束后会触发出鞘追击。",
+      "category": "mechanic",
+      "mechanic_id": "orbit_blade",
+      "requires_ids": ["orbit_blade_02"],
+      "min_wave": 4,
+      "offer_weight": 1.0,
+      "tags": ["mechanic", "orbit", "blade", "spirit_blade"],
+      "modifiers": [
+        { "stat": "warrior_spirit_enabled", "op": "add", "value": 1 },
+        { "stat": "warrior_spiritblade_count", "op": "add", "value": 1 },
+        { "stat": "warrior_spiritblade_speed", "op": "add", "value": 0.3 },
+        { "stat": "warrior_spiritblade_return_speed", "op": "add", "value": 0.2 }
+      ]
+    },
+    {
+      "tier": 4,
+      "id": "orbit_blade_04",
+      "display_name": "回锋轨迹",
+      "description": "飞出的星环移动时留下伤害轨迹，并可多命中1个目标。",
+      "category": "mechanic",
+      "mechanic_id": "orbit_blade",
+      "requires_ids": ["orbit_blade_03"],
+      "min_wave": 7,
+      "offer_weight": 0.95,
+      "tags": ["mechanic", "orbit", "blade", "spirit_blade", "trail"],
+      "modifiers": [
+        { "stat": "warrior_spiritblade_trail", "op": "add", "value": 1 },
+        { "stat": "warrior_spiritblade_pierce", "op": "add", "value": 1 },
+        { "stat": "warrior_spiritblade_speed", "op": "add", "value": 0.2 }
+      ]
+    },
+    {
+      "tier": 5,
+      "id": "orbit_blade_05",
+      "display_name": "刃环共振",
+      "description": "灵刃出鞘窗口更长。若已拥有冲刺撞击，冲刺后的灵刃追击更稳定。",
+      "category": "mechanic",
+      "mechanic_id": "orbit_blade",
+      "requires_ids": ["orbit_blade_04"],
+      "min_wave": 10,
+      "offer_weight": 0.75,
+      "tags": ["mechanic", "orbit", "blade", "spirit_blade", "capstone"],
+      "modifiers": [
+        { "stat": "warrior_spirit_infinite", "op": "add", "value": 1 },
+        { "stat": "warrior_spiritblade_return_speed", "op": "add", "value": 0.35 },
+        { "stat": "warrior_damage", "op": "add", "value": 2 }
+      ]
+    }
+  ]
+}

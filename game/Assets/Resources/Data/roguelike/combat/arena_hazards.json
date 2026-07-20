@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "rotation_waves": [5, 10, 15],
+  "hazards": [
+    {
+      "id": "toxic_edge",
+      "display_name": "毒边",
+      "description": "外环边缘持续伤害，靠近边界越痛。",
+      "edge_damage_mult": 1.35,
+      "tick_interval": 0.35
+    },
+    {
+      "id": "laser_sweep",
+      "display_name": "激光扫射",
+      "description": "旋转激光线扫过 Arena，触碰即伤。",
+      "rotation_deg_per_sec": 24,
+      "line_half_width": 1.15,
+      "damage_per_tick": 12,
+      "tick_interval": 0.28
+    },
+    {
+      "id": "gravity_well",
+      "display_name": "重力井",
+      "description": "仅在引力圈内向圆心牵引，靠近中心受到压迫伤害。",
+      "pull_strength": 2.4,
+      "pull_radius": 10.5,
+      "core_radius": 3.8,
+      "core_damage_per_tick": 6,
+      "tick_interval": 0.45
+    }
+  ]
+}

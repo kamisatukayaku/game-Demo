@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "obstacles": [
+    {
+      "wave": 10,
+      "layout_id": "cross_pillars",
+      "display_name": "十字柱阵",
+      "description": "中央十字障碍改变走位。"
+    },
+    {
+      "wave": 15,
+      "layout_id": "rotating_bar",
+      "display_name": "旋转障碍",
+      "description": "中央旋转条迫使绕行。"
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "_note": "饰品/道具定义 — 5级品质体系：cursed(诅咒，仅负面，事件/难度选择)/damaged(破损，小加成，怪物掉落，同种至多3个)/intact(完好，较大加成)/refined(精致，机制级效果)/mysterious(神秘，事件专属，正反混合或影响分支)。",
+  "max_stacks_by_quality": {
+    "cursed": 1,
+    "damaged": 3,
+    "intact": 3,
+    "refined": 2,
+    "mysterious": 1
+  },
+  "items": [
+    {
+      "item_id": "cursed_gold_fever",
+      "display_name": "贪婪印记",
+      "description": "商店变得贪婪，所有商品价格提高30%。诅咒越深，代价越大。",
+      "category": "accessory",
+      "quality": "cursed",
+      "shop_price": 0,
+      "source": "event",
+      "affixes": [
+        { "key": "shop_price_mult", "value": 0.30 }
+      ]
+    },
+    {
+      "item_id": "cursed_fragile_bones",
+      "display_name": "脆弱骨骼",
+      "description": "你的骨骼变得异常脆弱。最大生命值-15%。",
+      "category": "accessory",
+      "quality": "cursed",
+      "shop_price": 0,
+      "source": "event",
+      "affixes": [
+        { "key": "max_hp_mult", "value": -0.15 }
+      ]
+    },
+    {
+      "item_id": "cursed_feeble_arms",
+      "display_name": "孱弱臂膀",
+      "description": "你的手臂软弱无力。攻击力-15%。",
+      "category": "accessory",
+      "quality": "cursed",
+      "shop_price": 0,
+      "source": "event",
+      "affixes": [
+        { "key": "attack_mult", "value": -0.15 }
+      ]
+    },
+    {
+      "item_id": "cursed_slow_reflexes",
+      "display_name": "迟钝神经",
+      "description": "反应变得迟钝。移动速度-20%。",
+      "category": "accessory",
+      "quality": "cursed",
+      "shop_price": 0,
+      "source": "event",
+      "affixes": [
+        { "key": "move_speed_mult", "value": -0.20 }
+      ]
+    },
+    {
+      "item_id": "cursed_unstable_form",
+      "display_name": "不稳定形态",
+      "description": "防御力大幅下降。防御值-50%。",
+      "category": "accessory",
+      "quality": "cursed",
+      "shop_price": 0,
+      "source": "event",
+      "affixes": [
+        { "key": "defense_mult", "value": -0.50 }
+      ]
+    },
+    {
+      "item_id": "cursed_bleak_luck",
+      "display_name": "厄运缠身",
+      "description": "霉运笼罩着你。暴击率归零。",
+      "category": "accessory",
+      "quality": "cursed",
+      "shop_price": 0,
+      "source": "event",
+      "affixes": [
+        { "key": "crit_chance", "value": -1.00 }
+      ]
+    },
+    {
+      "item_id": "minor_power_ring",
+      "display_name": "小型力量戒指",
+      "description": "一枚做工粗糙但有效的戒指。攻击力+10%。(破损，至多叠加3个)",
+      "category": "accessory",
+      "quality": "damaged",
+      "shop_price": 50,
+      "source": "drop",
+      "affixes": [
+        { "key": "attack_mult", "value": 0.10 }
+      ]
+    },
+    {
+      "item_id": "minor_vitality_charm",
+      "display_name": "小型活力符",
+      "description": "散发微弱暖光的符咒。最大生命+15%。(破损，至多叠加3个)",
+      "category": "accessory",
+      "quality": "damaged",
+      "shop_price": 45,
+      "source": "drop",
+      "affixes": [
+        { "key": "max_hp_mult", "value": 0.15 }
+      ]
+    },
+    {
+      "item_id": "minor_guard_brooch",
+      "display_name": "小型护盾胸针",
+      "description": "不起眼的防御饰品。防御+8。(破损，至多叠加3个)",
+      "category": "accessory",
+      "quality": "damaged",
+      "shop_price": 40,
+      "source": "drop",
+      "affixes": [
+        { "key": "defense", "value": 8.0 }
+      ]
+    },
+    {
+      "item_id": "minor_swift_feather",
+      "display_name": "小型迅捷之羽",
+      "description": "一片轻盈的羽毛。移速+8%。(破损，至多叠加3个)",
+      "category": "accessory",
+      "quality": "damaged",
+      "shop_price": 45,
+      "source": "drop",
+      "affixes": [
+        { "key": "move_speed_mult", "value": 0.08 }
+      ]
+    },
+    {
+      "item_id": "minor_lucky_coin",
+      "display_name": "小型幸运币",
+      "description": "一面微光闪烁的旧硬币。暴击率+3%。(破损，至多叠加3个)",
+      "category": "accessory",
+      "quality": "damaged",
+      "shop_price": 55,
+      "source": "drop",
+      "affixes": [
+        { "key": "crit_chance", "value": 0.03 }
+      ]
+    },
+    {
+      "item_id": "minor_healing_totem",
+      "display_name": "小型治疗图腾",
+      "description": "微弱的生命恢复。每秒回复0.5点生命。(破损，至多叠加3个)",
+      "category": "accessory",
+      "quality": "damaged",
+      "shop_price": 50,
+      "source": "drop",
+      "affixes": [
+        { "key": "hp_regen", "value": 0.5 }
+      ]
+    },
+    {
+      "item_id": "ring_of_power",
+      "display_name": "力量戒指",
+      "description": "蕴含古老力量的戒指。攻击力+30%。",
+      "category": "accessory",
+      "quality": "intact",
+      "shop_price": 200,
+      "source": "boss_shop_event",
+      "affixes": [
+        { "key": "attack_mult", "value": 0.30 }
+      ]
+    },
+    {
+      "item_id": "amulet_of_vitality",
+      "display_name": "活力护符",
+      "description": "散发温暖光芒的护符，佩戴者生命力显著提升。最大生命+40%。",
+      "category": "accessory",
+      "quality": "intact",
+      "shop_price": 250,
+      "source": "boss_shop_event",
+      "affixes": [
+        { "key": "max_hp_mult", "value": 0.40 }
+      ]
+    },
+    {
+      "item_id": "boots_of_haste",
+      "display_name": "疾行靴",
+      "description": "轻便的魔法靴子。移动速度+20%。",
+      "category": "accessory",
+      "quality": "intact",
+      "shop_price": 180,
+      "source": "shop_event",
+      "affixes": [
+        { "key": "move_speed_mult", "value": 0.20 }
+      ]
+    },
+    {
+      "item_id": "cloak_of_shadows",
+      "display_name": "暗影斗篷",
+      "description": "夜色编织的斗篷。暴击率+8%，暴击伤害+25%。",
+      "category": "accessory",
+      "quality": "intact",
+      "shop_price": 400,
+      "source": "boss_event",
+      "affixes": [
+        { "key": "crit_chance", "value": 0.08 },
+        { "key": "crit_damage_mult", "value": 0.25 }
+      ]
+    },
+    {
+      "item_id": "thorned_bracers",
+      "display_name": "荆棘护腕",
+      "description": "布满荆棘纹路的护腕。荆棘伤害+15，防御+20。",
+      "category": "accessory",
+      "quality": "intact",
+      "shop_price": 300,
+      "source": "boss_shop",
+      "affixes": [
+        { "key": "thorns_damage", "value": 15.0 },
+        { "key": "defense", "value": 20.0 }
+      ]
+    },
+    {
+      "item_id": "vampiric_brooch",
+      "display_name": "吸血胸针",
+      "description": "暗红色的宝石镶嵌在银质胸针上。吸血+5%。",
+      "category": "accessory",
+      "quality": "intact",
+      "shop_price": 350,
+      "source": "boss_event",
+      "affixes": [
+        { "key": "lifesteal", "value": 0.05 }
+      ]
+    },
+    {
+      "item_id": "dragonscale_armor",
+      "display_name": "龙鳞甲片",
+      "description": "一片坚硬的龙鳞。伤害减免+15%。",
+      "category": "accessory",
+      "quality": "intact",
+      "shop_price": 350,
+      "source": "boss_event",
+      "affixes": [
+        { "key": "damage_reduction", "value": 0.15 }
+      ]
+    },
+    {
+      "item_id": "refined_splitter_lens",
+      "display_name": "分光棱镜",
+      "description": "精致的魔法水晶，能将一枚弹体分裂成多枚。远程弹道数+1。(精致)",
+      "category": "accessory",
+      "quality": "refined",
+      "shop_price": 600,
+      "source": "boss_shop_event",
+      "affixes": [
+        { "key": "projectile_count", "value": 1.0 }
+      ]
+    },
+    {
+      "item_id": "refined_explosive_core",
+      "display_name": "爆裂核心",
+      "description": "一个不稳定的能量核心。远程攻击命中时产生爆炸，爆炸半径+3，爆炸伤害+50%。(精致)",
+      "category": "accessory",
+      "quality": "refined",
+      "shop_price": 700,
+      "source": "boss_event",
+      "affixes": [
+        { "key": "explosion_radius", "value": 3.0 },
+        { "key": "explosion_dmg_mult", "value": 0.50 }
+      ]
+    },
+    {
+      "item_id": "refined_lightning_rod",
+      "display_name": "闪电导流器",
+      "description": "引导雷电的神秘装置。闪电链传导半径+5，伤害比例+30%。(精致)",
+      "category": "accessory",
+      "quality": "refined",
+      "shop_price": 650,
+      "source": "boss_shop",
+      "affixes": [
+        { "key": "chain_range", "value": 5.0 },
+        { "key": "chain_dmg_ratio", "value": 0.30 }
+      ]
+    },
+    {
+      "item_id": "refined_berserker_gauntlets",
+      "display_name": "狂战士护手",
+      "description": "注入狂暴力量的护手。近战连击数+2，近战范围+2。(精致)",
+      "category": "accessory",
+      "quality": "refined",
+      "shop_price": 600,
+      "source": "boss_shop_event",
+      "affixes": [
+        { "key": "melee_combo_count", "value": 2.0 },
+        { "key": "melee_range_add", "value": 2.0 }
+      ]
+    },
+    {
+      "item_id": "refined_homing_eye",
+      "display_name": "追踪之眼",
+      "description": "一枚漂浮的水晶眼球。弹体追踪角度+45°/s，追踪强度极高。(精致)",
+      "category": "accessory",
+      "quality": "refined",
+      "shop_price": 650,
+      "source": "boss_event",
+      "affixes": [
+        { "key": "homing_angle", "value": 45.0 }
+      ]
+    },
+    {
+      "item_id": "mysterious_chaos_orb",
+      "display_name": "混沌法球",
+      "description": "散发着矛盾能量的法球。攻击力+30%，但移速-15%。谁也无法预测混沌的代价。(神秘)",
+      "category": "accessory",
+      "quality": "mysterious",
+      "shop_price": 0,
+      "source": "event_only",
+      "affixes": [
+        { "key": "attack_mult", "value": 0.30 },
+        { "key": "move_speed_mult", "value": -0.15 }
+      ]
+    },
+    {
+      "item_id": "mysterious_phantom_quiver",
+      "display_name": "幻影箭袋",
+      "description": "里面永远装着无形的箭矢。弹道数+1，但弹速-30%。幻影无形却有踪。(神秘)",
+      "category": "accessory",
+      "quality": "mysterious",
+      "shop_price": 0,
+      "source": "event_only",
+      "affixes": [
+        { "key": "projectile_count", "value": 1.0 },
+        { "key": "projectile_speed_mult", "value": -0.30 }
+      ]
+    },
+    {
+      "item_id": "mysterious_blood_crystal",
+      "display_name": "血之水晶",
+      "description": "以生命力为代价换取暴击力量。暴击率+15%，但生命回复-50%。血与水晶的交易。(神秘)",
+      "category": "accessory",
+      "quality": "mysterious",
+      "shop_price": 0,
+      "source": "event_only",
+      "affixes": [
+        { "key": "crit_chance", "value": 0.15 },
+        { "key": "hp_regen", "value": -0.50 }
+      ]
+    },
+    {
+      "item_id": "mysterious_titan_core",
+      "display_name": "巨人之心",
+      "description": "一颗仍在跳动的巨人之心。最大生命+60%，但防御-50%。巨人虽强，亦有弱点。(神秘)",
+      "category": "accessory",
+      "quality": "mysterious",
+      "shop_price": 0,
+      "source": "event_only",
+      "affixes": [
+        { "key": "max_hp_mult", "value": 0.60 },
+        { "key": "defense_mult", "value": -0.50 }
+      ]
+    },
+    {
+      "item_id": "mysterious_fate_seal",
+      "display_name": "命运之印",
+      "description": "古老的符文印记，能改变命运的走向。持有此物将能在关键事件中选择隐藏的分支。(神秘)",
+      "category": "accessory",
+      "quality": "mysterious",
+      "shop_price": 0,
+      "source": "event_only",
+      "affixes": [],
+      "special_effect": "unlock_event_branch"
+    },
+    {
+      "item_id": "mysterious_ancient_key",
+      "display_name": "古钥碎片",
+      "description": "一把锈迹斑斑的青铜钥匙碎片。据说凑齐后能打开某处隐藏的大门。在携带此物时遇到某事件可以解锁隐藏选项。(神秘)",
+      "category": "accessory",
+      "quality": "mysterious",
+      "shop_price": 0,
+      "source": "event_only",
+      "affixes": [],
+      "special_effect": "unlock_event_branch"
+    }
+  ]
+}

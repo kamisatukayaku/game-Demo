@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "evolution": {
+    "id": "boomerang",
+    "name": "回旋进化",
+    "behavior_verb": "回旋",
+    "fantasy_text": "飞出与折返构成闭环，路线本身即是刀刃。",
+    "source_weapon": "contact_weapon",
+    "advanced_form": "boomerang",
+    "movement_model": "player_center_launch",
+    "evolution_condition": {
+      "description": "需要指定的 Contact Weapon 达到 Lv3。",
+      "source_weapon_level": 3
+    },
+    "tiers": [
+      {
+        "tier": 1,
+        "id": "short_cast",
+        "name": "????",
+        "description": "???????????",
+        "gameplay_change": "进化为主动往返武器。"
+      },
+      {
+        "tier": 2,
+        "id": "long_cast",
+        "name": "????",
+        "description": "???????",
+        "gameplay_change": "攻击覆盖更远战场。"
+      },
+      {
+        "tier": 3,
+        "id": "piercing_arc",
+        "name": "????",
+        "description": "??????????????",
+        "gameplay_change": "路线转化为持续切割带。"
+      },
+      {
+        "tier": 4,
+        "id": "multi_return",
+        "name": "????",
+        "description": "???????????????",
+        "gameplay_change": "单次往返变为多段路线。"
+      },
+      {
+        "tier": 5,
+        "id": "boomerang_storm",
+        "name": "????",
+        "description": "???????????",
+        "gameplay_change": "形成完整回旋风暴。"
+      }
+    ],
+    "final_form": {
+      "id": "boomerang_storm",
+      "name": "回旋风暴",
+      "description": "贯穿与多段返回组成围绕玩家持续展开的交错飞行网络。"
+    }
+  }
+}

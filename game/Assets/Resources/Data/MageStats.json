@@ -1,0 +1,16 @@
+{
+  "schema_version": 2,
+  "pool": "mage_stats",
+  "requires_tag": "spell",
+  "tags": ["spell"],
+  "upgrades": [
+    {"id":"num_mage_cooldown","display_name":"法术冷却","description":"法术冷却缩短。","stat":"skill_cooldown_reduce","values":[0.12,0.10,0.08,0.06],"max_stacks":4,"offer_weight":0.78,"tags":["spell","cooldown"]},
+    {"id":"num_mage_gravity_radius","display_name":"引力范围","description":"引力井牵引范围扩大。","stat":"mage_gravity_radius","values":[0.60,0.47,0.37,0.29],"max_stacks":4,"offer_weight":0.76,"tags":["spell","gravity","area"]},
+    {"id":"num_mage_gravity_duration","display_name":"引力持续","description":"引力井持续时间延长。","stat":"skill_vacuum_duration","values":[0.35,0.27,0.21],"max_stacks":3,"offer_weight":0.66,"tags":["spell","gravity"]},
+    {"id":"num_mage_gravity_damage","display_name":"引力压缩","description":"引力井持续伤害提高。","stat":"mage_gravity_damage_mult","values":[0.18,0.14,0.11,0.09],"max_stacks":4,"offer_weight":0.62,"tags":["spell","gravity","damage"]},
+    {"id":"num_mage_tidal_radius","display_name":"潮汐范围","description":"潮汐波纹半径扩大。","stat":"skill_tidal_radius_add","values":[0.60,0.48,0.38,0.30],"max_stacks":4,"offer_weight":0.74,"tags":["spell","tidal","area"]},
+    {"id":"num_mage_tidal_force","display_name":"潮汐推力","description":"潮汐更容易推开怪物。","stat":"skill_tidal_knockback_add","values":[0.42,0.33,0.26,0.20],"max_stacks":4,"offer_weight":0.66,"tags":["spell","tidal","control"]},
+    {"id":"num_mage_tidal_damage","display_name":"潮汐冲击","description":"潮汐波纹伤害提高。","stat":"skill_tidal_damage_mult","values":[0.20,0.16,0.12,0.10],"max_stacks":4,"offer_weight":0.62,"tags":["spell","tidal","damage"]},
+    {"id":"num_mage_arcane_focus","display_name":"奥术飞弹","description":"奥术飞弹伤害提高。","stat":"mage_arcane_damage_mult","values":[0.13,0.10,0.08],"max_stacks":3,"offer_weight":0.56,"tags":["spell","arcane","single_target"]}
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "nodes": [
+    {
+      "id": "attr_max_hp_1",
+      "display_name": "生命强化 I",
+      "description": "永久增加 5% 最大生命值。",
+      "tree_type": "attribute",
+      "tier": 1,
+      "cost": 100,
+      "prerequisites": [],
+      "max_level": 3,
+      "effects": [
+        { "effect_type": "stat_mod", "effect_value": 0.05, "effect_param": "max_hp_mult" }
+      ]
+    },
+    {
+      "id": "attr_max_hp_2",
+      "display_name": "生命强化 II",
+      "description": "永久增加 8% 最大生命值。",
+      "tree_type": "attribute",
+      "tier": 2,
+      "cost": 200,
+      "prerequisites": ["attr_max_hp_1"],
+      "max_level": 3,
+      "effects": [
+        { "effect_type": "stat_mod", "effect_value": 0.08, "effect_param": "max_hp_mult" }
+      ]
+    },
+    {
+      "id": "attr_attack_1",
+      "display_name": "攻击强化 I",
+      "description": "永久增加 5% 攻击力。",
+      "tree_type": "attribute",
+      "tier": 1,
+      "cost": 100,
+      "prerequisites": [],
+      "max_level": 3,
+      "effects": [
+        { "effect_type": "all_damage_mult", "effect_value": 0.05, "effect_param": "" }
+      ]
+    },
+    {
+      "id": "attr_attack_2",
+      "display_name": "攻击强化 II",
+      "description": "永久增加 8% 攻击力。",
+      "tree_type": "attribute",
+      "tier": 2,
+      "cost": 200,
+      "prerequisites": ["attr_attack_1"],
+      "max_level": 3,
+      "effects": [
+        { "effect_type": "all_damage_mult", "effect_value": 0.08, "effect_param": "" }
+      ]
+    },
+    {
+      "id": "attr_move_speed",
+      "display_name": "移速强化",
+      "description": "永久增加 8% 移动速度。",
+      "tree_type": "attribute",
+      "tier": 1,
+      "cost": 150,
+      "prerequisites": [],
+      "max_level": 3,
+      "effects": [
+        { "effect_type": "move_speed_mult", "effect_value": 0.08, "effect_param": "" }
+      ]
+    },
+    {
+      "id": "attr_crit_chance",
+      "display_name": "暴击训练",
+      "description": "永久增加 3% 暴击率。",
+      "tree_type": "attribute",
+      "tier": 2,
+      "cost": 300,
+      "prerequisites": ["attr_attack_1"],
+      "max_level": 3,
+      "effects": [
+        { "effect_type": "crit_chance", "effect_value": 0.03, "effect_param": "" }
+      ]
+    },
+    {
+      "id": "attr_damage_reduction",
+      "display_name": "坚韧护甲",
+      "description": "永久获得 5% 减伤。",
+      "tree_type": "attribute",
+      "tier": 2,
+      "cost": 250,
+      "prerequisites": ["attr_max_hp_1"],
+      "max_level": 3,
+      "effects": [
+        { "effect_type": "damage_reduction", "effect_value": 0.05, "effect_param": "" }
+      ]
+    },
+    {
+      "id": "attr_lifesteal",
+      "display_name": "生命汲取",
+      "description": "永久获得 2% 吸血。",
+      "tree_type": "attribute",
+      "tier": 3,
+      "cost": 400,
+      "prerequisites": ["attr_attack_2"],
+      "max_level": 3,
+      "effects": [
+        { "effect_type": "lifesteal", "effect_value": 0.02, "effect_param": "" }
+      ]
+    },
+    {
+      "id": "attr_exp_gain",
+      "display_name": "经验加成",
+      "description": "永久增加 10% 经验获取。",
+      "tree_type": "attribute",
+      "tier": 2,
+      "cost": 200,
+      "prerequisites": [],
+      "max_level": 3,
+      "effects": [
+        { "effect_type": "exp_gain_mult", "effect_value": 0.10, "effect_param": "" }
+      ]
+    },
+    {
+      "id": "world_extra_camp",
+      "display_name": "额外营地",
+      "description": "世界生成时额外添加一个精英营地。",
+      "tree_type": "world",
+      "tier": 1,
+      "cost": 300,
+      "prerequisites": [],
+      "max_level": 1,
+      "effects": [
+        { "effect_type": "unlock_camp_type", "effect_value": 1, "effect_param": "camp_elite" }
+      ]
+    },
+    {
+      "id": "world_less_danger",
+      "display_name": "低危世界",
+      "description": "世界等级的 DangerValue 降低 10%。",
+      "tree_type": "world",
+      "tier": 2,
+      "cost": 500,
+      "prerequisites": ["world_extra_camp"],
+      "max_level": 1,
+      "effects": [
+        { "effect_type": "world_danger_reduce", "effect_value": 0.10, "effect_param": "" }
+      ]
+    },
+    {
+      "id": "event_new_trial",
+      "display_name": "新试炼",
+      "description": "解锁事件：试炼挑战。",
+      "tree_type": "event",
+      "tier": 1,
+      "cost": 200,
+      "prerequisites": [],
+      "max_level": 1,
+      "effects": [
+        { "effect_type": "unlock_event", "effect_value": 1, "effect_param": "event_challenge_trial" }
+      ]
+    },
+    {
+      "id": "event_gold_rush",
+      "display_name": "淘金热",
+      "description": "解锁事件：淘金热（高难度）。",
+      "tree_type": "event",
+      "tier": 2,
+      "cost": 350,
+      "prerequisites": ["event_new_trial"],
+      "max_level": 1,
+      "effects": [
+        { "effect_type": "unlock_event", "effect_value": 1, "effect_param": "event_gold_rush" }
+      ]
+    },
+    {
+      "id": "loot_better_equip",
+      "display_name": "稀有装备",
+      "description": "解锁稀有装备掉落池。",
+      "tree_type": "loot",
+      "tier": 1,
+      "cost": 250,
+      "prerequisites": [],
+      "max_level": 1,
+      "effects": [
+        { "effect_type": "unlock_equipment", "effect_value": 1, "effect_param": "equipment_rare" }
+      ]
+    },
+    {
+      "id": "loot_more_gold",
+      "display_name": "金币加成",
+      "description": "所有金币获取 +20%。",
+      "tree_type": "loot",
+      "tier": 1,
+      "cost": 200,
+      "prerequisites": [],
+      "max_level": 3,
+      "effects": [
+        { "effect_type": "gold_drop_mult", "effect_value": 0.20, "effect_param": "" }
+      ]
+    }
+  ]
+}

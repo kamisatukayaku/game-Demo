@@ -1,0 +1,54 @@
+{
+  "modifiers": [
+    {
+      "id": "standard",
+      "display_name": "标准波",
+      "description": "常规刷怪节奏",
+      "color": "#8EC8FF"
+    },
+    {
+      "id": "night",
+      "display_name": "暗夜",
+      "description": "W7/W17 视野缩小，远程弹道保留光轨",
+      "color": "#6A48C8"
+    },
+    {
+      "id": "frenzy",
+      "display_name": "狂潮",
+      "description": "W9/W19 刷怪加速，经验×1.5",
+      "color": "#FF5A2E"
+    },
+    {
+      "id": "hunt_contract",
+      "display_name": "猎杀契约",
+      "description": "90 秒内击杀 30 敌，奖励 Relic 三选一",
+      "color": "#E8A832"
+    },
+    {
+      "id": "elite_hunt",
+      "display_name": "猎杀精英",
+      "description": "本波精英出现率提升",
+      "color": "#FFD04A"
+    },
+    {
+      "id": "calm",
+      "display_name": "喘息",
+      "description": "刷怪略缓，便于整备",
+      "color": "#5CE8A8"
+    },
+    {
+      "id": "double_elite",
+      "display_name": "双精英",
+      "description": "Hard：本波出现 2 名精英",
+      "color": "#FF4060",
+      "hard_only": true
+    },
+    {
+      "id": "support_x2",
+      "display_name": "支援×2",
+      "description": "Hard：支援型敌人翻倍",
+      "color": "#44E8A0",
+      "hard_only": true
+    }
+  ]
+}

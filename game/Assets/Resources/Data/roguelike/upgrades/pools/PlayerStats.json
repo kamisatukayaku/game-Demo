@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "pool": "player_stats",
+  "tags": ["player", "survival"],
+  "upgrades": [
+    {"id":"num_player_max_hp","display_name":"最大生命","description":"最大生命提高，并立即恢复同等生命。","stat":"max_hp_flat","values":[8,6,5,4,3],"max_stacks":5,"offer_weight":1.05,"offer_group":"player","tags":["survival","vitality"]},
+    {"id":"num_player_overheal_shield","display_name":"溢出护盾","description":"治疗溢出时转化为临时护盾。","stat":"overheal_shield","values":[0.35,0.28,0.22],"max_stacks":3,"offer_weight":0.82,"offer_group":"player","tags":["survival","defense","shield"]},
+    {"id":"num_player_damage_reduction","display_name":"减伤","description":"受到的伤害降低。","stat":"damage_reduction","values":[0.04,0.035,0.03,0.025],"max_stacks":4,"offer_weight":0.95,"offer_group":"player","tags":["survival","defense"]},
+    {"id":"num_player_health_regen","display_name":"生命再生","description":"每秒自动回复生命。","stat":"health_regen_per_second","values":[0.25,0.22,0.18,0.15],"max_stacks":4,"offer_weight":0.88,"offer_group":"player","tags":["survival","regen"]},
+    {"id":"num_player_heal_on_kill","display_name":"击杀回复","description":"击杀敌人时回复少量生命。","stat":"heal_on_kill_flat","values":[0.35,0.28,0.22],"max_stacks":3,"offer_weight":0.8,"offer_group":"player","tags":["survival","recovery"]},
+    {"id":"num_player_move_speed","display_name":"移动速度","description":"移动速度提高。","stat":"move_speed_mult","values":[0.08,0.07,0.06,0.05,0.04],"max_stacks":5,"offer_weight":0.88,"offer_group":"player","tags":["survival","mobility"]},
+    {"id":"num_player_xp_magnet","display_name":"经验吸附","description":"经验球吸附范围扩大。","stat":"xp_magnet_range_mult","values":[0.15,0.12,0.10,0.08,0.06],"max_stacks":5,"offer_weight":0.82,"offer_group":"player","tags":["survival","utility"]},
+    {"id":"num_player_exp_gain","display_name":"经验获取","description":"获得的经验提高。","stat":"exp_gain_mult","values":[0.05,0.04,0.03,0.025],"max_stacks":4,"offer_weight":0.72,"offer_group":"player","tags":["survival","growth"]},
+    {"id":"num_player_dash_cooldown","display_name":"冲刺冷却","description":"冲刺冷却缩短。","stat":"dash_cooldown_reduction","values":[0.08,0.06,0.04],"max_stacks":3,"offer_weight":0.8,"offer_group":"player","tags":["survival","dash"]},
+    {"id":"num_player_dash_distance","display_name":"冲刺距离","description":"冲刺距离增加；冲刺伤害轨迹也会变长。","stat":"dash_distance_add","values":[0.45,0.35,0.28,0.22],"max_stacks":4,"offer_weight":0.78,"offer_group":"player","tags":["survival","dash","mobility"]},
+    {"id":"num_player_dash_iframe","display_name":"冲刺无敌","description":"冲刺无敌时间增加。","stat":"dash_invincible_time_add","values":[0.02,0.015,0.01],"max_stacks":3,"offer_weight":0.75,"offer_group":"player","tags":["survival","dash"]},
+    {"id":"num_player_hit_iframe","display_name":"受击保护","description":"受击后的无敌保护时间增加。","stat":"hit_invulnerability_add","values":[0.04,0.03,0.02],"max_stacks":3,"offer_weight":0.78,"offer_group":"player","tags":["survival","defense"]},
+    {"id":"num_player_low_hp_dr","display_name":"濒危减伤","description":"生命低于30%时受到的伤害降低。","stat":"missing_hp_damage_reduction","values":[0.08,0.06,0.05],"max_stacks":3,"offer_weight":0.7,"offer_group":"player","tags":["survival","defense"]},
+    {"id":"num_player_healing_mult","display_name":"治疗强化","description":"所有治疗效果提高。","stat":"healing_received_mult","values":[0.08,0.06,0.05],"max_stacks":3,"offer_weight":0.68,"offer_group":"player","tags":["survival","regen"]},
+    {"id":"num_player_boss_hunter","display_name":"Boss杀手","description":"对Boss伤害提高。","stat":"boss_damage_mult","values":[0.12,0.09,0.07],"max_stacks":3,"offer_weight":0.62,"offer_group":"player","tags":["single_target","boss"]},
+    {"id":"num_player_elite_breaker","display_name":"精英杀手","description":"对精英和小Boss伤害提高。","stat":"elite_damage_mult","values":[0.13,0.10,0.08],"max_stacks":3,"offer_weight":0.64,"offer_group":"player","tags":["single_target","elite"]}
+  ]
+}

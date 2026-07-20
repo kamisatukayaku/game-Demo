@@ -1,0 +1,61 @@
+{
+  "schema_version": 3,
+  "_note": "Unified Ring Arena is the default theme. Legacy themes are retained only for old saves, tests, and Sandbox compatibility.",
+  "themes": [
+    {
+      "id": "unified",
+      "display_name": "自由构筑",
+      "description": "移动、冲刺、射击、法术、星环和离体武器都通过升级逐步解锁。",
+      "attack_profile_id": "weapon_theme_ranged",
+      "base_stats": {
+        "attack_mult": 1.0,
+        "attack_speed_mult": 1.0,
+        "range": 14.0
+      }
+    },
+    {
+      "id": "ranged",
+      "display_name": "射手兼容",
+      "description": "旧存档和 Sandbox 调试用的远程攻击主题。",
+      "attack_profile_id": "weapon_theme_ranged",
+      "base_stats": {
+        "attack_mult": 1.0,
+        "attack_speed_mult": 1.0,
+        "range": 16.0
+      }
+    },
+    {
+      "id": "mage",
+      "display_name": "法师兼容",
+      "description": "旧存档和 Sandbox 调试用的法术主题。",
+      "attack_profile_id": "weapon_theme_mage",
+      "base_stats": {
+        "attack_mult": 0.9,
+        "attack_speed_mult": 1.05,
+        "range": 14.0
+      }
+    },
+    {
+      "id": "warrior",
+      "display_name": "冲刺兼容",
+      "description": "旧存档和 Sandbox 调试用的近距冲刺主题。",
+      "attack_profile_id": "weapon_theme_melee",
+      "base_stats": {
+        "attack_mult": 1.0,
+        "attack_speed_mult": 1.0,
+        "range": 1.5
+      }
+    },
+    {
+      "id": "melee",
+      "display_name": "近战兼容",
+      "description": "旧调试入口保留项，正式 Ring Arena 不再作为独立职业。",
+      "attack_profile_id": "weapon_theme_melee",
+      "base_stats": {
+        "attack_mult": 1.0,
+        "attack_speed_mult": 1.0,
+        "range": 1.6
+      }
+    }
+  ]
+}

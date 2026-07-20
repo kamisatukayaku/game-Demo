@@ -1,0 +1,698 @@
+{
+    "schema_version":  3,
+    "_note":  "玩家武器/技能 + 怪物冲撞/弹幕/激光。",
+    "definitions":  [
+                        {
+                            "id":  "weapon_theme_melee",
+                            "display_name":  "近战挥击",
+                            "source_kind":  "weapon",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  0.45,
+                            "range":  1.6,
+                            "base_damage":  12,
+                            "damage_type":  "physical",
+                            "damage_source":  "weapon",
+                            "tags":  [
+                                         "neutral",
+                                         "starter"
+                                     ],
+                            "weapon_extension":  {
+                                                     "weapon_theme":  "melee",
+                                                     "windup":  0.05,
+                                                     "slots_required":  1
+                                                 }
+                        },
+                        {
+                            "id":  "weapon_theme_ranged",
+                            "display_name":  "远程弹丸",
+                            "source_kind":  "weapon",
+                            "delivery":  "projectile",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  0.65,
+                            "range":  16.0,
+                            "base_damage":  7,
+                            "damage_type":  "kinetic",
+                            "damage_source":  "weapon",
+                            "tags":  [
+                                         "ranged"
+                                     ],
+                            "delivery_params":  {
+                                                    "projectile_speed":  14,
+                                                    "projectile_homing":  "none",
+                                                    "projectile_scale":  0.22
+                                                },
+                            "weapon_extension":  {
+                                                     "weapon_theme":  "ranged",
+                                                     "windup":  0.05,
+                                                     "slots_required":  1
+                                                 }
+                        },
+                        {
+                            "id":  "weapon_theme_reflect",
+                            "display_name":  "反弹近击",
+                            "source_kind":  "weapon",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  0.55,
+                            "range":  1.4,
+                            "base_damage":  7,
+                            "damage_type":  "physical",
+                            "damage_source":  "weapon",
+                            "tags":  [
+                                         "reflect"
+                                     ],
+                            "weapon_extension":  {
+                                                     "weapon_theme":  "reflect",
+                                                     "windup":  0.05,
+                                                     "slots_required":  1
+                                                 }
+                        },
+                        {
+                            "id":  "weapon_theme_aura",
+                            "display_name":  "光环师轻击",
+                            "source_kind":  "weapon",
+                            "delivery":  "projectile",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  0.85,
+                            "range":  9.0,
+                            "base_damage":  5,
+                            "damage_type":  "energy",
+                            "damage_source":  "weapon",
+                            "tags":  [
+                                         "aura"
+                                     ],
+                            "delivery_params":  {
+                                                    "projectile_speed":  12,
+                                                    "projectile_homing":  "none",
+                                                    "projectile_scale":  0.18
+                                                },
+                            "weapon_extension":  {
+                                                     "weapon_theme":  "aura",
+                                                     "windup":  0.05,
+                                                     "slots_required":  1
+                                                 }
+                        },
+                        {
+                            "id":  "weapon_theme_mage",
+                            "display_name":  "奥术弹",
+                            "source_kind":  "weapon",
+                            "delivery":  "projectile",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  0.58,
+                            "range":  14.0,
+                            "base_damage":  9,
+                            "damage_type":  "energy",
+                            "damage_source":  "skill",
+                            "tags":  [
+                                         "mage"
+                                     ],
+                            "delivery_params":  {
+                                                    "projectile_speed":  16,
+                                                    "projectile_homing":  "weak",
+                                                    "projectile_scale":  0.2
+                                                },
+                            "weapon_extension":  {
+                                                     "weapon_theme":  "mage",
+                                                     "windup":  0.05,
+                                                     "slots_required":  1
+                                                 }
+                        },
+                        {
+                            "id":  "skill_mage_arcane_bolt",
+                            "display_name":  "奥术飞弹",
+                            "source_kind":  "skill",
+                            "delivery":  "projectile",
+                            "targeting":  "directional",
+                            "cooldown":  1.2,
+                            "range":  14.0,
+                            "base_damage":  11,
+                            "damage_type":  "energy",
+                            "damage_source":  "skill",
+                            "tags":  [
+                                         "mage"
+                                     ],
+                            "delivery_params":  {
+                                                    "projectile_speed":  18,
+                                                    "projectile_homing":  "weak",
+                                                    "projectile_scale":  0.22
+                                                },
+                            "skill_extension":  {
+                                                    "skill_id":  "skill_mage_arcane_bolt",
+                                                    "slot_type":  "active"
+                                                }
+                        },
+                        {
+                            "id":  "skill_mage_fire_nova",
+                            "display_name":  "烈焰新星",
+                            "source_kind":  "skill",
+                            "delivery":  "aoe",
+                            "targeting":  "directional",
+                            "cooldown":  3.5,
+                            "range":  10.0,
+                            "base_damage":  16,
+                            "damage_type":  "energy",
+                            "damage_source":  "skill",
+                            "tags":  [
+                                         "mage"
+                                     ],
+                            "delivery_params":  {
+                                                    "aoe_radius":  2.8,
+                                                    "aoe_duration":  0.1,
+                                                    "aoe_persistent":  false
+                                                },
+                            "skill_extension":  {
+                                                    "skill_id":  "skill_mage_fire_nova",
+                                                    "slot_type":  "active"
+                                                }
+                        },
+                        {
+                            "id":  "skill_mage_gravity_well",
+                            "display_name":  "引力井",
+                            "source_kind":  "skill",
+                            "delivery":  "aoe",
+                            "targeting":  "directional",
+                            "cooldown":  7.0,
+                            "range":  9.0,
+                            "base_damage":  8,
+                            "damage_type":  "energy",
+                            "damage_source":  "skill",
+                            "tags":  [
+                                         "mage"
+                                     ],
+                            "delivery_params":  {
+                                                    "aoe_radius":  3.2,
+                                                    "aoe_duration":  1.6,
+                                                    "aoe_persistent":  false
+                                                },
+                            "skill_extension":  {
+                                                    "skill_id":  "skill_mage_gravity_well",
+                                                    "slot_type":  "active"
+                                                }
+                        },
+                        {
+                            "id":  "skill_mage_frost_ward",
+                            "display_name":  "冰霜护体",
+                            "source_kind":  "skill",
+                            "delivery":  "self_buff",
+                            "targeting":  "self",
+                            "cooldown":  9.0,
+                            "range":  3.0,
+                            "base_damage":  0,
+                            "damage_type":  "energy",
+                            "damage_source":  "skill",
+                            "tags":  [
+                                         "mage"
+                                     ],
+                            "skill_extension":  {
+                                                    "skill_id":  "skill_mage_frost_ward",
+                                                    "slot_type":  "active"
+                                                }
+                        },
+                        {
+                            "id":  "skill_sentry_bolt",
+                            "display_name":  "哨弹",
+                            "source_kind":  "skill",
+                            "delivery":  "projectile",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.05,
+                            "range":  11.5,
+                            "base_damage":  5,
+                            "damage_type":  "kinetic",
+                            "damage_source":  "skill",
+                            "tags":  [
+                                         "tech"
+                                     ],
+                            "delivery_params":  {
+                                                    "projectile_speed":  18,
+                                                    "projectile_homing":  "none",
+                                                    "projectile_scale":  0.18
+                                                },
+                            "skill_extension":  {
+                                                    "skill_id":  "skill_sentry_bolt",
+                                                    "slot_type":  "auto"
+                                                }
+                        },
+                        {
+                            "id":  "skill_pierce_beam",
+                            "display_name":  "贯射线",
+                            "source_kind":  "skill",
+                            "delivery":  "beam",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.65,
+                            "range":  12.5,
+                            "base_damage":  4,
+                            "damage_type":  "energy",
+                            "damage_source":  "skill",
+                            "tags":  [
+                                         "tech"
+                                     ],
+                            "delivery_params":  {
+                                                    "beam_pierce":  false,
+                                                    "beam_half_width":  0.2
+                                                },
+                            "skill_extension":  {
+                                                    "skill_id":  "skill_pierce_beam",
+                                                    "slot_type":  "active"
+                                                }
+                        },
+                        {
+                            "id":  "skill_chain_arc",
+                            "display_name":  "链电",
+                            "source_kind":  "skill",
+                            "delivery":  "beam",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.35,
+                            "range":  11.0,
+                            "base_damage":  5,
+                            "damage_type":  "energy",
+                            "damage_source":  "skill",
+                            "tags":  [
+                                         "tech"
+                                     ],
+                            "delivery_params":  {
+                                                    "beam_pierce":  false,
+                                                    "beam_half_width":  0.25,
+                                                    "chain_max_targets":  3,
+                                                    "chain_jump_range":  6.0,
+                                                    "chain_damage_falloff":  0.7
+                                                },
+                            "skill_extension":  {
+                                                    "skill_id":  "skill_chain_arc",
+                                                    "slot_type":  "active"
+                                                }
+                        },
+                        {
+                            "id":  "skill_scorch_field",
+                            "display_name":  "燃域",
+                            "source_kind":  "skill",
+                            "delivery":  "aoe",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  0.95,
+                            "range":  10.0,
+                            "base_damage":  7,
+                            "damage_type":  "physical",
+                            "damage_source":  "skill",
+                            "tags":  [
+                                         "tech"
+                                     ],
+                            "delivery_params":  {
+                                                    "aoe_radius":  6.0,
+                                                    "aoe_duration":  2.5,
+                                                    "aoe_cone_angle_deg":  90,
+                                                    "aoe_persistent":  true,
+                                                    "aoe_damage_mult":  1.0
+                                                },
+                            "skill_extension":  {
+                                                    "skill_id":  "skill_scorch_field",
+                                                    "slot_type":  "active"
+                                                }
+                        },
+                        {
+                            "id":  "aura_player_mist",
+                            "display_name":  "雾蚀光环",
+                            "source_kind":  "skill",
+                            "delivery":  "aura",
+                            "targeting":  "self_aura",
+                            "cooldown":  1.15,
+                            "range":  9.0,
+                            "base_damage":  0,
+                            "damage_type":  "physical",
+                            "damage_source":  "skill",
+                            "tags":  [
+                                         "eco",
+                                         "pollution"
+                                     ],
+                            "delivery_params":  {
+                                                    "aura_tick_interval":  1.0,
+                                                    "aura_apply_to":  "enemies_in_range"
+                                                },
+                            "skill_extension":  {
+                                                    "skill_id":  "aura_player_base",
+                                                    "slot_type":  "aura"
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_hex_01_charge",
+                            "source_kind":  "monster",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.2,
+                            "range":  1.2,
+                            "base_damage":  5,
+                            "damage_type":  "impact",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_hex_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "charge_dash":  true,
+                                                    "dash_speed_mult":  1.25,
+                                                    "dash_distance":  6
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_hex_03_charge",
+                            "source_kind":  "monster",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.4,
+                            "range":  1.3,
+                            "base_damage":  6,
+                            "damage_type":  "impact",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_hex_03"
+                                                  },
+                            "delivery_params":  {
+                                                    "charge_dash":  true,
+                                                    "dash_speed_mult":  1.55,
+                                                    "dash_distance":  5.5
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_pent_01_charge",
+                            "source_kind":  "monster",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.6,
+                            "range":  1.4,
+                            "base_damage":  14,
+                            "damage_type":  "impact",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_pent_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "charge_dash":  true,
+                                                    "dash_speed_mult":  2.15,
+                                                    "aoe_radius":  1.2,
+                                                    "dash_distance":  7
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_square_02_charge",
+                            "source_kind":  "monster",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  0.9,
+                            "range":  1.2,
+                            "base_damage":  7,
+                            "damage_type":  "impact",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_square_02"
+                                                  },
+                            "delivery_params":  {
+                                                    "charge_dash":  true,
+                                                    "dash_speed_mult":  1.45,
+                                                    "dash_distance":  6.5
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_wisp_fast_01_dash",
+                            "source_kind":  "monster",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  2.6,
+                            "range":  1.0,
+                            "base_damage":  4,
+                            "damage_type":  "impact",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_wisp_fast_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "charge_dash":  true,
+                                                    "dash_speed_mult":  2.35,
+                                                    "dash_distance":  5.2
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_star4_01_barrage",
+                            "source_kind":  "monster",
+                            "delivery":  "projectile",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  0.8,
+                            "range":  6.0,
+                            "base_damage":  3,
+                            "damage_type":  "kinetic",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_star4_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "projectile_speed":  8,
+                                                    "projectile_homing":  "none",
+                                                    "projectile_scale":  0.28,
+                                                    "projectile_count":  1,
+                                                    "spread_deg":  0
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_star5_01_barrage",
+                            "source_kind":  "monster",
+                            "delivery":  "projectile",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.05,
+                            "range":  7.0,
+                            "base_damage":  4,
+                            "damage_type":  "kinetic",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_star5_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "projectile_speed":  7.2,
+                                                    "projectile_homing":  "none",
+                                                    "projectile_scale":  0.28,
+                                                    "projectile_count":  2,
+                                                    "spread_deg":  9
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_star4_02_barrage",
+                            "source_kind":  "monster",
+                            "delivery":  "projectile",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.3,
+                            "range":  6.0,
+                            "base_damage":  3,
+                            "damage_type":  "kinetic",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_star4_02"
+                                                  },
+                            "delivery_params":  {
+                                                    "projectile_speed":  6,
+                                                    "projectile_homing":  "none",
+                                                    "projectile_scale":  0.28,
+                                                    "projectile_count":  3,
+                                                    "spread_deg":  14
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_tri_01_laser",
+                            "source_kind":  "monster",
+                            "delivery":  "beam",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  0.95,
+                            "range":  7.5,
+                            "base_damage":  5,
+                            "damage_type":  "energy",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_tri_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "beam_pierce":  false,
+                                                    "beam_half_width":  0.22,
+                                                    "beam_duration":  0.6,
+                                                    "beam_tick_interval":  0.15
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_tri_05_laser",
+                            "source_kind":  "monster",
+                            "delivery":  "beam",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.3,
+                            "range":  9.0,
+                            "base_damage":  8,
+                            "damage_type":  "energy",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_tri_05"
+                                                  },
+                            "delivery_params":  {
+                                                    "beam_pierce":  true,
+                                                    "beam_half_width":  0.22,
+                                                    "beam_duration":  0.75,
+                                                    "beam_tick_interval":  0.12
+                                                }
+                        },
+                        {
+                            "id":  "atk_boss_wild_charge",
+                            "source_kind":  "monster",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.55,
+                            "range":  1.6,
+                            "base_damage":  18,
+                            "damage_type":  "impact",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_pent_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "charge_dash":  true,
+                                                    "dash_speed_mult":  2.75,
+                                                    "aoe_radius":  1.8
+                                                },
+                            "tags":  [
+                                         "boss"
+                                     ]
+                        },
+                        {
+                            "id":  "atk_boss_wild_barrage",
+                            "source_kind":  "monster",
+                            "delivery":  "projectile",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.25,
+                            "range":  8.0,
+                            "base_damage":  6,
+                            "damage_type":  "kinetic",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_pent_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "projectile_speed":  10,
+                                                    "projectile_homing":  "none",
+                                                    "projectile_scale":  0.28,
+                                                    "projectile_count":  10,
+                                                    "spread_deg":  12
+                                                },
+                            "tags":  [
+                                         "boss"
+                                     ]
+                        },
+                        {
+                            "id":  "atk_boss_final_laser",
+                            "source_kind":  "monster",
+                            "delivery":  "beam",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.05,
+                            "range":  10.0,
+                            "base_damage":  12,
+                            "damage_type":  "energy",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_pent_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "beam_pierce":  true,
+                                                    "beam_half_width":  0.28
+                                                },
+                            "tags":  [
+                                         "boss",
+                                         "final"
+                                     ]
+                        },
+                        {
+                            "id":  "atk_boss_final_charge",
+                            "source_kind":  "monster",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.75,
+                            "range":  2.0,
+                            "base_damage":  20,
+                            "damage_type":  "impact",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_pent_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "charge_dash":  true,
+                                                    "dash_speed_mult":  3.05,
+                                                    "aoe_radius":  2.5
+                                                },
+                            "tags":  [
+                                         "boss",
+                                         "final"
+                                     ]
+                        },
+                        {
+                            "id":  "atk_mob_hex_03_contact",
+                            "source_kind":  "monster",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.15,
+                            "range":  1.35,
+                            "base_damage":  6,
+                            "damage_type":  "impact",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_hex_03"
+                                                  },
+                            "delivery_params":  {
+                                                    "hit_radius":  0.72
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_pent_01_contact",
+                            "source_kind":  "monster",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.45,
+                            "range":  1.55,
+                            "base_damage":  14,
+                            "damage_type":  "impact",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_pent_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "hit_radius":  0.9
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_star8_01_triple",
+                            "source_kind":  "monster",
+                            "delivery":  "projectile",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.65,
+                            "range":  8,
+                            "base_damage":  4,
+                            "damage_type":  "kinetic",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_star8_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "projectile_speed":  5.5,
+                                                    "projectile_homing":  "none",
+                                                    "projectile_scale":  0.3,
+                                                    "projectile_count":  4,
+                                                    "spread_deg":  20
+                                                }
+                        },
+                        {
+                            "id":  "atk_mob_square_01_contact",
+                            "source_kind":  "monster",
+                            "delivery":  "melee",
+                            "targeting":  "nearest_in_range",
+                            "cooldown":  1.2,
+                            "range":  1.35,
+                            "base_damage":  4,
+                            "damage_type":  "impact",
+                            "damage_source":  "monster",
+                            "monster_extension":  {
+                                                      "enemy_id":  "mob_square_01"
+                                                  },
+                            "delivery_params":  {
+                                                    "hit_radius":  0.72
+                                                }
+                        }
+                    ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "relics": [
+    {
+      "id": "relic_boss_breaker",
+      "display_name": "破王印记",
+      "description": "对 Boss 伤害 +18%。",
+      "stat": "boss_damage_mult",
+      "value": 0.18
+    },
+    {
+      "id": "relic_elite_breaker",
+      "display_name": "精英猎手",
+      "description": "对精英和小 Boss 伤害 +20%。",
+      "stat": "elite_damage_mult",
+      "value": 0.2
+    },
+    {
+      "id": "relic_blood_tithe",
+      "display_name": "鲜血什一税",
+      "description": "击杀敌人时恢复 3% 最大生命值。",
+      "stat": "heal_on_kill_pct",
+      "value": 0.03
+    },
+    {
+      "id": "relic_xp_surge",
+      "display_name": "经验涌流",
+      "description": "经验获取 +20%。",
+      "stat": "exp_gain_mult",
+      "value": 0.2
+    },
+    {
+      "id": "relic_dash_reset",
+      "display_name": "闪身核心",
+      "description": "冲刺冷却时间 -0.5 秒。",
+      "stat": "dash_cooldown_reduce",
+      "value": 0.5
+    },
+    {
+      "id": "relic_drone_overclock",
+      "display_name": "外置超频",
+      "description": "外置武器伤害 +12%。",
+      "stat": "detached_part_damage_mult",
+      "value": 0.12
+    }
+  ]
+}

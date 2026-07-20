@@ -1,0 +1,136 @@
+{
+  "zones": [
+    {
+      "id": "xp_boost_zone",
+      "displayName": "经验增幅区",
+      "description": "进入范围后提高经验获取效率",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "经验增幅区：经验获取提高",
+      "type": "Beneficial",
+      "color": "#42D9D0",
+      "symbol": "ArrowUp",
+      "showOnFirstEncounter": true,
+      "isHazardous": false
+    },
+    {
+      "id": "meteor_strike_zone",
+      "displayName": "陨石落点",
+      "description": "离开红色范围以避免受到伤害",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "危险区域：尽快离开落点",
+      "type": "Hazard",
+      "color": "#FF5548",
+      "symbol": "Warning",
+      "showOnFirstEncounter": true,
+      "isHazardous": true
+    },
+    {
+      "id": "energy_storm_zone",
+      "displayName": "能量风暴",
+      "description": "风暴范围内会持续受到伤害",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "危险区域：离开风暴范围",
+      "type": "Hazard",
+      "color": "#C45CFF",
+      "symbol": "Warning",
+      "showOnFirstEncounter": true,
+      "isHazardous": true
+    },
+    {
+      "id": "warp_portal_zone",
+      "displayName": "传送门",
+      "description": "进入后可被传送到对称位置",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "控制区域：进入后会被传送",
+      "type": "Control",
+      "color": "#6A8CFF",
+      "symbol": "Portal",
+      "showOnFirstEncounter": true,
+      "isHazardous": false
+    },
+    {
+      "id": "toxic_edge",
+      "displayName": "毒性边界",
+      "description": "靠近竞技场边缘会受到持续伤害",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "危险区域：离开边缘地带",
+      "type": "Hazard",
+      "color": "#FF5548",
+      "symbol": "Warning",
+      "showOnFirstEncounter": true,
+      "isHazardous": true
+    },
+    {
+      "id": "dual_ring_outer",
+      "displayName": "外环危险区",
+      "description": "外环范围内会受到伤害",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "危险区域：退回内环安全区",
+      "type": "Hazard",
+      "color": "#FF7040",
+      "symbol": "Warning",
+      "showOnFirstEncounter": true,
+      "isHazardous": true
+    },
+    {
+      "id": "laser_sweep",
+      "displayName": "激光扫射",
+      "description": "被激光扫中会受到伤害",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "危险区域：避开激光路径",
+      "type": "Hazard",
+      "color": "#FF5548",
+      "symbol": "Warning",
+      "showOnFirstEncounter": true,
+      "isHazardous": true
+    },
+    {
+      "id": "gravity_well",
+      "displayName": "引力干扰区",
+      "description": "进入范围会受到牵引",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "控制区域：移动会受到牵引",
+      "type": "Control",
+      "color": "#7B5CFF",
+      "symbol": "Portal",
+      "showOnFirstEncounter": true,
+      "isHazardous": false
+    },
+    {
+      "id": "support_heal_ring",
+      "displayName": "支援治疗环",
+      "description": "敌人治疗单位会在此范围内治疗友军",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "危险区域：优先击杀治疗单位",
+      "type": "Hazard",
+      "color": "#FF8866",
+      "symbol": "Warning",
+      "showOnFirstEncounter": true,
+      "isHazardous": true
+    },
+    {
+      "id": "mage_zone",
+      "displayName": "法术区域",
+      "description": "进入后受到法术效果影响",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "控制区域：注意法术效果",
+      "type": "Control",
+      "color": "#6A8CFF",
+      "symbol": "Portal",
+      "showOnFirstEncounter": true,
+      "isHazardous": false
+    },
+    {
+      "id": "unknown_zone",
+      "displayName": "未知区域",
+      "description": "靠近查看效果",
+      "proximityHint": "未知区域：靠近查看效果",
+      "enteredHint": "未知区域：靠近查看效果",
+      "type": "Neutral",
+      "color": "#A0B4C8",
+      "symbol": "Dot",
+      "showOnFirstEncounter": true,
+      "isHazardous": false
+    }
+  ]
+}

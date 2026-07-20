@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "_note": "伤害来源；击杀归属用于掉落统计。",
+  "definitions": [
+    { "id": "weapon", "display_name": "武器", "loot_attribution": "player" },
+    { "id": "skill", "display_name": "技能", "loot_attribution": "player" },
+    { "id": "aura", "display_name": "光环", "loot_attribution": "player" },
+    { "id": "reflect", "display_name": "反弹", "loot_attribution": "player" },
+    { "id": "monster", "display_name": "怪物", "loot_attribution": "player" },
+    { "id": "item", "display_name": "道具", "loot_attribution": "player" }
+  ]
+}

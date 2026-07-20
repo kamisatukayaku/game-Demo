@@ -1,0 +1,252 @@
+{
+  "attributes": [
+    {
+      "attr_id": "attack",
+      "display_name": "攻击力",
+      "description": "基础攻击力，影响所有伤害计算。",
+      "base_value": 10.0,
+      "min": 0.0,
+      "max": 999999.0
+    },
+    {
+      "attr_id": "attack_mult",
+      "display_name": "攻击力倍率",
+      "description": "攻击力的总乘算倍率（1.0=无变化）。",
+      "base_value": 1.0,
+      "min": 0.01,
+      "max": 100.0
+    },
+    {
+      "attr_id": "max_hp",
+      "display_name": "最大生命值",
+      "description": "基础最大生命值。",
+      "base_value": 100.0,
+      "min": 1.0,
+      "max": 999999.0
+    },
+    {
+      "attr_id": "max_hp_mult",
+      "display_name": "最大生命倍率",
+      "description": "最大生命的总乘算倍率（1.0=无变化）。",
+      "base_value": 1.0,
+      "min": 0.01,
+      "max": 100.0
+    },
+    {
+      "attr_id": "defense",
+      "display_name": "防御值",
+      "description": "基础防御力，降低受到的伤害。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 999999.0
+    },
+    {
+      "attr_id": "defense_mult",
+      "display_name": "防御倍率",
+      "description": "防御力的总乘算倍率（1.0=无变化）。",
+      "base_value": 1.0,
+      "min": 0.01,
+      "max": 100.0
+    },
+    {
+      "attr_id": "move_speed_mult",
+      "display_name": "移动速度倍率",
+      "description": "移动速度的总乘算倍率（1.0=无变化）。",
+      "base_value": 1.0,
+      "min": 0.1,
+      "max": 10.0
+    },
+    {
+      "attr_id": "all_damage_mult",
+      "display_name": "全伤害倍率",
+      "description": "所有伤害来源的总乘算倍率（1.0=无变化）。",
+      "base_value": 1.0,
+      "min": 0.01,
+      "max": 100.0
+    },
+    {
+      "attr_id": "crit_chance",
+      "display_name": "暴击率",
+      "description": "攻击触发暴击的概率（0~1）。",
+      "base_value": 0.05,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "attr_id": "crit_damage_mult",
+      "display_name": "暴击伤害倍率",
+      "description": "暴击时的伤害倍率（1.5=150%基础伤害）。",
+      "base_value": 1.5,
+      "min": 1.0,
+      "max": 50.0
+    },
+    {
+      "attr_id": "damage_reduction",
+      "display_name": "伤害减免",
+      "description": "直接减免的伤害比例（0~1，如0.2=减免20%）。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 0.95
+    },
+    {
+      "attr_id": "lifesteal",
+      "display_name": "吸血比例",
+      "description": "造成伤害时回复生命值的比例（0~1）。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "attr_id": "thorns_damage",
+      "display_name": "荆棘伤害",
+      "description": "受到攻击时反弹的固定伤害值。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 999999.0
+    },
+    {
+      "attr_id": "dodge_chance",
+      "display_name": "闪避率",
+      "description": "完全闪避一次攻击的概率（0~1）。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 0.75
+    },
+    {
+      "attr_id": "hp_regen",
+      "display_name": "生命回复",
+      "description": "每秒回复的生命值。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 9999.0
+    },
+    {
+      "attr_id": "exp_gain_mult",
+      "display_name": "经验获取倍率",
+      "description": "ExperienceSystem 获取经验的乘算倍率。",
+      "base_value": 1.0,
+      "min": 0.01,
+      "max": 10.0
+    },
+    {
+      "attr_id": "gold_drop_mult",
+      "display_name": "金币掉落倍率",
+      "description": "怪物掉落金币的乘算倍率。",
+      "base_value": 1.0,
+      "min": 0.0,
+      "max": 100.0
+    },
+    {
+      "attr_id": "shop_price_mult",
+      "display_name": "商店价格乘数",
+      "description": "商店物品价格乘算倍率（1.0=原价，0.5=半价）。",
+      "base_value": 1.0,
+      "min": 0.01,
+      "max": 10.0
+    },
+    {
+      "attr_id": "enemy_spawn_rate",
+      "display_name": "怪物刷新倍率",
+      "description": "怪物刷新速率的乘算倍率（1.0=默认）。",
+      "base_value": 1.0,
+      "min": 0.0,
+      "max": 10.0
+    },
+    {
+      "attr_id": "enemy_stat_mult",
+      "display_name": "怪物属性倍率",
+      "description": "怪物全属性的全局倍率（由世界等级驱动）。",
+      "base_value": 1.0,
+      "min": 0.1,
+      "max": 50.0
+    },
+    {
+      "attr_id": "enemy_level_base",
+      "display_name": "怪物等级基础",
+      "description": "野外怪物的基础等级（由世界等级决定）。",
+      "base_value": 1.0,
+      "min": 1.0,
+      "max": 999.0
+    },
+    {
+      "attr_id": "world_level_xp_mult",
+      "display_name": "世界等级经验倍率",
+      "description": "WorldExp获取的倍率。",
+      "base_value": 1.0,
+      "min": 0.01,
+      "max": 100.0
+    },
+    {
+      "attr_id": "attack_speed_mult",
+      "display_name": "攻速倍率",
+      "description": "攻击速度的乘算倍率（1.0=无变化，影响冷却时间）。",
+      "base_value": 1.0,
+      "min": 0.1,
+      "max": 10.0
+    },
+    {
+      "attr_id": "projectile_count",
+      "display_name": "远程弹道数",
+      "description": "每次攻击额外发射的弹体数量（向上取整）。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 20.0
+    },
+    {
+      "attr_id": "homing_angle",
+      "display_name": "远程追踪角度",
+      "description": "弹体追踪转向速度（度/秒），0=不追踪。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 360.0
+    },
+    {
+      "attr_id": "burst_count",
+      "display_name": "远程连发数",
+      "description": "每次攻击连续快速发射的弹体波数（向上取整）。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 10.0
+    },
+    {
+      "attr_id": "melee_range_add",
+      "display_name": "近战范围加成",
+      "description": "近战攻击范围额外加成。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 20.0
+    },
+    {
+      "attr_id": "melee_angle_add",
+      "display_name": "近战角度加成",
+      "description": "近战扇形角度额外加成（度，加到默认75°上）。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 90.0
+    },
+    {
+      "attr_id": "melee_combo_count",
+      "display_name": "近战连击数",
+      "description": "每次近战攻击快速连续判定的次数（向上取整）。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 10.0
+    },
+    {
+      "attr_id": "rare_drop_rate",
+      "display_name": "稀有掉落概率",
+      "description": "饰品掉落概率的乘算加成（0=无加成，0.5=+50%概率）。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "attr_id": "shop_slot_count",
+      "display_name": "商店槽位数",
+      "description": "商店额外显示的商品槽位数（向上取整）。",
+      "base_value": 0.0,
+      "min": 0.0,
+      "max": 5.0
+    }
+  ]
+}

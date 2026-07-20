@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "_note": "逐步补回 Buff/Debuff 定义。",
+  "definitions": [
+    {
+      "id": "buff_overheal_shield",
+      "display_name": "溢出护盾",
+      "polarity": 0,
+      "category": "defense",
+      "tags": ["shield"],
+      "duration": 5.0,
+      "duration_policy": 0,
+      "max_stacks": 1,
+      "stack_policy": 3,
+      "exclusive_group": "overheal_shield",
+      "priority": 0,
+      "effects": [
+        {
+          "type": "shield",
+          "value": 1,
+          "per_stack": false
+        }
+      ]
+    },
+    {
+      "id": "buff_slow_debuff",
+      "display_name": "减速",
+      "polarity": 2,
+      "category": "crowd_control",
+      "tags": ["slow", "debuff"],
+      "duration": 1.5,
+      "duration_policy": 0,
+      "max_stacks": 1,
+      "stack_policy": 0,
+      "priority": 0,
+      "effects": [
+        {
+          "type": "stat_mod",
+          "stat": "move_speed",
+          "op": "mul",
+          "value": -0.25,
+          "per_stack": false
+        }
+      ]
+    },
+    {
+      "id": "buff_bleed",
+      "display_name": "流血",
+      "polarity": 2,
+      "category": "dot",
+      "tags": ["bleed", "dot", "debuff", "physical"],
+      "duration": 3.0,
+      "duration_policy": 0,
+      "max_stacks": 5,
+      "stack_policy": 0,
+      "priority": 0,
+      "effects": [
+        {
+          "type": "tick_damage",
+          "damage_type": "physical",
+          "value": 5,
+          "per_stack": true,
+          "interval": 1.0
+        }
+      ]
+    },
+    {
+      "id": "buff_aura_haste",
+      "display_name": "光环迅捷",
+      "polarity": 1,
+      "category": "buff",
+      "tags": ["haste", "buff", "aura"],
+      "duration": 0.65,
+      "duration_policy": 0,
+      "max_stacks": 1,
+      "stack_policy": 3,
+      "priority": 0,
+      "effects": [
+        {
+          "type": "stat_mod",
+          "stat": "move_speed",
+          "op": "mul",
+          "value": 0.22,
+          "per_stack": false
+        }
+      ]
+    },
+    {
+      "id": "buff_poison",
+      "display_name": "中毒",
+      "polarity": 2,
+      "category": "dot",
+      "tags": ["poison", "dot", "debuff"],
+      "duration": 4.0,
+      "duration_policy": 0,
+      "max_stacks": 3,
+      "stack_policy": 0,
+      "priority": 0,
+      "effects": [
+        {
+          "type": "tick_damage",
+          "damage_type": "physical",
+          "value": 12,
+          "per_stack": true,
+          "interval": 1.0
+        }
+      ]
+    },
+    {
+      "id": "buff_aura_weaken",
+      "display_name": "光环削弱",
+      "polarity": 2,
+      "category": "debuff",
+      "tags": ["debuff", "aura"],
+      "duration": 1.2,
+      "duration_policy": 0,
+      "max_stacks": 1,
+      "stack_policy": 3,
+      "priority": 0,
+      "effects": [
+        {
+          "type": "stat_mod",
+          "stat": "attack",
+          "op": "mul",
+          "value": -0.18,
+          "per_stack": false
+        }
+      ]
+    },
+    {
+      "id": "buff_burn",
+      "display_name": "灼烧",
+      "polarity": 2,
+      "category": "dot",
+      "tags": ["burn", "dot", "debuff", "fire"],
+      "duration": 3.0,
+      "duration_policy": 0,
+      "max_stacks": 3,
+      "stack_policy": 0,
+      "priority": 0,
+      "effects": [
+        {
+          "type": "tick_damage",
+          "damage_type": "fire",
+          "value": 8,
+          "per_stack": true,
+          "interval": 1.0
+        }
+      ]
+    }
+  ]
+}
+

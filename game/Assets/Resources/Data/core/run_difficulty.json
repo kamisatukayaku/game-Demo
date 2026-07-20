@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "difficulties": [
+    {
+      "id": "easy",
+      "display_name": "简单",
+      "victory_mode": "survive_waves",
+      "wave_survive_count": 15,
+      "player_stat_mult": 1.12,
+      "xp_mult": 1.18,
+      "spawn_count_mult": 0.88,
+      "reward_mult": 0.9,
+      "enemy_hp_mult": 0.92,
+      "enemy_damage_mult": 0.9,
+      "build_phase_seconds": 2.0,
+      "boss_minion_spawn_mult": 0.3
+    },
+    {
+      "id": "normal",
+      "display_name": "普通",
+      "victory_mode": "survive_waves",
+      "wave_survive_count": 15,
+      "player_stat_mult": 1.0,
+      "xp_mult": 1.0,
+      "spawn_count_mult": 1.0,
+      "reward_mult": 1.0,
+      "enemy_hp_mult": 1.0,
+      "enemy_damage_mult": 1.0,
+      "build_phase_seconds": 2.0,
+      "boss_minion_spawn_mult": 0.35
+    },
+    {
+      "id": "hard",
+      "display_name": "困难",
+      "victory_mode": "survive_waves",
+      "wave_survive_count": 15,
+      "player_stat_mult": 0.94,
+      "xp_mult": 0.92,
+      "spawn_count_mult": 1.12,
+      "reward_mult": 1.25,
+      "enemy_hp_mult": 1.15,
+      "enemy_damage_mult": 1.12,
+      "build_phase_seconds": 1.5,
+      "boss_minion_spawn_mult": 0.42
+    }
+  ]
+}

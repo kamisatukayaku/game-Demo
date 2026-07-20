@@ -1,0 +1,1633 @@
+{
+  "schema_version": 2,
+  "biomes": [
+    {
+      "id": "frozen_desert",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.0,
+      "temperature_max": 0.25,
+      "humidity_min": 0.0,
+      "humidity_max": 0.25,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "frozen_desert_basic_1",
+          "weight": 0.25,
+          "color": "#D4F1FD",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "frozen_desert_basic_2",
+          "weight": 0.25,
+          "color": "#D6F1FD",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "frozen_desert_basic_3",
+          "weight": 0.25,
+          "color": "#C3E9FC",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "frozen_desert_basic_4",
+          "weight": 0.25,
+          "color": "#B9E5FB",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "ice_field",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.0,
+      "temperature_max": 0.25,
+      "humidity_min": 0.25,
+      "humidity_max": 0.5,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "ice_field_basic_1",
+          "weight": 0.25,
+          "color": "#9D8B74",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "ice_field_basic_2",
+          "weight": 0.25,
+          "color": "#A9987E",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "ice_field_basic_3",
+          "weight": 0.25,
+          "color": "#A2917C",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "ice_field_basic_4",
+          "weight": 0.25,
+          "color": "#938371",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "glacier",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.0,
+      "temperature_max": 0.25,
+      "humidity_min": 0.5,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "glacier_basic_1",
+          "weight": 0.25,
+          "color": "#3992C8",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "glacier_basic_2",
+          "weight": 0.25,
+          "color": "#4EAFDB",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "glacier_basic_3",
+          "weight": 0.25,
+          "color": "#419ACE",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "glacier_basic_4",
+          "weight": 0.25,
+          "color": "#3A9ACF",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "rocky_desert",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.25,
+      "temperature_max": 0.5,
+      "humidity_min": 0.0,
+      "humidity_max": 0.25,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "rocky_desert_basic_1",
+          "weight": 0.25,
+          "color": "#A9987E",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "rocky_desert_basic_2",
+          "weight": 0.25,
+          "color": "#A3937E",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "rocky_desert_basic_3",
+          "weight": 0.25,
+          "color": "#968571",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "rocky_desert_basic_4",
+          "weight": 0.25,
+          "color": "#A2917C",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "shrubland",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.25,
+      "temperature_max": 0.5,
+      "humidity_min": 0.25,
+      "humidity_max": 0.5,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "shrubland_basic_1",
+          "weight": 0.25,
+          "color": "#CDBF39",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "shrubland_basic_2",
+          "weight": 0.25,
+          "color": "#B3B33B",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "shrubland_basic_3",
+          "weight": 0.25,
+          "color": "#BCB63B",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "shrubland_basic_4",
+          "weight": 0.25,
+          "color": "#BFB93B",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "coniferous_forest",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.25,
+      "temperature_max": 0.5,
+      "humidity_min": 0.5,
+      "humidity_max": 0.75,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "coniferous_forest_basic_1",
+          "weight": 0.25,
+          "color": "#355631",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "coniferous_forest_basic_2",
+          "weight": 0.25,
+          "color": "#597D39",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "coniferous_forest_basic_3",
+          "weight": 0.25,
+          "color": "#496733",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "coniferous_forest_basic_4",
+          "weight": 0.25,
+          "color": "#42652E",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "swamp",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.25,
+      "temperature_max": 0.75,
+      "humidity_min": 0.75,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "swamp_basic_1",
+          "weight": 0.25,
+          "color": "#698C5E",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "swamp_basic_2",
+          "weight": 0.25,
+          "color": "#5F7E51",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "swamp_basic_3",
+          "weight": 0.25,
+          "color": "#658758",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "swamp_basic_4",
+          "weight": 0.25,
+          "color": "#5F7E50",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "desert",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.5,
+      "temperature_max": 1.0,
+      "humidity_min": 0.0,
+      "humidity_max": 0.25,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "desert_basic_1",
+          "weight": 0.25,
+          "color": "#FDC968",
+          "move_speed": 1.2,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "desert_basic_2",
+          "weight": 0.25,
+          "color": "#FDC96B",
+          "move_speed": 1.2,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "desert_basic_3",
+          "weight": 0.25,
+          "color": "#FDCB6E",
+          "move_speed": 1.2,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "desert_basic_4",
+          "weight": 0.25,
+          "color": "#FCC469",
+          "move_speed": 1.2,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "grassland",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.5,
+      "temperature_max": 0.75,
+      "humidity_min": 0.25,
+      "humidity_max": 0.5,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "grassland_basic_1",
+          "weight": 0.25,
+          "color": "#A3C547",
+          "move_speed": 1.2,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "grassland_basic_2",
+          "weight": 0.25,
+          "color": "#9CC03D",
+          "move_speed": 1.2,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "grassland_basic_3",
+          "weight": 0.25,
+          "color": "#92B83F",
+          "move_speed": 1.2,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "grassland_basic_4",
+          "weight": 0.25,
+          "color": "#94BA3A",
+          "move_speed": 1.2,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "broadleaf_forest",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.5,
+      "temperature_max": 0.75,
+      "humidity_min": 0.5,
+      "humidity_max": 0.75,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "broadleaf_forest_basic_1",
+          "weight": 0.25,
+          "color": "#355631",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "broadleaf_forest_basic_2",
+          "weight": 0.25,
+          "color": "#375830",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "broadleaf_forest_basic_3",
+          "weight": 0.25,
+          "color": "#42652E",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "broadleaf_forest_basic_4",
+          "weight": 0.25,
+          "color": "#345434",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "savanna",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.75,
+      "temperature_max": 1.0,
+      "humidity_min": 0.25,
+      "humidity_max": 0.5,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "savanna_basic_1",
+          "weight": 0.25,
+          "color": "#BEB739",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "savanna_basic_2",
+          "weight": 0.25,
+          "color": "#CDBF39",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "savanna_basic_3",
+          "weight": 0.25,
+          "color": "#C3BB38",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "savanna_basic_4",
+          "weight": 0.25,
+          "color": "#C4BB38",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "rainforest",
+      "environment_index_min": 0.75,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.75,
+      "temperature_max": 1.0,
+      "humidity_min": 0.5,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "rainforest_basic_1",
+          "weight": 0.25,
+          "color": "#6B3924",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "rainforest_basic_2",
+          "weight": 0.25,
+          "color": "#713C25",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "rainforest_basic_3",
+          "weight": 0.25,
+          "color": "#643421",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "rainforest_basic_4",
+          "weight": 0.25,
+          "color": "#6B3923",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "permafrost_thaw",
+      "environment_index_min": 0.5,
+      "environment_index_max": 0.75,
+      "temperature_min": 0.0,
+      "temperature_max": 0.25,
+      "humidity_min": 0.0,
+      "humidity_max": 0.5,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "permafrost_thaw_basic_1",
+          "weight": 0.25,
+          "color": "#6B422B",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "permafrost_thaw_basic_2",
+          "weight": 0.25,
+          "color": "#7A4D30",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "permafrost_thaw_basic_3",
+          "weight": 0.25,
+          "color": "#754A2F",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "permafrost_thaw_basic_4",
+          "weight": 0.25,
+          "color": "#71462C",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "glacier_melt",
+      "environment_index_min": 0.5,
+      "environment_index_max": 0.75,
+      "temperature_min": 0.0,
+      "temperature_max": 0.25,
+      "humidity_min": 0.5,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "glacier_melt_basic_1",
+          "weight": 0.25,
+          "color": "#526C80",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "glacier_melt_basic_2",
+          "weight": 0.25,
+          "color": "#537186",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "glacier_melt_basic_3",
+          "weight": 0.25,
+          "color": "#4E697E",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "glacier_melt_basic_4",
+          "weight": 0.25,
+          "color": "#4D6980",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "quarry",
+      "environment_index_min": 0.5,
+      "environment_index_max": 0.75,
+      "temperature_min": 0.25,
+      "temperature_max": 0.5,
+      "humidity_min": 0.0,
+      "humidity_max": 0.25,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "quarry_basic_1",
+          "weight": 0.25,
+          "color": "#E9E8E1",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "quarry_basic_2",
+          "weight": 0.25,
+          "color": "#E5E4DD",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "quarry_basic_3",
+          "weight": 0.25,
+          "color": "#DCDAD4",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "quarry_basic_4",
+          "weight": 0.25,
+          "color": "#DBD8D3",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "shifting_dunes",
+      "environment_index_min": 0.5,
+      "environment_index_max": 0.75,
+      "temperature_min": 0.5,
+      "temperature_max": 1.0,
+      "humidity_min": 0.0,
+      "humidity_max": 0.25,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "shifting_dunes_basic_1",
+          "weight": 0.25,
+          "color": "#FDE2A5",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "shifting_dunes_basic_2",
+          "weight": 0.25,
+          "color": "#FCDFA1",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "shifting_dunes_basic_3",
+          "weight": 0.25,
+          "color": "#FCDFA1",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "shifting_dunes_basic_4",
+          "weight": 0.25,
+          "color": "#FDDA98",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "overgrazed_land",
+      "environment_index_min": 0.5,
+      "environment_index_max": 0.75,
+      "temperature_min": 0.25,
+      "temperature_max": 0.75,
+      "humidity_min": 0.25,
+      "humidity_max": 0.5,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "overgrazed_land_basic_1",
+          "weight": 0.25,
+          "color": "#E6A959",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "overgrazed_land_basic_2",
+          "weight": 0.25,
+          "color": "#DB9B4E",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "overgrazed_land_basic_3",
+          "weight": 0.25,
+          "color": "#E0A252",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "overgrazed_land_basic_4",
+          "weight": 0.25,
+          "color": "#E0A351",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "deforested_conifer",
+      "environment_index_min": 0.5,
+      "environment_index_max": 0.75,
+      "temperature_min": 0.25,
+      "temperature_max": 0.5,
+      "humidity_min": 0.5,
+      "humidity_max": 0.75,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "deforested_conifer_basic_1",
+          "weight": 0.25,
+          "color": "#BFA788",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "deforested_conifer_basic_2",
+          "weight": 0.25,
+          "color": "#B09A7F",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "deforested_conifer_basic_3",
+          "weight": 0.25,
+          "color": "#B39D82",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "deforested_conifer_basic_4",
+          "weight": 0.25,
+          "color": "#A8937B",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "deforested_broadleaf",
+      "environment_index_min": 0.5,
+      "environment_index_max": 0.75,
+      "temperature_min": 0.5,
+      "temperature_max": 0.75,
+      "humidity_min": 0.5,
+      "humidity_max": 0.75,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "deforested_broadleaf_basic_1",
+          "weight": 0.25,
+          "color": "#BFA788",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "deforested_broadleaf_basic_2",
+          "weight": 0.25,
+          "color": "#B09A7F",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "deforested_broadleaf_basic_3",
+          "weight": 0.25,
+          "color": "#B39D82",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "deforested_broadleaf_basic_4",
+          "weight": 0.25,
+          "color": "#A8937B",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "polluted_savanna",
+      "environment_index_min": 0.5,
+      "environment_index_max": 0.75,
+      "temperature_min": 0.75,
+      "temperature_max": 1.0,
+      "humidity_min": 0.25,
+      "humidity_max": 0.5,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "polluted_savanna_basic_1",
+          "weight": 0.25,
+          "color": "#E6A959",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "polluted_savanna_basic_2",
+          "weight": 0.25,
+          "color": "#DB9B4E",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "polluted_savanna_basic_3",
+          "weight": 0.25,
+          "color": "#E0A252",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "polluted_savanna_basic_4",
+          "weight": 0.25,
+          "color": "#E0A351",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "polluted_rainforest",
+      "environment_index_min": 0.5,
+      "environment_index_max": 0.75,
+      "temperature_min": 0.75,
+      "temperature_max": 1.0,
+      "humidity_min": 0.5,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "polluted_rainforest_basic_1",
+          "weight": 0.25,
+          "color": "#946174",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "polluted_rainforest_basic_2",
+          "weight": 0.25,
+          "color": "#A46F85",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "polluted_rainforest_basic_3",
+          "weight": 0.25,
+          "color": "#9B6679",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "polluted_rainforest_basic_4",
+          "weight": 0.25,
+          "color": "#915F76",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "eutrophic_swamp",
+      "environment_index_min": 0.5,
+      "environment_index_max": 0.75,
+      "temperature_min": 0.25,
+      "temperature_max": 0.75,
+      "humidity_min": 0.75,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "eutrophic_swamp_basic_1",
+          "weight": 0.25,
+          "color": "#A0CC6E",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "eutrophic_swamp_basic_2",
+          "weight": 0.25,
+          "color": "#94C14E",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "eutrophic_swamp_basic_3",
+          "weight": 0.25,
+          "color": "#699843",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "eutrophic_swamp_basic_4",
+          "weight": 0.25,
+          "color": "#639041",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "permafrost_collapse",
+      "environment_index_min": 0.25,
+      "environment_index_max": 0.5,
+      "temperature_min": 0.0,
+      "temperature_max": 0.25,
+      "humidity_min": 0.0,
+      "humidity_max": 0.5,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "permafrost_collapse_basic_1",
+          "weight": 0.25,
+          "color": "#6B5B4B",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "permafrost_collapse_basic_2",
+          "weight": 0.25,
+          "color": "#6C5E4F",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "permafrost_collapse_basic_3",
+          "weight": 0.25,
+          "color": "#695948",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "permafrost_collapse_basic_4",
+          "weight": 0.25,
+          "color": "#665645",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "glacier_polluted",
+      "environment_index_min": 0.25,
+      "environment_index_max": 0.5,
+      "temperature_min": 0.0,
+      "temperature_max": 0.25,
+      "humidity_min": 0.5,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "glacier_polluted_basic_1",
+          "weight": 0.25,
+          "color": "#B0BAC2",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "glacier_polluted_basic_2",
+          "weight": 0.25,
+          "color": "#BEC7CD",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "glacier_polluted_basic_3",
+          "weight": 0.25,
+          "color": "#A2ACB3",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "glacier_polluted_basic_4",
+          "weight": 0.25,
+          "color": "#9CA5AA",
+          "move_speed": 0.6,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "gravel_wasteland",
+      "environment_index_min": 0.25,
+      "environment_index_max": 0.5,
+      "temperature_min": 0.25,
+      "temperature_max": 0.5,
+      "humidity_min": 0.0,
+      "humidity_max": 0.25,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "gravel_wasteland_basic_1",
+          "weight": 0.25,
+          "color": "#C3B094",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "gravel_wasteland_basic_2",
+          "weight": 0.25,
+          "color": "#BDA98D",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "gravel_wasteland_basic_3",
+          "weight": 0.25,
+          "color": "#C3AD8F",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "gravel_wasteland_basic_4",
+          "weight": 0.25,
+          "color": "#C1AC8F",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "gobi_desert",
+      "environment_index_min": 0.25,
+      "environment_index_max": 0.5,
+      "temperature_min": 0.5,
+      "temperature_max": 1.0,
+      "humidity_min": 0.0,
+      "humidity_max": 0.25,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "gobi_desert_basic_1",
+          "weight": 0.25,
+          "color": "#C3B094",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "gobi_desert_basic_2",
+          "weight": 0.25,
+          "color": "#B8A489",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "gobi_desert_basic_3",
+          "weight": 0.25,
+          "color": "#C3AD8F",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "gobi_desert_basic_4",
+          "weight": 0.25,
+          "color": "#C1AC8F",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "barren_land",
+      "environment_index_min": 0.25,
+      "environment_index_max": 0.5,
+      "temperature_min": 0.25,
+      "temperature_max": 0.75,
+      "humidity_min": 0.25,
+      "humidity_max": 0.75,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "barren_land_basic_1",
+          "weight": 0.25,
+          "color": "#B38E6B",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "barren_land_basic_2",
+          "weight": 0.25,
+          "color": "#B99673",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "barren_land_basic_3",
+          "weight": 0.25,
+          "color": "#A37C5A",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "barren_land_basic_4",
+          "weight": 0.25,
+          "color": "#B5926F",
+          "move_speed": 1.1,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "withered_forest",
+      "environment_index_min": 0.25,
+      "environment_index_max": 0.5,
+      "temperature_min": 0.75,
+      "temperature_max": 1.0,
+      "humidity_min": 0.25,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "withered_forest_basic_1",
+          "weight": 0.25,
+          "color": "#958571",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "withered_forest_basic_2",
+          "weight": 0.25,
+          "color": "#978976",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "withered_forest_basic_3",
+          "weight": 0.25,
+          "color": "#938370",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "withered_forest_basic_4",
+          "weight": 0.25,
+          "color": "#937F67",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "putrid_water",
+      "environment_index_min": 0.25,
+      "environment_index_max": 0.5,
+      "temperature_min": 0.25,
+      "temperature_max": 0.75,
+      "humidity_min": 0.75,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "putrid_water_basic_1",
+          "weight": 0.25,
+          "color": "#2D4332",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "putrid_water_basic_2",
+          "weight": 0.25,
+          "color": "#37533A",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "putrid_water_basic_3",
+          "weight": 0.25,
+          "color": "#324A35",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "putrid_water_basic_4",
+          "weight": 0.25,
+          "color": "#375230",
+          "move_speed": 0.5,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "permafrost_waste",
+      "environment_index_min": 0.0,
+      "environment_index_max": 0.25,
+      "temperature_min": 0.0,
+      "temperature_max": 0.25,
+      "humidity_min": 0.0,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "permafrost_waste_basic_1",
+          "weight": 0.25,
+          "color": "#798994",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "permafrost_waste_basic_2",
+          "weight": 0.25,
+          "color": "#637F92",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "permafrost_waste_basic_3",
+          "weight": 0.25,
+          "color": "#607D93",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "permafrost_waste_basic_4",
+          "weight": 0.25,
+          "color": "#415669",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "dried_mine",
+      "environment_index_min": 0.0,
+      "environment_index_max": 0.25,
+      "temperature_min": 0.25,
+      "temperature_max": 1.0,
+      "humidity_min": 0.0,
+      "humidity_max": 0.25,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "dried_mine_basic_1",
+          "weight": 0.25,
+          "color": "#2A2B2C",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "dried_mine_basic_2",
+          "weight": 0.25,
+          "color": "#222324",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "dried_mine_basic_3",
+          "weight": 0.25,
+          "color": "#222224",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "dried_mine_basic_4",
+          "weight": 0.25,
+          "color": "#232325",
+          "move_speed": 0.9,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "industrial_waste",
+      "environment_index_min": 0.0,
+      "environment_index_max": 0.25,
+      "temperature_min": 0.25,
+      "temperature_max": 0.75,
+      "humidity_min": 0.25,
+      "humidity_max": 0.75,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "industrial_waste_basic_1",
+          "weight": 0.25,
+          "color": "#784A2E",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "industrial_waste_basic_2",
+          "weight": 0.25,
+          "color": "#71462C",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "industrial_waste_basic_3",
+          "weight": 0.25,
+          "color": "#714931",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "industrial_waste_basic_4",
+          "weight": 0.25,
+          "color": "#6E472F",
+          "move_speed": 1.0,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "twisted_forest",
+      "environment_index_min": 0.0,
+      "environment_index_max": 0.25,
+      "temperature_min": 0.75,
+      "temperature_max": 1.0,
+      "humidity_min": 0.25,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "twisted_forest_basic_1",
+          "weight": 0.25,
+          "color": "#8C72A5",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "twisted_forest_basic_2",
+          "weight": 0.25,
+          "color": "#9077A9",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "twisted_forest_basic_3",
+          "weight": 0.25,
+          "color": "#876D98",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "twisted_forest_basic_4",
+          "weight": 0.25,
+          "color": "#8B72A5",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "toxic_sludge",
+      "environment_index_min": 0.0,
+      "environment_index_max": 0.25,
+      "temperature_min": 0.25,
+      "temperature_max": 0.75,
+      "humidity_min": 0.75,
+      "humidity_max": 1.0,
+      "final": false,
+      "texture_types": [
+        {
+          "id": "toxic_sludge_basic_1",
+          "weight": 0.25,
+          "color": "#445A38",
+          "move_speed": 0.3,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "toxic_sludge_basic_2",
+          "weight": 0.25,
+          "color": "#3F5538",
+          "move_speed": 0.3,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "toxic_sludge_basic_3",
+          "weight": 0.25,
+          "color": "#445936",
+          "move_speed": 0.3,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "toxic_sludge_basic_4",
+          "weight": 0.25,
+          "color": "#445A39",
+          "move_speed": 0.3,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "radiation_zone",
+      "environment_index_min": 0.0,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.0,
+      "temperature_max": 1.0,
+      "humidity_min": 0.0,
+      "humidity_max": 1.0,
+      "final": true,
+      "texture_types": [
+        {
+          "id": "radiation_zone_basic_1",
+          "weight": 0.25,
+          "color": "#B5A687",
+          "move_speed": 0.4,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "radiation_zone_basic_2",
+          "weight": 0.25,
+          "color": "#B2A588",
+          "move_speed": 0.4,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "radiation_zone_basic_3",
+          "weight": 0.25,
+          "color": "#B7AB90",
+          "move_speed": 0.4,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "radiation_zone_basic_4",
+          "weight": 0.25,
+          "color": "#A99C7F",
+          "move_speed": 0.4,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "volcanic_land",
+      "environment_index_min": 0.0,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.0,
+      "temperature_max": 1.0,
+      "humidity_min": 0.0,
+      "humidity_max": 1.0,
+      "final": true,
+      "texture_types": [
+        {
+          "id": "volcanic_land_basic_1",
+          "weight": 0.25,
+          "color": "#472321",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "volcanic_land_basic_2",
+          "weight": 0.25,
+          "color": "#532724",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "volcanic_land_basic_3",
+          "weight": 0.25,
+          "color": "#341C1B",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "volcanic_land_basic_4",
+          "weight": 0.25,
+          "color": "#3E2120",
+          "move_speed": 0.7,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    },
+    {
+      "id": "crater",
+      "environment_index_min": 0.0,
+      "environment_index_max": 1.0,
+      "temperature_min": 0.0,
+      "temperature_max": 1.0,
+      "humidity_min": 0.0,
+      "humidity_max": 1.0,
+      "final": true,
+      "texture_types": [
+        {
+          "id": "crater_basic_1",
+          "weight": 0.25,
+          "color": "#5D311D",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "crater_basic_2",
+          "weight": 0.25,
+          "color": "#6C391F",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "crater_basic_3",
+          "weight": 0.25,
+          "color": "#723C20",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        },
+        {
+          "id": "crater_basic_4",
+          "weight": 0.25,
+          "color": "#733C1F",
+          "move_speed": 0.8,
+          "rotate": true,
+          "mirror": true
+        }
+      ]
+    }
+  ]
+}

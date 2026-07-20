@@ -1,0 +1,145 @@
+{
+  "schema_version": 2,
+  "_note": "Unified Ring Arena milestone table. Legacy mage/shooter/warrior keys remain for old saves and simulation compatibility.",
+  "builds": {
+    "unified": {
+      "milestones": [
+        {
+          "level": 5,
+          "id": "unified_milestone_l5",
+          "display_name": "融合启源",
+          "description": "已解锁的任意机制线获得小幅通用加成。",
+          "modifiers": [
+            { "stat": "weapon_damage_mult", "value": 0.08 },
+            { "stat": "skill_damage_mult", "value": 0.08 },
+            { "stat": "detached_part_damage_mult", "value": 0.08 }
+          ]
+        },
+        {
+          "level": 10,
+          "id": "unified_milestone_l10",
+          "display_name": "交叉共鸣",
+          "description": "弹道、冲刺与星环更容易形成协同。",
+          "modifiers": [
+            { "stat": "weapon_attack_speed_mult", "value": 0.08 },
+            { "stat": "dash_strike_damage_mult", "value": 0.10 },
+            { "stat": "move_speed_mult", "value": 0.05 }
+          ]
+        },
+        {
+          "level": 15,
+          "id": "unified_milestone_l15",
+          "display_name": "自由冠顶",
+          "description": "多机制混搭获得巅峰身份加成。",
+          "modifiers": [
+            { "stat": "weapon_extra_projectile", "value": 1 },
+            { "stat": "warrior_weapon_count", "value": 1 },
+            { "stat": "skill_cooldown_reduce", "value": 0.05 }
+          ]
+        }
+      ]
+    },
+    "mage": {
+      "milestones": [
+        {
+          "level": 5,
+          "id": "mage_milestone_l5",
+          "display_name": "法术共振",
+          "description": "旧法术构筑兼容加成。",
+          "modifiers": [
+            { "stat": "skill_damage_mult", "value": 0.12 },
+            { "stat": "skill_cooldown_reduce", "value": 0.04 }
+          ]
+        },
+        {
+          "level": 10,
+          "id": "mage_milestone_l10",
+          "display_name": "引力织网",
+          "description": "控场范围扩大。",
+          "modifiers": [
+            { "stat": "mage_gravity_radius", "value": 0.45 },
+            { "stat": "skill_range_mult", "value": 0.10 }
+          ]
+        },
+        {
+          "level": 15,
+          "id": "mage_milestone_l15",
+          "display_name": "奇点觉醒",
+          "description": "引力与潮汐进一步强化。",
+          "modifiers": [
+            { "stat": "mage_arcane_damage_mult", "value": 0.15 },
+            { "stat": "skill_vacuum_strength", "value": 0.20 }
+          ]
+        }
+      ]
+    },
+    "shooter": {
+      "milestones": [
+        {
+          "level": 5,
+          "id": "shooter_milestone_l5",
+          "display_name": "弹幕织网",
+          "description": "旧射击构筑兼容加成。",
+          "modifiers": [
+            { "stat": "weapon_attack_speed_mult", "value": 0.10 },
+            { "stat": "projectile_speed_mult", "value": 0.08 }
+          ]
+        },
+        {
+          "level": 10,
+          "id": "shooter_milestone_l10",
+          "display_name": "过载回路",
+          "description": "暴击与远程压制进一步强化。",
+          "modifiers": [
+            { "stat": "crit_chance", "value": 0.05 },
+            { "stat": "long_range_damage_mult", "value": 0.12 }
+          ]
+        },
+        {
+          "level": 15,
+          "id": "shooter_milestone_l15",
+          "display_name": "扇形裁决",
+          "description": "弹幕密度与暴击伤害提升。",
+          "modifiers": [
+            { "stat": "weapon_extra_projectile", "value": 1 },
+            { "stat": "crit_damage_mult", "value": 0.18 }
+          ]
+        }
+      ]
+    },
+    "warrior": {
+      "milestones": [
+        {
+          "level": 5,
+          "id": "warrior_milestone_l5",
+          "display_name": "星环斩击",
+          "description": "旧冲刺构筑兼容加成。",
+          "modifiers": [
+            { "stat": "weapon_damage_mult", "value": 0.12 },
+            { "stat": "move_speed_mult", "value": 0.06 }
+          ]
+        },
+        {
+          "level": 10,
+          "id": "warrior_milestone_l10",
+          "display_name": "贴身裁决",
+          "description": "冲刺与接触武器协同强化。",
+          "modifiers": [
+            { "stat": "detached_part_damage_mult", "value": 0.12 },
+            { "stat": "move_speed_damage_ratio", "value": 0.08 }
+          ]
+        },
+        {
+          "level": 15,
+          "id": "warrior_milestone_l15",
+          "display_name": "轨道风暴",
+          "description": "离体武器规模与范围扩张。",
+          "modifiers": [
+            { "stat": "detached_part_count", "value": 1 },
+            { "stat": "detached_contact_radius_mult", "value": 0.15 }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "_note": "World模式职业定义。从Roguelike搬移近战(战士)和远程(射手)职业成长线，通过属性加成实现。Mage(法师)暂不搬移。",
+  "professions": [
+    {
+      "id": "warrior",
+      "display_name": "战士",
+      "description": "专注于近战格斗的勇士。擅长正面冲锋和持续输出。",
+      "icon_id": "icon_profession_warrior",
+      "base_attributes": {
+        "attack_mult": 0.05,
+        "max_hp_mult": 0.10,
+        "defense": 10.0,
+        "melee_range_add": 1.5,
+        "melee_angle_add": 15.0,
+        "melee_knockback_chance": 0.15,
+        "melee_combo_count": 1.0
+      },
+      "level_bonus_per_level": {
+        "_desc": "每级额外的属性增长（叠加在玩家等级属性之上）",
+        "attack_mult": 0.02,
+        "max_hp_mult": 0.03,
+        "defense": 2.0,
+        "melee_range_add": 0.1,
+        "melee_combo_count": 0.1,
+        "move_speed_mult": 0.01
+      }
+    },
+    {
+      "id": "ranger",
+      "display_name": "射手",
+      "description": "精准的远程射手。擅长风筝和控制战场。",
+      "icon_id": "icon_profession_ranger",
+      "base_attributes": {
+        "attack_mult": 0.10,
+        "crit_chance": 0.05,
+        "crit_damage_mult": 0.10,
+        "projectile_count": 1.0,
+        "projectile_speed_mult": 0.20,
+        "attack_speed_mult": 0.15,
+        "move_speed_mult": 0.05
+      },
+      "level_bonus_per_level": {
+        "_desc": "每级额外的属性增长",
+        "attack_mult": 0.02,
+        "crit_chance": 0.005,
+        "projectile_speed_mult": 0.02,
+        "attack_speed_mult": 0.015,
+        "move_speed_mult": 0.005,
+        "ranged_range": 1.0
+      }
+    }
+  ]
+}

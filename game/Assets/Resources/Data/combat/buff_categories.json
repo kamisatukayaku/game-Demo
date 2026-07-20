@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "categories": [
+    { "id": "movement", "dispellable": true, "show_on_ui": true },
+    { "id": "damage", "dispellable": true, "show_on_ui": true },
+    { "id": "heal", "dispellable": true, "show_on_ui": true },
+    { "id": "shield", "dispellable": false, "show_on_ui": true },
+    { "id": "pollution", "dispellable": true, "show_on_ui": true },
+    { "id": "control", "dispellable": true, "show_on_ui": true },
+    { "id": "offense", "dispellable": false, "show_on_ui": true }
+  ]
+}

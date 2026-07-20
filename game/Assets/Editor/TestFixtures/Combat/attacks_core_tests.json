@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "_note": "Combat test attack profiles referenced by CombatTests.",
+  "definitions": [
+    {
+      "id": "weapon_starter_melee",
+      "base_damage": 8,
+      "damage_type": "physical",
+      "damage_source": "weapon",
+      "delivery": "melee",
+      "targeting": "nearest_in_range",
+      "cooldown": 0.5,
+      "range": 1.5
+    },
+    {
+      "id": "weapon_starter_bolt",
+      "base_damage": 6,
+      "damage_type": "kinetic",
+      "damage_source": "weapon",
+      "delivery": "projectile",
+      "targeting": "nearest_in_range",
+      "cooldown": 0.55,
+      "range": 14,
+      "delivery_params": { "projectile_speed": 14, "projectile_homing": "none" }
+    },
+    {
+      "id": "weapon_starter_rapid",
+      "base_damage": 4,
+      "damage_type": "kinetic",
+      "damage_source": "weapon",
+      "delivery": "projectile",
+      "targeting": "nearest_in_range",
+      "cooldown": 0.25,
+      "range": 12,
+      "delivery_params": { "projectile_speed": 16, "projectile_homing": "none", "projectile_count": 2, "spread_deg": 8 }
+    },
+    {
+      "id": "weapon_starter_laser",
+      "base_damage": 10,
+      "damage_type": "energy",
+      "damage_source": "weapon",
+      "delivery": "beam",
+      "targeting": "directional",
+      "cooldown": 0.8,
+      "range": 16,
+      "delivery_params": { "beam_pierce": true, "beam_half_width": 0.35, "beam_duration": 0.35, "beam_tick_interval": 0.1 }
+    },
+    {
+      "id": "weapon_eco_vine_whip",
+      "base_damage": 9,
+      "damage_type": "eco",
+      "damage_source": "weapon",
+      "delivery": "melee",
+      "targeting": "nearest_in_range",
+      "cooldown": 0.6,
+      "range": 1.8,
+      "on_hit_buffs": ["debuff_poison"]
+    },
+    {
+      "id": "weapon_tech_shock_bolt",
+      "base_damage": 11,
+      "damage_type": "tech",
+      "damage_source": "weapon",
+      "delivery": "projectile",
+      "targeting": "nearest_in_range",
+      "cooldown": 0.7,
+      "range": 15,
+      "on_hit_buffs": ["debuff_armor_break"],
+      "delivery_params": { "projectile_speed": 18, "projectile_homing": "weak" }
+    },
+    {
+      "id": "tower_sentry_bolt",
+      "base_damage": 7,
+      "damage_type": "tech",
+      "damage_source": "tower",
+      "delivery": "projectile",
+      "targeting": "nearest_in_range",
+      "cooldown": 0.9,
+      "range": 18,
+      "delivery_params": { "projectile_speed": 20, "projectile_homing": "none" }
+    },
+    {
+      "id": "tower_eco_thorn",
+      "base_damage": 14,
+      "damage_type": "eco",
+      "damage_source": "tower",
+      "delivery": "projectile",
+      "targeting": "nearest_in_range",
+      "cooldown": 1.1,
+      "range": 12,
+      "on_hit_buffs": ["debuff_slow"],
+      "delivery_params": { "projectile_speed": 12, "projectile_homing": "none" }
+    },
+    {
+      "id": "tower_laser_mk1",
+      "base_damage": 12,
+      "damage_type": "tech",
+      "damage_source": "tower",
+      "delivery": "beam",
+      "targeting": "directional",
+      "cooldown": 1.2,
+      "range": 20,
+      "delivery_params": { "beam_pierce": true, "beam_half_width": 0.25, "beam_duration": 0.5, "beam_tick_interval": 0.12 }
+    },
+    {
+      "id": "tower_mist_emitter",
+      "base_damage": 0,
+      "damage_type": "pollution",
+      "damage_source": "tower",
+      "delivery": "aura",
+      "targeting": "area",
+      "cooldown": 0.5,
+      "range": 8,
+      "delivery_params": { "aura_tick_interval": 1.0, "aura_apply_to": "enemies_in_range", "aoe_radius": 6 }
+    },
+    {
+      "id": "tower_vine_snare_bolt",
+      "base_damage": 8,
+      "damage_type": "eco",
+      "damage_source": "tower",
+      "delivery": "projectile",
+      "targeting": "nearest_in_range",
+      "cooldown": 1.0,
+      "range": 14,
+      "on_hit_buffs": ["debuff_poison"],
+      "delivery_params": { "projectile_speed": 13, "projectile_homing": "none" }
+    },
+    {
+      "id": "tower_tesla_arc",
+      "base_damage": 9,
+      "damage_type": "tech",
+      "damage_source": "tower",
+      "delivery": "beam",
+      "targeting": "nearest_in_range",
+      "cooldown": 1.0,
+      "range": 10,
+      "delivery_params": {
+        "chain_max_targets": 3,
+        "chain_jump_range": 6.0,
+        "chain_damage_falloff": 0.7,
+        "beam_pierce": false,
+        "beam_half_width": 0.2
+      }
+    },
+    {
+      "id": "tower_purifier_aura",
+      "base_damage": 0,
+      "damage_type": "eco",
+      "damage_source": "tower",
+      "delivery": "aura",
+      "targeting": "area",
+      "cooldown": 0.5,
+      "range": 6,
+      "delivery_params": { "aura_tick_interval": 1.0, "aura_apply_to": "allies_in_range", "aura_heal_per_tick": 3, "aoe_radius": 5 }
+    },
+    {
+      "id": "tower_flame_aoe",
+      "base_damage": 16,
+      "damage_type": "physical",
+      "damage_source": "tower",
+      "delivery": "aoe",
+      "targeting": "area",
+      "cooldown": 1.5,
+      "range": 10,
+      "on_hit_buffs": ["debuff_burn"],
+      "delivery_params": { "aoe_radius": 6.0, "aoe_cone_angle_deg": 90, "aoe_duration": 0.2 }
+    },
+    {
+      "id": "enemy_slime_melee",
+      "base_damage": 5,
+      "damage_type": "physical",
+      "damage_source": "monster",
+      "delivery": "melee",
+      "targeting": "nearest_in_range",
+      "cooldown": 1.0,
+      "range": 1.2
+    },
+    {
+      "id": "enemy_polluted_slime_melee",
+      "base_damage": 4,
+      "damage_type": "pollution",
+      "damage_source": "monster",
+      "delivery": "melee",
+      "targeting": "nearest_in_range",
+      "cooldown": 1.0,
+      "range": 1.2,
+      "on_hit_buffs": ["debuff_toxic_coating"]
+    },
+    {
+      "id": "enemy_slime_mutant_spore",
+      "base_damage": 6,
+      "damage_type": "eco",
+      "damage_source": "monster",
+      "delivery": "projectile",
+      "targeting": "nearest_in_range",
+      "cooldown": 1.2,
+      "range": 10,
+      "on_hit_buffs": ["debuff_poison"],
+      "delivery_params": { "projectile_speed": 10, "projectile_homing": "none" }
+    },
+    {
+      "id": "enemy_dart_mite_sting",
+      "base_damage": 4,
+      "damage_type": "physical",
+      "damage_source": "monster",
+      "delivery": "projectile",
+      "targeting": "nearest_in_range",
+      "cooldown": 0.9,
+      "range": 12,
+      "on_hit_buffs": ["debuff_wisp_chill"],
+      "delivery_params": { "projectile_speed": 14, "projectile_homing": "none" }
+    },
+    {
+      "id": "enemy_brute_slam",
+      "base_damage": 12,
+      "damage_type": "physical",
+      "damage_source": "monster",
+      "delivery": "melee",
+      "targeting": "nearest_in_range",
+      "cooldown": 1.4,
+      "range": 1.5,
+      "on_hit_buffs": ["debuff_slow"]
+    },
+    {
+      "id": "enemy_wisp_bolt",
+      "base_damage": 5,
+      "damage_type": "eco",
+      "damage_source": "monster",
+      "delivery": "projectile",
+      "targeting": "nearest_in_range",
+      "cooldown": 1.0,
+      "range": 14,
+      "delivery_params": { "projectile_speed": 16, "projectile_homing": "lock_loss" }
+    },
+    {
+      "id": "enemy_pollution_spitter_acid",
+      "base_damage": 7,
+      "damage_type": "pollution",
+      "damage_source": "monster",
+      "delivery": "projectile",
+      "targeting": "nearest_in_range",
+      "cooldown": 1.1,
+      "range": 13,
+      "on_hit_buffs": ["debuff_toxic_coating"],
+      "delivery_params": { "projectile_speed": 11, "projectile_homing": "none" }
+    },
+    {
+      "id": "item_smoke_grenade",
+      "base_damage": 0,
+      "damage_type": "physical",
+      "damage_source": "item",
+      "delivery": "aoe",
+      "targeting": "area",
+      "cooldown": 0,
+      "range": 6,
+      "on_hit_buffs": ["debuff_slow"],
+      "delivery_params": { "aoe_radius": 3.0, "aoe_duration": 3.0 }
+    }
+  ]
+}

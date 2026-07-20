@@ -1,0 +1,70 @@
+# Unity generated directories
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# IDE and generated project files
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+.vsconfig
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity crash and build artifacts
+sysinfo.txt
+crashlytics-build.properties
+*.apk
+*.aab
+*.app
+*.unitypackage
+
+# Local tools, agent state and source-control metadata
+.agents/
+.codebuddy/
+.workbuddy/
+.workflows/
+.plastic/
+ignore.conf
+CODEBUDDY.md
+thinking.md
+data-sync.log
+ArchitectureValidationReport.txt
+BUG.md
+SCRIPT_INDEX.md
+world_mode_analysis.md
+laserShoot.wav
+怪物受击音效.wav
+
+# Demo recordings and downloaded capture tools
+demo_capture/
+
+# Migration leftovers and package examples not required by the game
+game/Assets/Editor_dst/
+game/Assets/Editor_dst_dst/
+game/Assets/TextMesh Pro/Examples & Extras/
+
+# Internal generated reports and archived planning data
+docs/
+tools/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini

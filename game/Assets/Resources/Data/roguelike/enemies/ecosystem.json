@@ -1,0 +1,319 @@
+{
+  "profiles": [
+    {
+      "enemy_id": "mob_square_01",
+      "role": "chaser"
+    },
+    {
+      "enemy_id": "mob_hex_03",
+      "role": "tank",
+      "knockback_multiplier": 0.18
+    },
+    {
+      "enemy_id": "mob_pent_01",
+      "role": "tank",
+      "knockback_multiplier": 0.08
+    },
+    {
+      "enemy_id": "mob_hex_01",
+      "role": "runner"
+    },
+    {
+      "enemy_id": "mob_square_02",
+      "role": "runner"
+    },
+    {
+      "enemy_id": "mob_wisp_fast_01",
+      "role": "runner"
+    },
+    {
+      "enemy_id": "mob_star4_01",
+      "role": "shooter"
+    },
+    {
+      "enemy_id": "mob_star5_01",
+      "role": "shooter"
+    },
+    {
+      "enemy_id": "mob_star4_02",
+      "role": "shooter"
+    },
+    {
+      "enemy_id": "mob_tri_05",
+      "role": "shooter"
+    },
+    {
+      "enemy_id": "mob_star8_01",
+      "role": "shooter"
+    },
+    {
+      "enemy_id": "mob_splitter_eco_01",
+      "role": "splitter",
+      "split_child_id": "mob_splitter_shard_eco_01",
+      "split_count": 2,
+      "split_generations": 1
+    },
+    {
+      "enemy_id": "mob_splitter_shard_eco_01",
+      "role": "splitter",
+      "elite_eligible": false,
+      "split_child_id": "mob_square_01",
+      "split_count": 2,
+      "split_generations": 2
+    },
+    {
+      "enemy_id": "mob_support_eco_01",
+      "role": "supporter",
+      "effect_radius": 5.0,
+      "interval": 1.65,
+      "heal_percent": 0.026,
+      "shield_amount": 3.0
+    },
+    {
+      "enemy_id": "mob_bomber_eco_01",
+      "role": "bomber",
+      "trigger_radius": 2.6,
+      "effect_radius": 3.1,
+      "windup": 0.85,
+      "ability_damage": 16.0
+    },
+    {
+      "enemy_id": "mob_disruptor_eco_01",
+      "role": "disruptor",
+      "effect_radius": 4.8,
+      "interval": 0.75
+    }
+  ],
+  "elite_affixes": [
+    {
+      "id": "giant",
+      "hp_mult": 3.0,
+      "scale_mult": 1.4
+    },
+    {
+      "id": "berserk",
+      "hp_mult": 1.35,
+      "speed_mult": 1.5,
+      "scale_mult": 1.12
+    },
+    {
+      "id": "shielded",
+      "hp_mult": 1.45,
+      "shield_amount": 45.0,
+      "scale_mult": 1.15
+    },
+    {
+      "id": "splitting",
+      "hp_mult": 1.5,
+      "split_count": 2,
+      "scale_mult": 1.18
+    },
+    {
+      "id": "volatile",
+      "hp_mult": 1.6,
+      "death_explosion_radius": 3.4,
+      "death_explosion_damage": 14.0,
+      "scale_mult": 1.2
+    },
+    {
+      "id": "gravity",
+      "hp_mult": 1.7,
+      "gravity_radius": 4.6,
+      "scale_mult": 1.2
+    }
+  ],
+  "compositions": [
+    {
+      "id": "basic_pressure",
+      "min_wave": 1,
+      "max_wave": 5,
+      "weight": 3,
+      "enemy_ids": [
+        "mob_square_01",
+        "mob_square_01",
+        "mob_hex_03"
+      ]
+    },
+    {
+      "id": "opening_crossfire",
+      "min_wave": 1,
+      "max_wave": 5,
+      "weight": 1,
+      "enemy_ids": [
+        "mob_square_01",
+        "mob_square_01",
+        "mob_square_01",
+        "mob_star4_01"
+      ]
+    },
+    {
+      "id": "early_interceptor",
+      "min_wave": 3,
+      "max_wave": 8,
+      "weight": 1,
+      "enemy_ids": [
+        "mob_square_01",
+        "mob_hex_01",
+        "mob_wisp_fast_01"
+      ]
+    },
+    {
+      "id": "heavy_line",
+      "min_wave": 3,
+      "max_wave": 5,
+      "weight": 1,
+      "enemy_ids": [
+        "mob_square_01",
+        "mob_hex_03",
+        "mob_pent_01"
+      ]
+    },
+    {
+      "id": "early_shooter",
+      "min_wave": 4,
+      "max_wave": 9,
+      "weight": 2,
+      "enemy_ids": [
+        "mob_square_01",
+        "mob_square_01",
+        "mob_hex_01",
+        "mob_star4_01"
+      ]
+    },
+    {
+      "id": "laser_skirmish",
+      "min_wave": 9,
+      "max_wave": 11,
+      "weight": 1,
+      "enemy_ids": [
+        "mob_square_01",
+        "mob_star4_01",
+        "mob_tri_01"
+      ]
+    },
+    {
+      "id": "runner_split",
+      "min_wave": 6,
+      "max_wave": 10,
+      "weight": 3,
+      "enemy_ids": [
+        "mob_square_01",
+        "mob_wisp_fast_01",
+        "mob_splitter_eco_01"
+      ]
+    },
+    {
+      "id": "rush_screen",
+      "min_wave": 6,
+      "max_wave": 10,
+      "weight": 2,
+      "enemy_ids": [
+        "mob_hex_01",
+        "mob_square_02",
+        "mob_splitter_eco_01"
+      ]
+    },
+    {
+      "id": "early_support",
+      "min_wave": 9,
+      "max_wave": 11,
+      "weight": 1,
+      "enemy_ids": [
+        "mob_hex_03",
+        "mob_support_eco_01"
+      ]
+    },
+    {
+      "id": "early_disruptor",
+      "min_wave": 9,
+      "max_wave": 12,
+      "weight": 2,
+      "enemy_ids": [
+        "mob_square_01",
+        "mob_disruptor_eco_01",
+        "mob_star4_01"
+      ]
+    },
+    {
+      "id": "protected_fireline",
+      "min_wave": 11,
+      "max_wave": 14,
+      "weight": 2,
+      "enemy_ids": [
+        "mob_square_01",
+        "mob_star4_01",
+        "mob_hex_03"
+      ]
+    },
+    {
+      "id": "priority_targets",
+      "min_wave": 12,
+      "max_wave": 15,
+      "weight": 1,
+      "enemy_ids": [
+        "mob_hex_03",
+        "mob_star5_01",
+        "mob_disruptor_eco_01"
+      ]
+    },
+    {
+      "id": "sniper_screen",
+      "min_wave": 14,
+      "max_wave": 15,
+      "weight": 1,
+      "enemy_ids": [
+        "mob_hex_03",
+        "mob_star5_01",
+        "mob_tri_05"
+      ]
+    },
+    {
+      "id": "runner_crossfire",
+      "min_wave": 14,
+      "max_wave": 15,
+      "weight": 2,
+      "enemy_ids": [
+        "mob_wisp_fast_01",
+        "mob_square_02",
+        "mob_star4_02"
+      ]
+    },
+    {
+      "id": "fracture_bomb",
+      "min_wave": 14,
+      "max_wave": 15,
+      "weight": 1,
+      "enemy_ids": [
+        "mob_splitter_eco_01",
+        "mob_bomber_eco_01",
+        "mob_square_01"
+      ]
+    },
+    {
+      "id": "control_fireline",
+      "min_wave": 15,
+      "max_wave": 15,
+      "weight": 1,
+      "enemy_ids": [
+        "mob_disruptor_eco_01",
+        "mob_star8_01",
+        "mob_square_01",
+        "mob_hex_03"
+      ]
+    },
+    {
+      "id": "arena_chaos",
+      "min_wave": 15,
+      "max_wave": 15,
+      "weight": 1,
+      "enemy_ids": [
+        "mob_hex_03",
+        "mob_wisp_fast_01",
+        "mob_splitter_eco_01",
+        "mob_star5_01",
+        "mob_bomber_eco_01",
+        "mob_disruptor_eco_01"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,553 @@
+﻿{
+    "schema_version":  4,
+    "_note":  "15 波次；enemy_id 引用 enemies.json。无叙事 description。",
+    "wave_config":  {
+                        "build_phase_duration":  5.0,
+                        "pre_first_wave_delay":  5.0,
+                        "min_enemies_per_wave":  14,
+                        "max_enemies_per_wave_base":  14,
+                        "enemies_per_wave_growth":  1.13,
+                        "spawn_interval":  0.18,
+                        "spawn_mode":  "ring",
+                        "_spawn_note":  "ring 模式以玩家当前位置为圆心全方向刷怪；base_point 仅作找不到玩家时的回退",
+                        "base_point":  {
+                                           "x":  0,
+                                           "y":  0
+                                       },
+                        "spawn_radius":  28,
+                        "spawn_radius_jitter":  3,
+                        "spawn_point":  {
+                                            "x":  -10,
+                                            "y":  0
+                                        },
+                        "scaling_curves":  {
+                                               "hp_growth_per_wave":  1.14,
+                                               "damage_growth_per_wave":  1.12,
+                                               "speed_growth_per_wave":  1.022,
+                                               "dash_speed_growth_per_wave":  1.05,
+                                               "hp_growth_cap":  5.5,
+                                               "damage_growth_cap":  3.2,
+                                               "speed_growth_cap":  1.38,
+                                               "dash_speed_growth_cap":  2.2
+                                           }
+                    },
+    "waves":  [
+                  {
+                      "wave":  1,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  55,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  45,
+                                             "enemy_id":  "mob_hex_03"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.0,
+                                      "damage_mult":  1.0,
+                                      "speed_mult":  1.0,
+                                      "count_bonus":  0
+                                  }
+                  },
+                  {
+                      "wave":  2,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  45,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  40,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  15,
+                                             "enemy_id":  "mob_pent_01"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.03,
+                                      "damage_mult":  1.03,
+                                      "speed_mult":  1.0,
+                                      "count_bonus":  2
+                                  }
+                  },
+                  {
+                      "wave":  3,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  35,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  25,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  25,
+                                             "enemy_id":  "mob_hex_01"
+                                         },
+                                         {
+                                             "weight":  15,
+                                             "enemy_id":  "mob_square_02"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.06,
+                                      "damage_mult":  1.06,
+                                      "speed_mult":  1.0,
+                                      "count_bonus":  4
+                                  }
+                  },
+                  {
+                      "wave":  4,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  30,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  25,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  25,
+                                             "enemy_id":  "mob_hex_01"
+                                         },
+                                         {
+                                             "weight":  20,
+                                             "enemy_id":  "mob_square_02"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.09,
+                                      "damage_mult":  1.09,
+                                      "speed_mult":  1.0,
+                                      "count_bonus":  6
+                                  }
+                  },
+                  {
+                      "wave":  5,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  60,
+                                             "enemy_id":  "mob_hex_01"
+                                         },
+                                         {
+                                             "weight":  40,
+                                             "enemy_id":  "mob_square_02"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.12,
+                                      "damage_mult":  1.12,
+                                      "speed_mult":  1.02,
+                                      "count_bonus":  8
+                                  }
+                  },
+                  {
+                      "wave":  6,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  50,
+                                             "enemy_id":  "mob_hex_01"
+                                         },
+                                         {
+                                             "weight":  50,
+                                             "enemy_id":  "mob_square_02"
+                                         },
+                                         {
+                                             "weight":  8,
+                                             "enemy_id":  "mob_wisp_fast_01"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.15,
+                                      "damage_mult":  1.15,
+                                      "speed_mult":  1.03,
+                                      "count_bonus":  10
+                                  }
+                  },
+                  {
+                      "wave":  7,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  35,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  25,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  30,
+                                             "enemy_id":  "mob_star4_01"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_star5_01"
+                                         },
+                                         {
+                                             "weight":  8,
+                                             "enemy_id":  "mob_wisp_fast_01"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.18,
+                                      "damage_mult":  1.18,
+                                      "speed_mult":  1.04,
+                                      "count_bonus":  12
+                                  }
+                  },
+                  {
+                      "wave":  8,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  30,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  25,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_pent_01"
+                                         },
+                                         {
+                                             "weight":  25,
+                                             "enemy_id":  "mob_star4_01"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_star5_01"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_wisp_fast_01"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.22,
+                                      "damage_mult":  1.22,
+                                      "speed_mult":  1.05,
+                                      "count_bonus":  14
+                                  }
+                  },
+                  {
+                      "wave":  9,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  100,
+                                             "enemy_id":  "mob_tri_05"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.26,
+                                      "damage_mult":  1.26,
+                                      "speed_mult":  1.06,
+                                      "count_bonus":  16
+                                  }
+                  },
+                  {
+                      "wave":  10,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  30,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  20,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  25,
+                                             "enemy_id":  "mob_star4_01"
+                                         },
+                                         {
+                                             "weight":  12,
+                                             "enemy_id":  "mob_star5_01"
+                                         },
+                                         {
+                                             "weight":  8,
+                                             "enemy_id":  "mob_star4_02"
+                                         },
+                                         {
+                                             "weight":  5,
+                                             "enemy_id":  "mob_tri_05"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_wisp_fast_01"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.3,
+                                      "damage_mult":  1.3,
+                                      "speed_mult":  1.08,
+                                      "count_bonus":  18
+                                  }
+                  },
+                  {
+                      "wave":  11,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  25,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  20,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_pent_01"
+                                         },
+                                         {
+                                             "weight":  22,
+                                             "enemy_id":  "mob_star4_01"
+                                         },
+                                         {
+                                             "weight":  12,
+                                             "enemy_id":  "mob_star5_01"
+                                         },
+                                         {
+                                             "weight":  7,
+                                             "enemy_id":  "mob_star4_02"
+                                         },
+                                         {
+                                             "weight":  4,
+                                             "enemy_id":  "mob_tri_05"
+                                         },
+                                         {
+                                             "weight":  12,
+                                             "enemy_id":  "mob_wisp_fast_01"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.34,
+                                      "damage_mult":  1.34,
+                                      "speed_mult":  1.09,
+                                      "count_bonus":  20
+                                  }
+                  },
+                  {
+                      "wave":  12,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  20,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  15,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  15,
+                                             "enemy_id":  "mob_hex_01"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_square_02"
+                                         },
+                                         {
+                                             "weight":  18,
+                                             "enemy_id":  "mob_star4_01"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_star5_01"
+                                         },
+                                         {
+                                             "weight":  7,
+                                             "enemy_id":  "mob_star4_02"
+                                         },
+                                         {
+                                             "weight":  5,
+                                             "enemy_id":  "mob_tri_05"
+                                         },
+                                         {
+                                             "weight":  12,
+                                             "enemy_id":  "mob_wisp_fast_01"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.38,
+                                      "damage_mult":  1.38,
+                                      "speed_mult":  1.11,
+                                      "count_bonus":  22
+                                  }
+                  },
+                  {
+                      "wave":  13,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  18,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  14,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  8,
+                                             "enemy_id":  "mob_pent_01"
+                                         },
+                                         {
+                                             "weight":  14,
+                                             "enemy_id":  "mob_hex_01"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_square_02"
+                                         },
+                                         {
+                                             "weight":  15,
+                                             "enemy_id":  "mob_star4_01"
+                                         },
+                                         {
+                                             "weight":  9,
+                                             "enemy_id":  "mob_star5_01"
+                                         },
+                                         {
+                                             "weight":  6,
+                                             "enemy_id":  "mob_star4_02"
+                                         },
+                                         {
+                                             "weight":  2,
+                                             "enemy_id":  "mob_star8_01"
+                                         },
+                                         {
+                                             "weight":  4,
+                                             "enemy_id":  "mob_tri_05"
+                                         },
+                                         {
+                                             "weight":  14,
+                                             "enemy_id":  "mob_wisp_fast_01"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.42,
+                                      "damage_mult":  1.42,
+                                      "speed_mult":  1.13,
+                                      "count_bonus":  24
+                                  }
+                  },
+                  {
+                      "wave":  14,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  16,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  14,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_pent_01"
+                                         },
+                                         {
+                                             "weight":  14,
+                                             "enemy_id":  "mob_hex_01"
+                                         },
+                                         {
+                                             "weight":  10,
+                                             "enemy_id":  "mob_square_02"
+                                         },
+                                         {
+                                             "weight":  14,
+                                             "enemy_id":  "mob_star4_01"
+                                         },
+                                         {
+                                             "weight":  9,
+                                             "enemy_id":  "mob_star5_01"
+                                         },
+                                         {
+                                             "weight":  7,
+                                             "enemy_id":  "mob_star4_02"
+                                         },
+                                         {
+                                             "weight":  2,
+                                             "enemy_id":  "mob_star8_01"
+                                         },
+                                         {
+                                             "weight":  4,
+                                             "enemy_id":  "mob_tri_05"
+                                         },
+                                         {
+                                             "weight":  15,
+                                             "enemy_id":  "mob_wisp_fast_01"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.48,
+                                      "damage_mult":  1.48,
+                                      "speed_mult":  1.15,
+                                      "count_bonus":  26
+                                  }
+                  },
+                  {
+                      "wave":  15,
+                      "enemy_pool":  [
+                                         {
+                                             "weight":  15,
+                                             "enemy_id":  "mob_square_01"
+                                         },
+                                         {
+                                             "weight":  13,
+                                             "enemy_id":  "mob_hex_03"
+                                         },
+                                         {
+                                             "weight":  12,
+                                             "enemy_id":  "mob_pent_01"
+                                         },
+                                         {
+                                             "weight":  13,
+                                             "enemy_id":  "mob_hex_01"
+                                         },
+                                         {
+                                             "weight":  12,
+                                             "enemy_id":  "mob_square_02"
+                                         },
+                                         {
+                                             "weight":  12,
+                                             "enemy_id":  "mob_star4_01"
+                                         },
+                                         {
+                                             "weight":  9,
+                                             "enemy_id":  "mob_star5_01"
+                                         },
+                                         {
+                                             "weight":  7,
+                                             "enemy_id":  "mob_star4_02"
+                                         },
+                                         {
+                                             "weight":  3,
+                                             "enemy_id":  "mob_star8_01"
+                                         },
+                                         {
+                                             "weight":  4,
+                                             "enemy_id":  "mob_tri_05"
+                                         },
+                                         {
+                                             "weight":  16,
+                                             "enemy_id":  "mob_wisp_fast_01"
+                                         }
+                                     ],
+                      "scaling":  {
+                                      "hp_mult":  1.55,
+                                      "damage_mult":  1.55,
+                                      "speed_mult":  1.18,
+                                      "count_bonus":  28
+                                  }
+                  }
+              ],
+    "_scaling_formula":  {
+                             "note":  "final = base_stat × min(growth^(wave-1), cap) × wave.scaling.*_mult",
+                             "example_wave_15_mob_pent_01":  "HP 60 × 3.8 × 1.55 ≈ 353 | DMG 14 × 2.4 × 1.55 ≈ 52（较旧 10 波终局略低、曲线更平滑）"
+                         }
+}

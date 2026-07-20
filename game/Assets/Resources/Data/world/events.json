@@ -1,0 +1,327 @@
+{
+  "schema_version": 2,
+  "_note": "节点图事件格式。新增战斗圈事件、诅咒祭坛、灵魂契约等。所有可获得饰品的非诅咒事件都要求付出代价。",
+  "events": [
+    {
+      "id": "event_sacrifice_hp",
+      "display_name": "生命献祭",
+      "description": "一个古老的祭坛出现在你面前。",
+      "category": "sacrifice",
+      "min_world_level": 1,
+      "is_repeatable": false,
+      "weight": 1.5,
+      "nodes": [
+        { "node_id": "start", "description": "祭坛散发着诡异的光芒，石板上的文字要求你献祭生命力来换取力量。", "options": [
+          { "text": "献祭 25% 生命", "next": "sacrifice" },
+          { "text": "无视祭坛离开", "next": "end" }
+        ]},
+        { "node_id": "sacrifice", "description": "你割破手掌，鲜血滴入祭坛的凹槽...", "condition": { "type": "hp_percent", "op": "gte", "value": 30 },
+          "effects": [{ "type": "modify_hp", "value": -0.25, "value_type": "percent" }],
+          "options": [
+            { "text": "祈求力量(+15%攻击)", "next": "reward_attack" },
+            { "text": "祈求生命(+20%最大HP)", "next": "reward_hp" },
+            { "text": "祈求财富(+300金币)", "next": "reward_gold" }
+          ]},
+        { "node_id": "reward_attack", "description": "祭坛回应了你的祈求，力量涌入你的身体。", "effects": [{ "type": "add_attribute", "attr": "attack_mult", "value": 0.15 }], "auto_next": "end" },
+        { "node_id": "reward_hp", "description": "暖流流过全身，你的生命力显著增强。", "effects": [{ "type": "add_attribute", "attr": "max_hp_mult", "value": 0.20 }], "auto_next": "end" },
+        { "node_id": "reward_gold", "description": "祭坛底部打开，露出了堆积的金币。", "effects": [{ "type": "modify_gold", "value": 300 }], "auto_next": "end" },
+        { "node_id": "end", "description": "你继续踏上旅途。" }
+      ]
+    },
+    {
+      "id": "event_reveal_camps",
+      "display_name": "制高点侦察",
+      "description": "你发现了一处制高点，可以俯瞰周围的营地分布。",
+      "category": "intel",
+      "min_world_level": 1,
+      "is_repeatable": true,
+      "weight": 1.0,
+      "nodes": [
+        { "node_id": "start", "description": "攀上高处，你能看到附近的营地布局。是否花时间观察？", "options": [
+          { "text": "侦察附近（+80 XP，显示营地）", "next": "scout" },
+          { "text": "不浪费时间", "next": "end" }
+        ]},
+        { "node_id": "scout", "description": "你仔细观察了周围地形，标记了所有营地的位置。", "effects": [
+          { "type": "modify_xp", "value": 80 },
+          { "type": "reveal_markers", "marker_type": "Camp" }
+        ], "auto_next": "end" },
+        { "node_id": "end", "description": "继续前进。" }
+      ]
+    },
+    {
+      "id": "event_treasure_cache",
+      "display_name": "隐藏宝藏",
+      "description": "你在废墟中发现了一个隐藏的补给箱。",
+      "category": "treasure",
+      "min_world_level": 2,
+      "is_repeatable": false,
+      "weight": 1.2,
+      "nodes": [
+        { "node_id": "start", "description": "箱子看起来有些年头了，但锁扣仍然完好。", "options": [
+          { "text": "撬开宝箱（获得破损饰品）", "next": "accessory" },
+          { "text": "小心检查（+200 金币 + 50 XP）", "next": "gold_xp" },
+          { "text": "离开", "next": "end" }
+        ]},
+        { "node_id": "accessory", "description": "在箱子夹层中，你发现了一件饰品。", "effects": [{ "type": "add_accessory", "rarity": "damaged", "count": 1 }], "auto_next": "end" },
+        { "node_id": "gold_xp", "description": "箱子里装满了金币和一些古代文献。", "effects": [
+          { "type": "modify_gold", "value": 200 },
+          { "type": "modify_xp", "value": 50 }
+        ], "auto_next": "end" },
+        { "node_id": "end", "description": "离开废墟。" }
+      ]
+    },
+    {
+      "id": "event_risky_trade",
+      "display_name": "神秘交易",
+      "description": "一个身披斗篷的神秘商人拦住了你。",
+      "category": "risk_reward",
+      "min_world_level": 3,
+      "is_repeatable": true,
+      "weight": 1.0,
+      "nodes": [
+        { "node_id": "start", "description": "\"我有稀有货品，但需要你付出代价。\"商人低声说。", "options": [
+          { "text": "消耗 200 XP 换攻击Buff", "next": "xp_trade", "condition": { "type": "player_level", "op": "gte", "value": 3 } },
+          { "text": "消耗 150 金币换移速Buff", "next": "gold_trade", "condition": { "type": "gold", "op": "gte", "value": 150 } },
+          { "text": "消耗15%HP换完好饰品", "next": "hp_trade", "condition": { "type": "hp_percent", "op": "gte", "value": 20 } },
+          { "text": "拒绝交易", "next": "end" }
+        ]},
+        { "node_id": "xp_trade", "description": "商人取走了经验精华，递给你一瓶发光药剂。", "effects": [
+          { "type": "modify_xp", "value": -200 },
+          { "type": "apply_buff", "buff_id": "shop_buff_attack_boost", "duration": 120 }
+        ], "auto_next": "end" },
+        { "node_id": "gold_trade", "description": "商人收下金币，在你手背上画了符文。", "effects": [
+          { "type": "modify_gold", "value": -150 },
+          { "type": "apply_buff", "buff_id": "shop_buff_speed_boost", "duration": 150 }
+        ], "auto_next": "end" },
+        { "node_id": "hp_trade", "description": "商人取走了你的血液，递给你一件完好饰品。", "effects": [
+          { "type": "modify_hp", "value": -0.15, "value_type": "percent" },
+          { "type": "add_accessory", "rarity": "intact", "count": 1 }
+        ], "auto_next": "end" },
+        { "node_id": "end", "description": "商人消失在阴影中。" }
+      ]
+    },
+    {
+      "id": "event_challenge_trial",
+      "display_name": "试炼挑战",
+      "description": "远古守护者的幻影向你发起挑战。",
+      "category": "challenge",
+      "min_world_level": 5,
+      "is_repeatable": false,
+      "weight": 0.8,
+      "nodes": [
+        { "node_id": "start", "description": "\"只有真正的勇士才配得到我的馈赠。\"", "options": [
+          { "text": "接受试炼（-20%HP，+精致饰品）", "next": "accept", "condition": { "type": "hp_percent", "op": "gte", "value": 30 } },
+          { "text": "谨慎撤退", "next": "end" }
+        ]},
+        { "node_id": "accept", "description": "守护者洒下光环，你的身体承受了试炼。", "effects": [
+          { "type": "modify_hp", "value": -0.20, "value_type": "percent" },
+          { "type": "add_accessory", "rarity": "refined", "count": 1 }
+        ], "auto_next": "reward_xp" },
+        { "node_id": "reward_xp", "description": "守护者满意地点头。", "effects": [{ "type": "modify_xp", "value": 200 }], "auto_next": "end" },
+        { "node_id": "end", "description": "守护者的幻影消散。" }
+      ]
+    },
+    {
+      "id": "event_combat_circle",
+      "display_name": "战斗圈",
+      "description": "一个魔法屏障突然升起，将你困在其中！只有击败所有出现的敌人才可离开。",
+      "category": "challenge",
+      "min_world_level": 5,
+      "is_repeatable": true,
+      "weight": 0.9,
+      "nodes": [
+        { "node_id": "start", "description": "魔法符文在地面亮起，形成一个限制圈。\"战斗至死，或荣耀而归！\"", "options": [
+          { "text": "迎战！（生成一批敌人+限制圈，获胜得完好饰品）", "next": "fight" },
+          { "text": "在屏障完全封闭前逃离（消耗50金币）", "next": "flee", "condition": { "type": "gold", "op": "gte", "value": 50 } }
+        ]},
+        { "node_id": "fight", "description": "敌人从四面八方涌来！", "effects": [
+          { "type": "spawn_combat_circle", "enemy_count": 5, "radius": 10.0 }
+        ], "options": [
+          { "text": "战斗胜利！", "next": "victory" }
+        ]},
+        { "node_id": "victory", "description": "最后一名敌人倒下，屏障随之消散。", "effects": [
+          { "type": "add_accessory", "rarity": "intact", "count": 1 },
+          { "type": "modify_xp", "value": 100 }
+        ], "auto_next": "end" },
+        { "node_id": "flee", "description": "你仓促逃离，损失了一些金币。", "effects": [{ "type": "modify_gold", "value": -50 }], "auto_next": "end" },
+        { "node_id": "end", "description": "战斗的余音在空中回荡。" }
+      ]
+    },
+    {
+      "id": "event_xp_wager",
+      "display_name": "经验赌局",
+      "description": "路边出现了一个古老的赌局机关。",
+      "category": "risk_reward",
+      "min_world_level": 6,
+      "is_repeatable": true,
+      "weight": 0.9,
+      "nodes": [
+        { "node_id": "start", "description": "\"押上经验，翻转命运\"。两个按钮：红与蓝。", "options": [
+          { "text": "押上 150 XP", "next": "gamble", "condition": { "type": "player_level", "op": "gte", "value": 4 } },
+          { "text": "安全起见", "next": "end" }
+        ]},
+        { "node_id": "gamble", "description": "你按下按钮...", "effects": [{ "type": "modify_xp", "value": -150 }], "options": [
+          { "text": "红色", "next": "win" },
+          { "text": "蓝色", "next": "lose" }
+        ]},
+        { "node_id": "win", "description": "铃声！赌赢了！获得300 XP + 完好饰品！", "effects": [
+          { "type": "modify_xp", "value": 300 },
+          { "type": "add_accessory", "rarity": "intact", "count": 1 }
+        ], "auto_next": "end" },
+        { "node_id": "lose", "description": "低鸣声...赌输了。", "effects": [{ "type": "modify_xp", "value": -80 }], "auto_next": "end" },
+        { "node_id": "end", "description": "机关缓缓沉入地下。" }
+      ]
+    },
+    {
+      "id": "event_cursed_altar",
+      "display_name": "诅咒祭坛",
+      "description": "一个散发着不祥气息的黑色祭坛。铭文写着\"接受诅咒，获得神物\"。",
+      "category": "sacrifice",
+      "min_world_level": 7,
+      "is_repeatable": false,
+      "weight": 0.7,
+      "nodes": [
+        { "node_id": "start", "description": "祭坛散发着黑暗的能量，似乎在等待有人接受它的交易。", "options": [
+          { "text": "接受诅咒(+诅咒饰品+精致饰品)", "next": "accept" },
+          { "text": "拒绝黑暗的诱惑", "next": "end" }
+        ]},
+        { "node_id": "accept", "description": "黑暗能量涌入你的身体...你获得了一件精致的饰品，但也背上了一个永久的诅咒。", "effects": [
+          { "type": "add_accessory", "rarity": "cursed", "count": 1 },
+          { "type": "add_accessory", "rarity": "refined", "count": 1 }
+        ], "auto_next": "end" },
+        { "node_id": "end", "description": "祭坛的黑暗仍在低语..." }
+      ]
+    },
+    {
+      "id": "event_mysterious_merchant",
+      "display_name": "神秘使者",
+      "description": "一个全身笼罩在光芒中的使者出现在你面前。\"我带来了一件...特别的礼物。\"",
+      "category": "risk_reward",
+      "min_world_level": 8,
+      "is_repeatable": false,
+      "weight": 0.6,
+      "nodes": [
+        { "node_id": "start", "description": "使者手中捧着一件光芒四射的物品。\"但它有它的代价...\"", "options": [
+          { "text": "接受礼物（获得神秘饰品）", "next": "gift" },
+          { "text": "礼貌地拒绝", "next": "end" }
+        ]},
+        { "node_id": "gift", "description": "你接过物品，感觉到命运正发生微妙的变化。", "effects": [
+          { "type": "add_accessory", "rarity": "mysterious", "count": 1 },
+          { "type": "modify_world_level_exp", "value": 50 }
+        ], "auto_next": "end" },
+        { "node_id": "end", "description": "使者微笑着消失在一道光中。" }
+      ]
+    },
+    {
+      "id": "event_gold_rush",
+      "display_name": "金矿发现",
+      "description": "你发现了一处裸露的金矿脉！但挖掘可能引发危险。",
+      "category": "treasure",
+      "min_world_level": 7,
+      "is_repeatable": false,
+      "weight": 0.7,
+      "nodes": [
+        { "node_id": "start", "description": "金矿石闪闪发光。", "options": [
+          { "text": "大量开采（500金币，但触发敌人袭击）", "next": "dig_deep" },
+          { "text": "少量开采（200金币 + 100 XP）", "next": "dig_light" },
+          { "text": "担心矿难，离开", "next": "end" }
+        ]},
+        { "node_id": "dig_deep", "description": "你奋力挖掘。矿道震动引来了一批敌人！", "effects": [
+          { "type": "modify_gold", "value": 500 },
+          { "type": "spawn_ambush", "enemy_count": 4 }
+        ], "auto_next": "end" },
+        { "node_id": "dig_light", "description": "你小心采集表面矿石，找到了古老文献。", "effects": [
+          { "type": "modify_gold", "value": 200 },
+          { "type": "modify_xp", "value": 100 }
+        ], "auto_next": "end" },
+        { "node_id": "end", "description": "矿脉已枯竭。" }
+      ]
+    },
+    {
+      "id": "event_dangerous_trade",
+      "display_name": "死亡交易",
+      "description": "一个脸色苍白的商人坐在路边。\"我想要你的...一件饰品。作为交换，我给你更好的。\"",
+      "category": "risk_reward",
+      "min_world_level": 9,
+      "is_repeatable": true,
+      "weight": 0.6,
+      "nodes": [
+        { "node_id": "start", "description": "商人指了指你身上的饰品，又指了指他手中的精致饰品。", "options": [
+          { "text": "随机失去一件饰品，获得精致饰品", "next": "trade" },
+          { "text": "拒绝交易", "next": "end" }
+        ]},
+        { "node_id": "trade", "description": "商人取走了你的一件饰品，递给你一件更为精致的。", "effects": [
+          { "type": "remove_random_accessory", "count": 1 },
+          { "type": "add_accessory", "rarity": "refined", "count": 1 }
+        ], "auto_next": "end" },
+        { "node_id": "end", "description": "商人满意地点点头，消失不见。" }
+      ]
+    },
+    {
+      "id": "event_soul_contract",
+      "display_name": "灵魂契约",
+      "description": "一张古老的羊皮卷轴凭空出现在你面前。\"签名，获得力量。代价是...加快末日的到来。\"",
+      "category": "risk_reward",
+      "min_world_level": 11,
+      "is_repeatable": false,
+      "weight": 0.5,
+      "nodes": [
+        { "node_id": "start", "description": "卷轴上写满了古老的文字，只有签名处空白。", "options": [
+          { "text": "签名（攻击+30%，+100世界经验）", "next": "sign" },
+          { "text": "撕碎卷轴（+100 XP）", "next": "tear" }
+        ]},
+        { "node_id": "sign", "description": "你签下名字。力量涌入，但世界变得更危险了。", "effects": [
+          { "type": "add_attribute", "attr": "attack_mult", "value": 0.30 },
+          { "type": "modify_world_level_exp", "value": 100 }
+        ], "auto_next": "end" },
+        { "node_id": "tear", "description": "卷轴化为灰烬，你感到一阵轻松。", "effects": [{ "type": "modify_xp", "value": 100 }], "auto_next": "end" },
+        { "node_id": "end", "description": "卷轴的气息消散。" }
+      ]
+    },
+    {
+      "id": "event_boss_premonition",
+      "display_name": "Boss预兆",
+      "description": "天空变得暗红，地面上浮现出巨大的符文。最终Boss正从沉睡中觉醒。",
+      "category": "intel",
+      "min_world_level": 12,
+      "is_repeatable": false,
+      "weight": 0.4,
+      "nodes": [
+        { "node_id": "start", "description": "符文指向地图的远方，那里是最终Boss的巢穴。", "options": [
+          { "text": "标记Boss巢穴位置", "next": "reveal" },
+          { "text": "不理会预兆", "next": "end" }
+        ]},
+        { "node_id": "reveal", "description": "你记下了Boss的位置。同时残留在符文中的力量增强了你的体魄。", "effects": [
+          { "type": "reveal_markers", "marker_type": "BossNest" },
+          { "type": "add_attribute", "attr": "max_hp_mult", "value": 0.10 }
+        ], "auto_next": "end" },
+        { "node_id": "end", "description": "天空恢复了常态。" }
+      ]
+    },
+    {
+      "id": "event_final_preparation",
+      "display_name": "最终准备",
+      "description": "你来到了一个古老的锻造台。褪色的铭文写着\"最后的锻造\"。",
+      "category": "preparation",
+      "min_world_level": 14,
+      "is_repeatable": false,
+      "weight": 0.3,
+      "nodes": [
+        { "node_id": "start", "description": "锻造台仍有余温。你可以用它进行最后一次强化。", "options": [
+          { "text": "锻造武器（攻击+20%，消耗200金币）", "next": "forge_weapon", "condition": { "type": "gold", "op": "gte", "value": 200 } },
+          { "text": "锻造防具（防御+30，消耗200金币）", "next": "forge_armor", "condition": { "type": "gold", "op": "gte", "value": 200 } },
+          { "text": "稍作休息", "next": "end" }
+        ]},
+        { "node_id": "forge_weapon", "description": "武器在锻造台上发出耀眼的光芒！", "effects": [
+          { "type": "modify_gold", "value": -200 },
+          { "type": "add_attribute", "attr": "attack_mult", "value": 0.20 }
+        ], "auto_next": "end" },
+        { "node_id": "forge_armor", "description": "防具被注入了最后的保护魔法。", "effects": [
+          { "type": "modify_gold", "value": -200 },
+          { "type": "add_attribute", "attr": "defense", "value": 30.0 }
+        ], "auto_next": "end" },
+        { "node_id": "end", "description": "锻造台冷却了，再做不出任何改变。" }
+      ]
+    }
+  ]
+}

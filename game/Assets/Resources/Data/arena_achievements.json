@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "achievements": [
+    {
+      "id": "first_wave",
+      "title": "初阵",
+      "description": "完成任意 1 波",
+      "metric": "wave_reached",
+      "target": 1
+    },
+    {
+      "id": "wave_5",
+      "title": "站稳脚跟",
+      "description": "到达第 5 波",
+      "metric": "wave_reached",
+      "target": 5
+    },
+    {
+      "id": "wave_10",
+      "title": "中场强者",
+      "description": "到达第 10 波",
+      "metric": "wave_reached",
+      "target": 10
+    },
+    {
+      "id": "wave_15",
+      "title": "深域幸存者",
+      "description": "到达第 15 波",
+      "metric": "wave_reached",
+      "target": 15
+    },
+    {
+      "id": "wave_15_clear",
+      "title": "Demo ???",
+      "description": "? W15 ??",
+      "metric": "victory_w15",
+      "target": 15
+    },
+    {
+      "id": "kills_50",
+      "title": "清剿者",
+      "description": "单局击杀 50",
+      "metric": "kills",
+      "target": 50
+    },
+    {
+      "id": "kills_150",
+      "title": "屠场",
+      "description": "单局击杀 150",
+      "metric": "kills",
+      "target": 150
+    },
+    {
+      "id": "level_8",
+      "title": "成长曲线",
+      "description": "单局达到 8 级",
+      "metric": "level",
+      "target": 8
+    },
+    {
+      "id": "level_16",
+      "title": "满配雏形",
+      "description": "单局达到 16 级",
+      "metric": "level",
+      "target": 16
+    },
+    {
+      "id": "hard_clear",
+      "title": "Hard 通关",
+      "description": "困难难度胜利",
+      "metric": "hard_victory",
+      "target": 1
+    },
+    {
+      "id": "four_builds",
+      "title": "四向探索",
+      "description": "四种 Build 各胜利 1 次",
+      "metric": "builds_won",
+      "target": 4
+    },
+    {
+      "id": "meta_100",
+      "title": "碎片收集",
+      "description": "累计 Meta 碎片 100",
+      "metric": "total_shards",
+      "target": 100
+    }
+  ],
+  "daily_contracts": [
+    {
+      "id": "daily_wave_8",
+      "title": "今日：到达 W8",
+      "description": "任意难度到达第 8 波",
+      "metric": "wave_reached",
+      "target": 8,
+      "reward_shards": 12
+    },
+    {
+      "id": "daily_kills_80",
+      "title": "今日：击杀 80",
+      "description": "单局击杀 80 敌人",
+      "metric": "kills",
+      "target": 80,
+      "reward_shards": 10
+    },
+    {
+      "id": "daily_build_win",
+      "title": "今日：Build 胜利",
+      "description": "用当前所选 Build 胜利 1 局",
+      "metric": "build_victory",
+      "target": 1,
+      "reward_shards": 15
+    }
+  ]
+}

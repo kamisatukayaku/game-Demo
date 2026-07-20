@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "pool": "foundation",
+  "upgrades": [
+    {
+      "tier": 0,
+      "id": "foundation_primary_shot",
+      "display_name": "自动射击",
+      "description": "解锁自动远程射击。",
+      "category": "gameplay",
+      "offer_weight": 1.3,
+      "tags": ["foundation", "projectile"]
+    },
+    {
+      "tier": 0,
+      "id": "foundation_detached_origin",
+      "display_name": "无人武器",
+      "description": "外置武器槽 +1，可立即装配 1 个无人武器。",
+      "category": "gameplay",
+      "offer_weight": 1.15,
+      "tags": ["foundation", "detached"],
+      "modifiers": [{ "stat": "detached_part_count", "op": "add", "value": 1 }]
+    },
+    {
+      "tier": 0,
+      "id": "foundation_dash_strike",
+      "display_name": "冲刺撞击",
+      "description": "冲刺路径立即造成伤害，冲刺伤害倍率 +35%。",
+      "category": "gameplay",
+      "mechanic_id": "dash_melee",
+      "introduces_mechanic": true,
+      "offer_weight": 1.25,
+      "tags": ["foundation", "dash", "kinetic", "mechanic"],
+      "modifiers": [{ "stat": "dash_strike_damage_mult", "op": "add", "value": 0.35 }]
+    },
+    {
+      "tier": 0,
+      "id": "foundation_kinetic_trail",
+      "display_name": "动能尾流",
+      "description": "冲刺会留下短暂伤害轨迹。",
+      "category": "gameplay",
+      "requires_ids": ["foundation_dash_strike"],
+      "offer_weight": 1.0,
+      "tags": ["foundation", "dash", "kinetic", "trail"],
+      "modifiers": [
+        { "stat": "dash_damage_trail", "op": "add", "value": 1 },
+        { "stat": "dash_strike_width_add", "op": "add", "value": 0.18 }
+      ]
+    },
+    {
+      "tier": 0,
+      "id": "foundation_double_projectile",
+      "display_name": "双重弹道",
+      "description": "基础射击额外发射1枚弹道；单发伤害小幅降低。",
+      "category": "gameplay",
+      "requires_tag": "projectile",
+      "offer_weight": 1.2,
+      "tags": ["foundation", "projectile"],
+      "modifiers": [
+        { "stat": "weapon_extra_projectile", "op": "add", "value": 1 },
+        { "stat": "primary_projectile_damage_mult", "op": "add", "value": -0.06 }
+      ]
+    },
+    {
+      "tier": 0,
+      "id": "foundation_scatter",
+      "display_name": "散射协议",
+      "description": "基础射击变为扇形散射，弹道更多；单发伤害小幅降低。",
+      "category": "gameplay",
+      "requires_ids": ["foundation_double_projectile"],
+      "requires_tag": "projectile",
+      "offer_weight": 1.0,
+      "tags": ["foundation", "projectile", "scatter"],
+      "modifiers": [
+        { "stat": "spread_angle", "op": "add", "value": 18 },
+        { "stat": "weapon_extra_projectile", "op": "add", "value": 1 },
+        { "stat": "primary_projectile_damage_mult", "op": "add", "value": -0.04 }
+      ]
+    },
+    {
+      "tier": 0,
+      "id": "foundation_pierce",
+      "display_name": "穿透弹体",
+      "description": "基础弹道可以穿透1个敌人。",
+      "category": "gameplay",
+      "requires_tag": "projectile",
+      "offer_weight": 1.0,
+      "tags": ["foundation", "projectile", "pierce"],
+      "modifiers": [{ "stat": "projectile_pierce", "op": "add", "value": 1 }]
+    },
+    {
+      "tier": 0,
+      "id": "foundation_gravity_well",
+      "display_name": "引力井",
+      "description": "解锁引力井，放置吸引怪物的奇点区域。",
+      "category": "gameplay",
+      "offer_weight": 1.2,
+      "tags": ["foundation", "spell", "gravity"],
+      "modifiers": [{ "stat": "skill_gravity_well_unlock", "op": "add", "value": 1 }]
+    },
+    {
+      "tier": 0,
+      "id": "foundation_tidal_pulse",
+      "display_name": "潮汐脉冲",
+      "description": "解锁潮汐脉冲，释放水波推开周围敌人。",
+      "category": "gameplay",
+      "offer_weight": 1.15,
+      "tags": ["foundation", "spell", "tidal"],
+      "modifiers": [{ "stat": "skill_tidal_pulse_unlock", "op": "add", "value": 1 }]
+    }
+  ]
+}

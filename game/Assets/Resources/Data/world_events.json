@@ -1,0 +1,66 @@
+{
+  "_note": "随机事件点的生成规则配置。世界等级提升时必定生成新营地。营地摧毁必定生成商店(价格降低)。",
+  "event_points": [
+    {
+      "trigger": "world_generated",
+      "probability": 1.0,
+      "position": "random",
+      "count_min": 6,
+      "count_max": 10,
+      "max_total": 10,
+      "_desc": "世界初始生成：在地图上随机散布6-10个事件点"
+    },
+    {
+      "trigger": "world_level_up",
+      "probability": 0.50,
+      "position": "near_player_ring",
+      "near_min": 30.0,
+      "near_max": 55.0,
+      "count_per_trigger": 1,
+      "max_total": 8,
+      "_desc": "世界等级提升时：50%概率生成事件点。同时必定在周围生成一个新的营地（代码触发）。"
+    },
+    {
+      "trigger": "world_level_up_alt",
+      "probability": 1.0,
+      "position": "near_player_ring",
+      "near_min": 35.0,
+      "near_max": 65.0,
+      "count_min": 1,
+      "count_max": 2,
+      "max_total": 12,
+      "_desc": "世界等级提升时：必定生成1-2个新营地（高级等级解锁新营地类型）。"
+    },
+    {
+      "trigger": "player_level_up",
+      "probability": 0.30,
+      "position": "near_player_ring",
+      "near_min": 25.0,
+      "near_max": 45.0,
+      "count_per_trigger": 1,
+      "max_total": 5,
+      "_desc": "玩家等级提升时：30%概率生成事件点"
+    },
+    {
+      "trigger": "camp_destroyed",
+      "probability": 0.40,
+      "position": "near_player_ring",
+      "near_min": 35.0,
+      "near_max": 60.0,
+      "count_per_trigger": 1,
+      "max_total": 8,
+      "_desc": "营地被摧毁时：40%概率生成事件点（商店已必定生成）"
+    },
+    {
+      "trigger": "timer_interval",
+      "probability": 1.0,
+      "position": "near_player_ring",
+      "near_min": 20.0,
+      "near_max": 50.0,
+      "interval_seconds": 180.0,
+      "count_per_trigger": 1,
+      "max_total": 6,
+      "_desc": "每180秒：必定生成1个事件点"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+    "schema_version":  3,
+    "_note":  "Roguelike meta talents without Aura or Reflect upgrades.",
+    "max_picks":  3,
+    "talents":  [
+                    {
+                        "id":  "meta_01",
+                        "display_name":  "活力",
+                        "description":  "最大生命值 +10",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "max_hp_flat",
+                                              "op":  "add",
+                                              "value":  10
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_02",
+                        "display_name":  "坚韧",
+                        "description":  "最大生命值 +8%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "max_hp_mult",
+                                              "op":  "add",
+                                              "value":  0.08
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_03",
+                        "display_name":  "敏捷",
+                        "description":  "移动速度 +10%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "move_speed_mult",
+                                              "op":  "add",
+                                              "value":  0.1
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_04",
+                        "display_name":  "轻甲",
+                        "description":  "伤害减免 +5%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "damage_reduction",
+                                              "op":  "add",
+                                              "value":  0.05
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_05",
+                        "display_name":  "生命汲取",
+                        "description":  "生命偷取 +4%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "lifesteal",
+                                              "op":  "add",
+                                              "value":  0.04
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_06",
+                        "display_name":  "锐利目光",
+                        "description":  "暴击率 +6%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "crit_chance",
+                                              "op":  "add",
+                                              "value":  0.06
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_07",
+                        "display_name":  "暴击之力",
+                        "description":  "暴击伤害 +25%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "crit_damage_mult",
+                                              "op":  "add",
+                                              "value":  0.25
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_08",
+                        "display_name":  "锋利武器",
+                        "description":  "武器伤害 +8%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "weapon_damage_mult",
+                                              "op":  "add",
+                                              "value":  0.08
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_09",
+                        "display_name":  "迅捷攻击",
+                        "description":  "攻击速度 +8%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "weapon_attack_speed_mult",
+                                              "op":  "add",
+                                              "value":  0.08
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_10",
+                        "display_name":  "延伸打击",
+                        "description":  "武器攻击距离 +2",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "weapon_range_add",
+                                              "op":  "add",
+                                              "value":  2.0
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_11",
+                        "display_name":  "双重射击",
+                        "description":  "额外投射物 +1",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "weapon_extra_projectile",
+                                              "op":  "add",
+                                              "value":  1
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_12",
+                        "display_name":  "奥术增幅",
+                        "description":  "技能伤害 +10%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "skill_damage_mult",
+                                              "op":  "add",
+                                              "value":  0.1
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_13",
+                        "display_name":  "专注",
+                        "description":  "技能冷却缩减 +6%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "skill_cooldown_reduce",
+                                              "op":  "add",
+                                              "value":  0.06
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_14",
+                        "display_name":  "领域延伸",
+                        "description":  "技能范围 +10%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "skill_range_mult",
+                                              "op":  "add",
+                                              "value":  0.1
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_15",
+                        "display_name":  "多重施法",
+                        "description":  "额外技能投射物 +1",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "skill_extra_projectile",
+                                              "op":  "add",
+                                              "value":  1
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_23",
+                        "display_name":  "稳固",
+                        "description":  "击退抗性 +20%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "knockback_resist",
+                                              "op":  "add",
+                                              "value":  0.2
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_24",
+                        "display_name":  "赏金猎人",
+                        "description":  "经验获取 +12%",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "exp_gain_mult",
+                                              "op":  "add",
+                                              "value":  0.12
+                                          }
+                                      ]
+                    },
+                    {
+                        "id":  "meta_25",
+                        "display_name":  "再生",
+                        "description":  "生命回复 +0.3/秒",
+                        "branch":  "general",
+                        "modifiers":  [
+                                          {
+                                              "stat":  "hp_regen",
+                                              "op":  "add",
+                                              "value":  0.3
+                                          }
+                                      ]
+                    }
+                ]
+}

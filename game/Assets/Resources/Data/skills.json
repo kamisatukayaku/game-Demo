@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "_note": "Roguelike skill catalog without Aura or Reflect gameplay.",
+  "class_skills": {
+    "mage": [
+      "skill_mage_arcane_bolt",
+      "skill_mage_fire_nova",
+      "skill_mage_gravity_well",
+      "skill_mage_frost_ward"
+    ]
+  },
+  "auto_skills": [
+    {
+      "id": "skill_sentry_volley",
+      "display_name": "哨戒齐射",
+      "attack_profile_id": "skill_sentry_bolt",
+      "unlock_level": 1
+    }
+  ],
+  "active_skills": [
+    {
+      "id": "skill_scorch_field",
+      "display_name": "灼烧领域",
+      "attack_profile_id": "skill_scorch_field",
+      "input_action": "Skill3",
+      "unlock_level": 5
+    }
+  ]
+}

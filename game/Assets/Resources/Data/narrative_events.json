@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "chains": [
+    {
+      "id": "signal_relay",
+      "display_name": "信号中继",
+      "steps": [
+        {
+          "wave": 6,
+          "phase": "discover",
+          "title": "发现 · 异常信号",
+          "body": "竞技场边缘出现断续脉冲——像是某种中继站在回应你的 Build 频率。",
+          "banner_color": "#6AD4FF"
+        },
+        {
+          "wave": 12,
+          "phase": "risk",
+          "title": "风险 · 过载回传",
+          "body": "信号强度翻倍，下一波段怪物会更快集结。坚持住，回报在终点。",
+          "banner_color": "#FF8844",
+          "spawn_interval_mult": 0.88
+        },
+        {
+          "wave": 15,
+          "phase": "reward",
+          "title": "回报 · 共鸣碎片",
+          "body": "中继站稳定下来，本局剩余升级选项权重向 Capstone 倾斜。",
+          "banner_color": "#FFE066",
+          "xp_bonus": 90
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,413 @@
+﻿{
+  "warrior": {
+    "base": {
+      "weaponCount": 3,
+      "rotationSpeed": 205,
+      "radius": 3.20625,
+      "damage": 12.0,
+      "weaponSize": 0.72,
+      "hitInterval": 0.35
+    },
+    "upgrades": [
+      {
+        "id": "satellite_expansion_i",
+        "displayName": "卫星扩展 I",
+        "description": "星环武器数量 +1。",
+        "type": "weaponCount",
+        "value": 1.0,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "offerWeight": 1.2
+      },
+      {
+        "id": "orbit_synch_i",
+        "displayName": "轨道同步",
+        "description": "轨道旋转速度 +15%。",
+        "type": "rotationSpeed",
+        "value": 31.0,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "requiresIds": ["satellite_expansion_i"],
+        "offerWeight": 1.0
+      },
+      {
+        "id": "expanded_orbit_i",
+        "displayName": "扩展轨道 I",
+        "description": "轨道半径 +0.25。",
+        "type": "radius",
+        "value": 0.25,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "requiresIds": ["satellite_expansion_i"],
+        "offerWeight": 1.0
+      },
+      {
+        "id": "satellite_expansion_ii",
+        "displayName": "卫星扩展 II",
+        "description": "星环武器数量 +1。",
+        "type": "weaponCount",
+        "value": 1.0,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "requiresIds": ["satellite_expansion_i"],
+        "offerWeight": 1.1
+      },
+      {
+        "id": "expanded_orbit_ii",
+        "displayName": "扩展轨道 II",
+        "description": "轨道半径 +0.25。",
+        "type": "radius",
+        "value": 0.25,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "requiresIds": ["expanded_orbit_i"],
+        "offerWeight": 1.0
+      },
+      {
+        "id": "orbit_resonance_i",
+        "displayName": "轨道共鸣",
+        "description": "每存在1把武器，伤害 +3%。",
+        "type": "orbitSyncBonus",
+        "value": 0.03,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "requiresIds": ["satellite_expansion_ii"],
+        "offerWeight": 1.1
+      },
+      {
+        "id": "satellite_expansion_iii",
+        "displayName": "卫星扩展 III",
+        "description": "星环武器数量 +2。",
+        "type": "weaponCount",
+        "value": 2.0,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "requiresIds": ["satellite_expansion_ii"],
+        "offerWeight": 1.2
+      },
+      {
+        "id": "expanded_orbit_iii",
+        "displayName": "扩展轨道 III",
+        "description": "轨道半径 +0.25。",
+        "type": "radius",
+        "value": 0.25,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "requiresIds": ["expanded_orbit_ii"],
+        "offerWeight": 1.0
+      },
+      {
+        "id": "orbit_resonance_ii",
+        "displayName": "轨道共鸣 II",
+        "description": "每存在1把武器，伤害 +4%。",
+        "type": "orbitSyncBonus",
+        "value": 0.04,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "requiresIds": ["orbit_resonance_i"],
+        "offerWeight": 1.1
+      },
+      {
+        "id": "death_swarm",
+        "displayName": "死亡星群",
+        "description": "命中产生30%溅射伤害。",
+        "type": "orbitSplashRatio",
+        "value": 0.3,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "requiresIds": ["orbit_resonance_ii"],
+        "offerWeight": 1.3
+      },
+      {
+        "id": "satellite_expansion_iv",
+        "displayName": "卫星扩展 IV",
+        "description": "星环武器数量 +3。",
+        "type": "weaponCount",
+        "value": 3.0,
+        "tags": ["satellite"],
+        "category": "gameplay",
+        "requiresIds": ["satellite_expansion_iii"],
+        "offerWeight": 1.3
+      },
+      {
+        "id": "heavy_blade",
+        "displayName": "重刃",
+        "description": "星环武器体积 +20%。",
+        "type": "weaponSize",
+        "value": 0.2,
+        "tags": ["heavy"],
+        "category": "gameplay",
+        "offerWeight": 1.2
+      },
+      {
+        "id": "crushing_edge",
+        "displayName": "碾压之锋",
+        "description": "星环武器伤害 +20%。",
+        "type": "damage",
+        "value": 2.0,
+        "tags": ["heavy"],
+        "category": "gameplay",
+        "requiresIds": ["heavy_blade"],
+        "offerWeight": 1.0
+      },
+      {
+        "id": "extended_reach",
+        "displayName": "延伸触及",
+        "description": "轨道半径 +0.2。",
+        "type": "radius",
+        "value": 0.2,
+        "tags": ["heavy"],
+        "category": "gameplay",
+        "requiresIds": ["heavy_blade"],
+        "offerWeight": 1.0
+      },
+      {
+        "id": "titan_forging",
+        "displayName": "泰坦锻造",
+        "description": "体积 +90%，伤害 +30%，轨道半径 +1，旋转速度 -15%。",
+        "modifiers": [
+          { "type": "weaponSize", "value": 0.9 },
+          { "type": "damage", "value": 3.0 },
+          { "type": "radius", "value": 1.0 },
+          { "type": "rotationSpeed", "value": -30.75 }
+        ],
+        "tags": ["heavy"],
+        "category": "gameplay",
+        "requiresIds": ["crushing_edge"],
+        "offerWeight": 1.2
+      },
+      {
+        "id": "heavy_momentum",
+        "displayName": "沉重动能",
+        "description": "旋转速度 -10%，伤害 +40%。",
+        "modifiers": [
+          { "type": "rotationSpeed", "value": -20.5 },
+          { "type": "damage", "value": 4.0 }
+        ],
+        "tags": ["heavy"],
+        "category": "gameplay",
+        "requiresIds": ["titan_forging"],
+        "offerWeight": 1.1
+      },
+      {
+        "id": "titan_core_i",
+        "displayName": "泰坦核心 I",
+        "description": "武器数量 -1，伤害 +80%，体积 +100%，轨道半径 +1，旋转速度 -10%。",
+        "modifiers": [
+          { "type": "weaponCount", "value": -1.0 },
+          { "type": "damage", "value": 8.0 },
+          { "type": "weaponSize", "value": 1.0 },
+          { "type": "radius", "value": 1.0 },
+          { "type": "rotationSpeed", "value": -20.5 }
+        ],
+        "tags": ["heavy"],
+        "category": "gameplay",
+        "requiresIds": ["heavy_momentum"],
+        "offerWeight": 1.3
+      },
+      {
+        "id": "planet_breaker",
+        "displayName": "行星破击",
+        "description": "命中造成强力击退。",
+        "type": "meleeKnockbackChance",
+        "value": 1.0,
+        "tags": ["heavy"],
+        "category": "gameplay",
+        "requiresIds": ["titan_core_i"],
+        "offerWeight": 1.1
+      },
+      {
+        "id": "shockwave",
+        "displayName": "冲击波",
+        "description": "命中产生小范围冲击波。",
+        "type": "meleeExplosionRadius",
+        "value": 0.6,
+        "tags": ["heavy"],
+        "category": "gameplay",
+        "requiresIds": ["planet_breaker"],
+        "offerWeight": 1.2
+      },
+      {
+        "id": "titan_core_ii",
+        "displayName": "泰坦核心 II",
+        "description": "武器数量 -1，伤害 +150%，体积 +110%，轨道半径 +1，旋转速度 -15%。",
+        "modifiers": [
+          { "type": "weaponCount", "value": -1.0 },
+          { "type": "damage", "value": 15.0 },
+          { "type": "weaponSize", "value": 1.1 },
+          { "type": "radius", "value": 1.0 },
+          { "type": "rotationSpeed", "value": -30.75 }
+        ],
+        "tags": ["heavy"],
+        "category": "gameplay",
+        "requiresIds": ["shockwave"],
+        "offerWeight": 1.3
+      },
+      {
+        "id": "world_crusher",
+        "displayName": "世界粉碎",
+        "description": "冲击波半径 +50%。",
+        "type": "meleeExplosionRadius",
+        "value": 0.6,
+        "tags": ["heavy"],
+        "category": "gameplay",
+        "requiresIds": ["titan_core_ii"],
+        "offerWeight": 1.2
+      },
+      {
+        "id": "planetary_hammer",
+        "displayName": "行星之锤",
+        "description": "固定为1把武器；在泰坦核心基础上体积 +100%，伤害×6，击退×3。",
+        "type": "titanFlag",
+        "value": 1.0,
+        "tags": ["heavy", "capstone"],
+        "category": "gameplay",
+        "requiresIds": ["world_crusher"],
+        "offerWeight": 1.5
+      },
+      {
+        "id": "spirit_blade_i",
+        "displayName": "灵刃 I",
+        "description": "解锁灵刃：星环武器飞出攻击敌人。",
+        "type": "spiritEnabled",
+        "value": 1.0,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "offerWeight": 1.4
+      },
+      {
+        "id": "quick_return",
+        "displayName": "快速归返",
+        "description": "灵刃归返速度 +30%。",
+        "type": "spiritbladeReturnSpeed",
+        "value": 0.3,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["spirit_blade_i"],
+        "offerWeight": 1.0
+      },
+      {
+        "id": "double_launch",
+        "displayName": "双重发射",
+        "description": "同时飞出数量 +1。",
+        "type": "spiritbladeCount",
+        "value": 1.0,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["spirit_blade_i"],
+        "offerWeight": 1.1
+      },
+      {
+        "id": "homing_blade",
+        "displayName": "追踪之刃",
+        "description": "灵刃自动追踪目标。",
+        "type": "spiritbladeHoming",
+        "value": 1.0,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["spirit_blade_i"],
+        "offerWeight": 1.0
+      },
+      {
+        "id": "piercing_blade",
+        "displayName": "穿透之刃",
+        "description": "灵刃穿透 +1。",
+        "type": "spiritbladePierce",
+        "value": 1.0,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["spirit_blade_i"],
+        "offerWeight": 1.0
+      },
+      {
+        "id": "blade_recall",
+        "displayName": "回刃召回",
+        "description": "灵刃归返速度 +40%。",
+        "type": "spiritbladeReturnSpeed",
+        "value": 0.4,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["quick_return"],
+        "offerWeight": 1.1
+      },
+      {
+        "id": "ricochet_blade",
+        "displayName": "弹射之刃",
+        "description": "灵刃弹射 +1。",
+        "type": "projectileBounce",
+        "value": 1.0,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["piercing_blade"],
+        "offerWeight": 1.1
+      },
+      {
+        "id": "triple_launch",
+        "displayName": "三重发射",
+        "description": "同时飞出数量 +2。",
+        "type": "spiritbladeCount",
+        "value": 2.0,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["double_launch"],
+        "offerWeight": 1.2
+      },
+      {
+        "id": "phantom_trail",
+        "displayName": "幻影轨迹",
+        "description": "灵刃飞行路径留下伤害轨迹。",
+        "type": "spiritTrail",
+        "value": 1.0,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["triple_launch"],
+        "offerWeight": 1.1
+      },
+      {
+        "id": "piercing_blade_ii",
+        "displayName": "穿透之刃 II",
+        "description": "灵刃穿透 +1。",
+        "type": "spiritbladePierce",
+        "value": 1.0,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["piercing_blade"],
+        "offerWeight": 1.1
+      },
+      {
+        "id": "twin_recall",
+        "displayName": "双重返归",
+        "description": "归返后立即再次发射。",
+        "type": "spiritbladeRecast",
+        "value": 1.0,
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["blade_recall"],
+        "offerWeight": 1.2
+      },
+      {
+        "id": "blade_storm",
+        "displayName": "刃之风暴",
+        "description": "所有星环武器同时发射。",
+        "modifiers": [
+          { "type": "spiritbladeCount", "value": 99 }
+        ],
+        "tags": ["spiritblade"],
+        "category": "gameplay",
+        "requiresIds": ["triple_launch"],
+        "offerWeight": 1.3
+      },
+      {
+        "id": "infinite_dance",
+        "displayName": "无尽之舞",
+        "description": "灵刃永久循环：发射与归返交替进行。",
+        "type": "spiritInfinite",
+        "value": 1.0,
+        "tags": ["spiritblade", "capstone"],
+        "category": "gameplay",
+        "requiresIds": ["blade_storm"],
+        "offerWeight": 1.5
+      }
+    ]
+  }
+}

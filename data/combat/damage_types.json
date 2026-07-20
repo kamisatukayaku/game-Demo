@@ -1,0 +1,39 @@
+{
+  "schema_version": 2,
+  "_note": "常规 Roguelike 伤害类型；无 EI/污染倍率。",
+  "definitions": [
+    {
+      "id": "physical",
+      "display_name": "物理",
+      "bypass_armor": false,
+      "armor_coefficient": 1.0
+    },
+    {
+      "id": "kinetic",
+      "display_name": "动能",
+      "description": "弹幕、弹体",
+      "bypass_armor": false,
+      "armor_coefficient": 0.85
+    },
+    {
+      "id": "energy",
+      "display_name": "能量",
+      "description": "激光、链电等束状攻击",
+      "bypass_armor": false,
+      "armor_coefficient": 0.7
+    },
+    {
+      "id": "impact",
+      "display_name": "冲击",
+      "description": "冲撞、砸击",
+      "bypass_armor": false,
+      "armor_coefficient": 1.1
+    },
+    {
+      "id": "true",
+      "display_name": "真实",
+      "bypass_armor": true,
+      "armor_coefficient": 0
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "evolution": {
+    "id": "pulse",
+    "name": "脉冲进化",
+    "behavior_verb": "共振",
+    "fantasy_text": "冲击环彼此叠加，战场化作震荡的鼓面。",
+    "source_weapon": "contact_weapon",
+    "advanced_form": "pulse",
+    "movement_model": "random_wander",
+    "evolution_condition": {
+      "description": "需要指定的 Contact Weapon 达到 Lv3。",
+      "source_weapon_level": 3
+    },
+    "tiers": [
+      {
+        "tier": 1,
+        "id": "pulse_ring",
+        "name": "???",
+        "description": "?????????????????",
+        "gameplay_change": "进化为移动脉冲源。"
+      },
+      {
+        "tier": 2,
+        "id": "double_pulse",
+        "name": "????",
+        "description": "?????????????????",
+        "gameplay_change": "单次脉冲变为双层推进。"
+      },
+      {
+        "tier": 3,
+        "id": "propagating_wave",
+        "name": "???",
+        "description": "?????????????????????",
+        "gameplay_change": "获得连续传播能力。"
+      },
+      {
+        "tier": 4,
+        "id": "resonance_ring",
+        "name": "???",
+        "description": "??????????????",
+        "gameplay_change": "波纹叠加形成区域压制。"
+      },
+      {
+        "tier": 5,
+        "id": "arena_pulse",
+        "name": "????",
+        "description": "????????????????????",
+        "gameplay_change": "形成完整全场脉冲体系。"
+      }
+    ],
+    "final_form": {
+      "id": "arena_pulse",
+      "name": "全域脉冲",
+      "description": "多层传播与共振最终形成覆盖战场的周期性能量潮。"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "pool": "exhaustion_rewards",
+  "tags": ["exhaustion_fallback", "boss_reward"],
+  "upgrades": [
+    {
+      "id": "boss_overclock_core",
+      "display_name": "超频核心",
+      "description": "全伤害 +16%，最大生命 -4。高收益但容错更低。",
+      "modifiers": [
+        { "stat": "all_damage_mult", "op": "add", "value": 0.16 },
+        { "stat": "max_hp_flat", "op": "add", "value": -4 }
+      ],
+      "max_stacks": 4,
+      "offer_weight": 0.12,
+      "offer_group": "numeric",
+      "tags": ["exhaustion_fallback", "boss_reward", "risk_reward", "damage"]
+    },
+    {
+      "id": "boss_velocity_protocol",
+      "display_name": "疾行协议",
+      "description": "移动速度 +12%，武器攻速 -6%。换取更强走位空间。",
+      "modifiers": [
+        { "stat": "move_speed_mult", "op": "add", "value": 0.12 },
+        { "stat": "weapon_attack_speed_mult", "op": "add", "value": -0.06 }
+      ],
+      "max_stacks": 3,
+      "offer_weight": 0.10,
+      "offer_group": "player",
+      "tags": ["exhaustion_fallback", "boss_reward", "risk_reward", "mobility"]
+    },
+    {
+      "id": "boss_spell_compression",
+      "display_name": "法术压缩",
+      "description": "技能冷却 -10%，最大生命 -5。更频繁释放技能，但更怕失误。",
+      "modifiers": [
+        { "stat": "skill_cooldown_reduce", "op": "add", "value": 0.10 },
+        { "stat": "max_hp_flat", "op": "add", "value": -5 }
+      ],
+      "max_stacks": 3,
+      "offer_weight": 0.10,
+      "offer_group": "numeric",
+      "tags": ["exhaustion_fallback", "boss_reward", "risk_reward", "skill"]
+    },
+    {
+      "id": "boss_clean_calibration",
+      "display_name": "稳定校准",
+      "description": "全伤害 +6%。无副作用，但收益低于风险奖励。",
+      "stat": "all_damage_mult",
+      "values": [0.06],
+      "max_stacks": 5,
+      "offer_weight": 0.07,
+      "offer_group": "numeric",
+      "tags": ["exhaustion_fallback", "boss_reward", "damage"]
+    },
+    {
+      "id": "boss_reinforced_frame",
+      "display_name": "强化框架",
+      "description": "最大生命 +3。无副作用的稳定生存补强。",
+      "stat": "max_hp_flat",
+      "values": [3],
+      "max_stacks": 5,
+      "offer_weight": 0.06,
+      "offer_group": "player",
+      "tags": ["exhaustion_fallback", "boss_reward", "survival"]
+    }
+  ]
+}

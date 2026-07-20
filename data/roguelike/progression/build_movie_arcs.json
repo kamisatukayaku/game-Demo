@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "_note": "Unified Ring Arena arc. Legacy build arcs are retained for compatibility previews only; support arc was removed with the deprecated support gameplay.",
+  "arcs": [
+    {
+      "build_id": "unified",
+      "display_name": "自由构筑",
+      "capstone_tags": [
+        "foundation",
+        "dash",
+        "projectile",
+        "spell",
+        "detached",
+        "orbit",
+        "mechanic"
+      ],
+      "beats": [
+        {
+          "level": 3,
+          "title": "机制萌发",
+          "subtitle": "冲刺、射击、法术或星环开始定义本局方向"
+        },
+        {
+          "level": 8,
+          "title": "混搭成型",
+          "subtitle": "两到三条能力线开始形成协同"
+        },
+        {
+          "level": 12,
+          "title": "进化临界",
+          "subtitle": "离体武器进化与关键机制进入奖励池"
+        },
+        {
+          "level": 16,
+          "title": "自由冠顶",
+          "subtitle": "本局核心机制已经清晰可读"
+        }
+      ],
+      "capstone_wave": 15,
+      "capstone_title": "融合终幕",
+      "capstone_subtitle": "W15 - 已选择的机制共同共振"
+    },
+    {
+      "build_id": "mage",
+      "display_name": "法术兼容",
+      "capstone_tags": [
+        "gravity_mastery",
+        "tidal_mastery",
+        "detached_weapon"
+      ],
+      "beats": [
+        {
+          "level": 3,
+          "title": "法术起势",
+          "subtitle": "引力与潮汐开始出现"
+        },
+        {
+          "level": 8,
+          "title": "控场成型",
+          "subtitle": "范围与控制能力逐步稳定"
+        },
+        {
+          "level": 12,
+          "title": "共鸣临界",
+          "subtitle": "法术强化进入奖励池"
+        },
+        {
+          "level": 16,
+          "title": "法术冠顶",
+          "subtitle": "旧法术构筑预览完成"
+        }
+      ],
+      "capstone_wave": 15,
+      "capstone_title": "法术终幕",
+      "capstone_subtitle": "W15 - 引力与潮汐共同作用"
+    },
+    {
+      "build_id": "shooter",
+      "display_name": "射击兼容",
+      "capstone_tags": [
+        "rapid",
+        "critical",
+        "detached_weapon"
+      ],
+      "beats": [
+        {
+          "level": 3,
+          "title": "弹幕点火",
+          "subtitle": "射击机制开始展开"
+        },
+        {
+          "level": 8,
+          "title": "火力成型",
+          "subtitle": "弹道密度和覆盖率提升"
+        },
+        {
+          "level": 12,
+          "title": "过载临界",
+          "subtitle": "高级射击节点进入奖励池"
+        },
+        {
+          "level": 16,
+          "title": "弹幕冠顶",
+          "subtitle": "旧射击构筑预览完成"
+        }
+      ],
+      "capstone_wave": 15,
+      "capstone_title": "弹幕终幕",
+      "capstone_subtitle": "W15 - 过载与穿透共同压制"
+    },
+    {
+      "build_id": "contact",
+      "display_name": "冲刺兼容",
+      "capstone_tags": [
+        "dash",
+        "melee",
+        "contact",
+        "detached_weapon",
+        "boomerang",
+        "trail"
+      ],
+      "beats": [
+        {
+          "level": 3,
+          "title": "贴身试锋",
+          "subtitle": "冲刺伤害与路径机制开始出现"
+        },
+        {
+          "level": 8,
+          "title": "星环扩张",
+          "subtitle": "离体武器数量和路径逐步稳定"
+        },
+        {
+          "level": 12,
+          "title": "冲击临界",
+          "subtitle": "回旋与轨迹进化进入奖励池"
+        },
+        {
+          "level": 16,
+          "title": "裁决冠顶",
+          "subtitle": "旧冲刺构筑预览完成"
+        }
+      ],
+      "capstone_wave": 15,
+      "capstone_title": "冲刺终幕",
+      "capstone_subtitle": "W15 - 冲刺斩击与离体武器共同作战"
+    }
+  ],
+  "capstone_weight_by_wave": [
+    {
+      "min_wave": 1,
+      "max_wave": 8,
+      "mult": 1.0
+    },
+    {
+      "min_wave": 9,
+      "max_wave": 12,
+      "mult": 1.6
+    },
+    {
+      "min_wave": 13,
+      "max_wave": 14,
+      "mult": 2.4
+    },
+    {
+      "min_wave": 15,
+      "max_wave": 15,
+      "mult": 3.5
+    }
+  ]
+}

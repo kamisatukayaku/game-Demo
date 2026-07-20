@@ -1,0 +1,99 @@
+{
+  "_note": "商店定义（品类概率制）。world_shop=初始旅行商人，camp_clear_*=营地摧毁商店（价格逐渐降低，限购），event_shop=事件商人。Boss巢穴商店极为丰厚且免费。",
+  "shops": [
+    {
+      "shop_type_id": "world_shop",
+      "display_name": "旅行商人",
+      "min_world_level": 1,
+      "total_items": 5,
+      "categories": [
+        { "category": "accessory_damaged","probability": 0.25, "max_purchases": 2, "max_count": 2 },
+        { "category": "accessory_intact", "probability": 0.10, "max_purchases": 1, "max_count": 1 },
+        { "category": "accessory_refined","probability": 0.03, "max_purchases": 1, "max_count": 1 },
+        { "category": "buff",            "probability": 0.25, "max_purchases": 2, "max_count": 1 },
+        { "category": "heal",            "probability": 0.20, "max_purchases": 3, "max_count": 1 },
+        { "category": "exp",             "probability": 0.08, "max_purchases": 1, "max_count": 1 }
+      ],
+      "price_multiplier": 1.0
+    },
+    {
+      "shop_type_id": "camp_clear_basic",
+      "display_name": "临时营地清剿商店",
+      "min_world_level": 1,
+      "total_items": 3,
+      "categories": [
+        { "category": "accessory_damaged","probability": 0.40, "max_purchases": 2, "max_count": 2 },
+        { "category": "accessory_intact", "probability": 0.05, "max_purchases": 1, "max_count": 1 },
+        { "category": "buff",            "probability": 0.15, "max_purchases": 1, "max_count": 1 },
+        { "category": "heal",            "probability": 0.25, "max_purchases": 2, "max_count": 1 },
+        { "category": "exp",             "probability": 0.10, "max_purchases": 1, "max_count": 1 }
+      ],
+      "price_multiplier": 0.5,
+      "shop_tag": "临时营地清剿"
+    },
+    {
+      "shop_type_id": "camp_clear_normal",
+      "display_name": "普通营地清剿商店",
+      "min_world_level": 1,
+      "total_items": 4,
+      "categories": [
+        { "category": "accessory_damaged","probability": 0.30, "max_purchases": 2, "max_count": 2 },
+        { "category": "accessory_intact", "probability": 0.15, "max_purchases": 1, "max_count": 1 },
+        { "category": "accessory_refined","probability": 0.05, "max_purchases": 1, "max_count": 1 },
+        { "category": "buff",            "probability": 0.20, "max_purchases": 1, "max_count": 1 },
+        { "category": "heal",            "probability": 0.20, "max_purchases": 2, "max_count": 1 },
+        { "category": "exp",             "probability": 0.05, "max_purchases": 1, "max_count": 1 }
+      ],
+      "price_multiplier": 0.25,
+      "shop_tag": "普通营地清剿"
+    },
+    {
+      "shop_type_id": "camp_clear_elite",
+      "display_name": "精英营地清剿商店",
+      "min_world_level": 1,
+      "total_items": 4,
+      "categories": [
+        { "category": "accessory_intact", "probability": 0.25, "max_purchases": 2, "max_count": 2 },
+        { "category": "accessory_refined","probability": 0.15, "max_purchases": 2, "max_count": 1 },
+        { "category": "accessory_mysterious","probability": 0.05, "max_purchases": 1, "max_count": 1 },
+        { "category": "buff",            "probability": 0.20, "max_purchases": 2, "max_count": 1 },
+        { "category": "heal",            "probability": 0.15, "max_purchases": 2, "max_count": 1 },
+        { "category": "exp",             "probability": 0.05, "max_purchases": 1, "max_count": 1 }
+      ],
+      "price_multiplier": 0.10,
+      "shop_tag": "精英营地清剿"
+    },
+    {
+      "shop_type_id": "camp_clear_boss_nest",
+      "display_name": "Boss巢穴清剿商店",
+      "min_world_level": 1,
+      "total_items": 5,
+      "categories": [
+        { "category": "accessory_intact", "probability": 0.20, "max_purchases": 2, "max_count": 2 },
+        { "category": "accessory_refined","probability": 0.30, "max_purchases": 2, "max_count": 2 },
+        { "category": "accessory_mysterious","probability": 0.10, "max_purchases": 1, "max_count": 1 },
+        { "category": "buff",            "probability": 0.15, "max_purchases": 2, "max_count": 1 },
+        { "category": "heal",            "probability": 0.10, "max_purchases": 2, "max_count": 1 },
+        { "category": "exp",             "probability": 0.05, "max_purchases": 1, "max_count": 1 }
+      ],
+      "price_multiplier": 0.0,
+      "shop_tag": "Boss巢穴清剿"
+    },
+    {
+      "shop_type_id": "event_shop",
+      "display_name": "神秘商人",
+      "min_world_level": 3,
+      "total_items": 4,
+      "categories": [
+        { "category": "accessory_damaged","probability": 0.15, "max_purchases": 1, "max_count": 1 },
+        { "category": "accessory_intact", "probability": 0.20, "max_purchases": 1, "max_count": 1 },
+        { "category": "accessory_refined","probability": 0.10, "max_purchases": 1, "max_count": 1 },
+        { "category": "accessory_mysterious","probability": 0.05, "max_purchases": 1, "max_count": 1 },
+        { "category": "buff",            "probability": 0.25, "max_purchases": 2, "max_count": 1 },
+        { "category": "heal",            "probability": 0.15, "max_purchases": 1, "max_count": 1 },
+        { "category": "exp",             "probability": 0.05, "max_purchases": 1, "max_count": 1 }
+      ],
+      "price_multiplier": 1.0
+    }
+  ]
+}
